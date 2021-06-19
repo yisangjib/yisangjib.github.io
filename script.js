@@ -37,7 +37,7 @@ function draw() {
   grids[index].display();
 
   //fader
-  fill(255, 1);
+  fill(255, 3);
   noStroke();
   rect(0, 0, width, height);
 }
