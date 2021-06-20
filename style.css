@@ -1,0 +1,31 @@
+*{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+@font-face {
+    font-family: "NormalBatang-Regular";
+    src: url(fonts/NormalBatang-Regular.eot);
+    src: local(※), url(fonts/NormalBatang-Regular.woff) format("woff")
+}
+
+body{
+	font-family: NormalBatang-Regular;
+margin: 16px;
+text-align: center;
+}
+
+a{
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	width: 50px;
+}
+a: link{
+text-decoration: none;
+}
+
+p.textlink{
+margin-top: 100px;
+}
