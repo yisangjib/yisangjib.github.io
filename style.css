@@ -1,7 +1,7 @@
-*{
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 @font-face {
@@ -10,22 +10,40 @@
     src: local(※), url(fonts/NormalBatang-Regular.woff) format("woff")
 }
 
-body{
-	font-family: NormalBatang-Regular;
-margin: 16px;
-text-align: center;
+body {
+    width: 100%;
+    font-family: NormalBatang-Regular;
+    margin: 16px;
+    text-align: center;
 }
 
-a{
-	display: inline-block;
-	text-decoration: none;
-	color: black;
-	width: 50px;
-}
-a: link{
-text-decoration: none;
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+
+    width: 64px;
+    margin-top: 32px;
+
 }
 
-p.textlink{
-margin-top: 100px;
+a: link {
+    text-decoration: none;
+}
+
+.textlink {
+    width: 10%;
+
+    margin: 0 auto;
+
+}
+
+.rectlink {
+    position: relative;
+    display: inline-block;
+    width: 20vw;
+    height: 20vw;
+    background-color: gray;
+
+    border-radius: 100%;
 }
