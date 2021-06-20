@@ -1,0 +1,750 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    overflow: hidden;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*    CSS reset
+    2021. 06. 04*/
+/* Font setting */
+
+@font-face {
+    font-family: "FoundersGrotesk_Regular_EN";
+    src: url(fonts/FoundersGrotesk_Regular_EN);
+    src: local(※), url(fonts/FoundersGrotesk_Regular_EN.woff) format("woff")
+}
+
+@font-face {
+    font-family: "FoundersGrotesk_Regular_MK";
+    src: url(fonts/FoundersGrotesk_Regular_MK);
+    src: local(※), url(fonts/FoundersGrotesk_Regular_MK.woff) format("woff")
+}
+
+@font-face {
+    font-family: "FoundersGrotesk_Medium_EN";
+    src: url(fonts/FoundersGrotesk_Medium_EN);
+    src: local(※), url(fonts/FoundersGrotesk_Medium_EN.woff) format("woff")
+}
+
+@font-face {
+    font-family: "FoundersGrotesk_Medium_MK";
+    src: url(fonts/FoundersGrotesk_Medium_MK);
+    src: local(※), url(fonts/FoundersGrotesk_Medium_MK.woff) format("woff")
+}
+
+@font-face {
+    font-family: "FoundersGrotesk_Medium_NO";
+    src: url(fonts/FoundersGrotesk_Medium_NO);
+    src: local(※), url(fonts/FoundersGrotesk_Medium_NO.woff) format("woff")
+}
+
+@font-face {
+    font-family: "SpoqaHanSansNeo-Regular";
+    src: local(※), url(fonts/SpoqaHanSansNeo-Regular.woff) format("woff")
+}
+
+@font-face {
+    font-family: "SpoqaHanSansNeo-Bold";
+    src: local(※), url(fonts/SpoqaHanSansNeo-Bold.woff) format("woff")
+}
+
+
+/* text */
+
+body {
+    word-break: keep-all;
+    overflow-x: hidden;
+    overflow-y: auto;
+    letter-spacing: 1.8px;
+    word-spacing: 1.5px;
+    line-height: 1.4;
+
+}
+
+h1 {
+    font-family: "FoundersGrotesk_Medium_EN", sans-serif;
+    font-size: 32px;
+}
+
+.fisrttext {
+    font-family: "SpoqaHanSansNeo-Bold";
+    padding-left: 16px;
+    padding-top: 16px;
+}
+
+
+ul li {
+    list-style-type: none;
+    display: inline;
+    padding-left: 16px;
+    width: 90%;
+}
+
+a {
+    font-family: "FoundersGrotesk_Regular_MK", sans-serif;
+    font-size: 32px;
+
+    color: black;
+    display: inline;
+    text-decoration: none;
+}
+
+a:visited {
+    font-family: "FoundersGrotesk_Regular_EN", sans-serif;
+}
+
+a:hover {
+    font-family: "FoundersGrotesk_Regular_EN", sans-serif;
+    cursor: pointer;
+}
+
+
+.marktext {
+    font-family: "FoundersGrotesk_Regular_EN", sans-serif;
+}
+
+strong {
+    font-family: "SpoqaHanSansNeo-Bold";
+    color: black;
+}
+
+button {
+    font-family: "FoundersGrotesk_Medium_EN", sans-serif;
+    color: black;
+    background-color: blue;
+    position: fixed;
+    font-size: 48px;
+    border: 0;
+    bottom: 0px;
+}
+
+
+button:hover {
+    font-family: "FoundersGrotesk_Medium_NO", sans-serif;
+    border: 3px dotted orangered;
+
+    border-width: 8px;
+}
+
+.buttonclass {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: blue;
+    bottom: 0px;
+}
+
+.mark0 {
+    text-align: left;
+    width: 75px;
+    bottom: 0;
+    left: 0;
+}
+
+.mark1 {
+    text-align: center;
+    cursor: pointer;
+    width: 75px;
+
+    bottom: 0;
+    left: 5%;
+}
+
+.mark2 {
+    text-align: center;
+    cursor: pointer;
+    width: 75px;
+    bottom: 0;
+    left: 12%;
+}
+
+.mark3 {
+    text-align: center;
+    cursor: pointer;
+    width: 75px;
+    bottom: 0;
+    left: 19%;
+}
+
+.mark4 {
+    text-align: center;
+    cursor: pointer;
+    width: 75px;
+    bottom: 0;
+    left: 26%;
+}
+
+.mark5 {
+    text-align: center;
+    cursor: pointer;
+    width: 75px;
+    bottom: 0;
+    left: 33%;
+}
+
+.mark6 {
+    text-align: center;
+    cursor: pointer;
+    width: 75px;
+    bottom: 0;
+    left: 40%;
+}
+
+.mark7 {
+    text-align: center;
+    cursor: pointer;
+    width: 75px;
+    bottom: 0;
+    left: 47%;
+}
+
+.mark8 {
+    text-align: center;
+    cursor: pointer;
+    width: 75px;
+    bottom: 0;
+    left: 54%;
+}
+
+.mark9 {
+    text-align: center;
+    cursor: pointer;
+    width: 75px;
+    bottom: 0;
+    left: 61%;
+}
+
+.mark10 {
+    text-align: center;
+    cursor: pointer;
+    width: 75px;
+    bottom: 0;
+    left: 68%;
+}
+
+.mark11 {
+    text-align: center;
+    cursor: pointer;
+    width: 75px;
+    bottom: 0;
+    left: 75%;
+}
+
+.mark12 {
+    text-align: center;
+    cursor: pointer;
+    width: 75px;
+    bottom: 0;
+    left: 82%;
+}
+
+.mark13 {
+    text-align: center;
+    width: 75px;
+    bottom: 0;
+    left: 89%;
+    cursor: pointer;
+}
+
+/*<!-- Modal -->*/
+p#mark1 {
+    font-family: "FoundersGrotesk_Medium_MK", sans-serif;
+    text-align: left;
+    cursor: pointer;
+    width: 50%;
+
+}
+
+#mark1:hover {
+    font-family: "FoundersGrotesk_Medium_EN", sans-serif;
+}
+
+/*<!-- Modal -->*/
+/* The Modal (background) */
+.ebcf_modal1 {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 300px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.ebcf_modal-content1 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 16px;
+    width: 50%;
+    border: 2px dashed black;
+}
+
+/* The Close Button */
+.ebcf_close1 {}
+
+.ebcf_close1:hover,
+.ebcf_close1:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*<!-- Modal -->*/
+
+.ptext1 {
+    font-family: "SpoqaHanSansNeo-Regular", sans-serif;
+    font-size: 14px;
+    position: fixed;
+    color: DimGrey;
+    width: 30%;
+
+    left: 32px;
+    top: 10%;
+    display: none;
+    border: 2px dashed black;
+    border: 2px dashed black;
+    padding: 8px;
+
+}
+
+.ptext2 {
+    font-family: "SpoqaHanSansNeo-Regular", sans-serif;
+    font-size: 14px;
+    position: fixed;
+    color: DimGrey;
+    width: 30%;
+    right: 32px;
+    top: 15%;
+    display: none;
+    border: 2px dashed black;
+    padding: 8px;
+
+}
+
+.ptext3 {
+    font-family: "SpoqaHanSansNeo-Regular", sans-serif;
+    font-size: 14px;
+    position: fixed;
+    color: DimGrey;
+    width: 30%;
+    left: 48px;
+    top: 35%;
+    display: none;
+    border: 2px dashed black;
+    padding: 8px;
+
+}
+
+.navtext3-2 {
+    font-family: "FoundersGrotesk_Medium_EN", sans-serif;
+    font-size: 14px;
+}
+
+.navtext3-2:hover {
+    font-family: "FoundersGrotesk_Medium_MK", sans-serif;
+}
+
+.navtext3-2:visited {
+    font-family: "FoundersGrotesk_Medium_MK", sans-serif;
+}
+
+
+
+.ptext4 {
+    font-family: "SpoqaHanSansNeo-Regular", sans-serif;
+    font-size: 14px;
+    position: fixed;
+    color: DimGrey;
+    width: 30%;
+    right: 40%;
+    top: 5%;
+    display: none;
+    border: 2px dashed black;
+    padding: 8px;
+
+}
+
+.ptext5 {
+    font-family: "SpoqaHanSansNeo-Regular", sans-serif;
+    font-size: 14px;
+    position: fixed;
+    color: DimGrey;
+    width: 30%;
+    right: 50%;
+    left: 50%;
+    top: 55%;
+    display: none;
+    border: 2px dashed black;
+    padding: 8px;
+
+}
+
+.ptext6 {
+    font-family: "SpoqaHanSansNeo-Regular", sans-serif;
+    font-size: 14px;
+    position: fixed;
+    color: DimGrey;
+    width: 30%;
+    right: 32px;
+    top: 16px;
+    display: none;
+    border: 2px dashed black;
+    padding: 8px;
+
+}
+
+.ptext7 {
+    font-family: "SpoqaHanSansNeo-Regular", sans-serif;
+    font-size: 14px;
+    position: fixed;
+    color: DimGrey;
+    width: 30%;
+    right: 35%;
+    top: 25%;
+    display: none;
+    border: 2px dashed black;
+    padding: 8px;
+
+}
+
+.ptext8 {
+    font-family: "SpoqaHanSansNeo-Regular", sans-serif;
+    font-size: 14px;
+    position: fixed;
+    color: DimGrey;
+    width: 30%;
+    right: 50%;
+    left: 30%;
+    top: 40%;
+    display: none;
+    border: 2px dashed black;
+    padding: 8px;
+
+}
+
+.ptext9 {
+    font-family: "SpoqaHanSansNeo-Regular", sans-serif;
+    font-size: 14px;
+    position: fixed;
+    color: DimGrey;
+    width: 30%;
+    right: 40%;
+    left: 40%;
+    bottom: 10%;
+    display: none;
+    border: 2px dashed black;
+    padding: 8px;
+
+}
+
+.ptext10 {
+    font-family: "SpoqaHanSansNeo-Regular", sans-serif;
+    font-size: 14px;
+    position: fixed;
+    color: DimGrey;
+    width: 30%;
+    right: 32px;
+    bottom: 10%;
+    display: none;
+    border: 2px dashed black;
+    padding: 8px;
+
+}
+
+.ptext11 {
+    font-family: "SpoqaHanSansNeo-Regular", sans-serif;
+    font-size: 14px;
+    position: fixed;
+    color: DimGrey;
+    width: 30%;
+    left: 32px;
+    bottom: 10%;
+    display: none;
+    border: 2px dashed black;
+    padding: 8px;
+
+}
+
+.ptext12 {
+    font-family: "SpoqaHanSansNeo-Regular", sans-serif;
+    font-size: 14px;
+    position: fixed;
+    color: DimGrey;
+    width: 30%;
+    right: 10%;
+    top: 20%;
+    display: none;
+    border: 2px dashed black;
+    padding: 8px;
+
+}
+
+.ptext13 {
+    font-family: "SpoqaHanSansNeo-Regular", sans-serif;
+    font-size: 14px;
+    position: fixed;
+    color: DimGrey;
+    width: 30%;
+    right: 48px;
+    top: 60%;
+    display: none;
+    border: 2px dashed black;
+    padding: 8px;
+
+}
+
+.blue {
+    background-color: Gainsboro;
+    display: block;
+}
+
+/*media queries*/
+
+
+@media all and (min-width:600px) {
+    body {
+        word-break: normal;
+    }
+
+button {
+    font-family: "FoundersGrotesk_Medium_EN", sans-serif;
+    color: black;
+    background-color: blue;
+    position: fixed;
+    font-size: 32px;
+    border: 0;
+    bottom: 0px;
+}
+
+button:hover {
+    font-family: "FoundersGrotesk_Medium_NO", sans-serif;
+    border: 2px dotted orangered;
+
+    border-width: 8px;
+}
+
+.buttonclass {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: blue;
+    bottom: 0px;
+}
+
+
+}
+
+@media all and (min-width:1200px) {
+    body {
+        word-break: keep-all;
+    }
+
+button {
+    font-family: "FoundersGrotesk_Medium_EN", sans-serif;
+    color: black;
+    background-color: blue;
+    position: fixed;
+    font-size: 48px;
+    border: 0;
+    bottom: 0px;
+}
+
+button:hover {
+    font-family: "FoundersGrotesk_Medium_NO", sans-serif;
+    border: 3px dotted orangered;
+
+    border-width: 10px;
+}
+
+.buttonclass {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: blue;
+    bottom: 0px;
+}
+
+}
+
+.formobile {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .formobile {
+        display: block;
+        z-index: 10000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        box-sizing: border-box;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .formobile-p {
+        display: block;
+        z-index: 10001;
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        font-size: 12px;
+
+        line-height: 1.55;
+        color: black;
+        background-color: white;
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+        text-decoration: none;
+        overflow: hidden;
+
+    }
+}
