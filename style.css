@@ -17,6 +17,14 @@ body {
     text-align: center;
 }
 
+.info {
+    padding-bottom: 140px;
+    position: fixed;
+    width: 98%;
+    text-align: center;
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 24%, rgba(255, 255, 255, 1) 59%, rgba(255, 255, 255, 0) 100%);
+}
+
 a {
     display: block;
     text-decoration: none;
@@ -25,14 +33,7 @@ a {
 }
 
 a:hover {
-    background-color: blue;
-    color: white;
-
-}
-
-a:active {
-    background-color: blue;
-    color: white;
+    cursor: pointer;
 }
 
 ul {
@@ -41,11 +42,15 @@ ul {
 
 li {
     margin-top: 16px;
-    font-size: 48px;
+    font-size: 28px;
 }
-
 
 .textlink {
     width: 100%;
     margin: 0 auto;
+    font-size: 28px;
+}
+
+p{
+    font-size: 28px;
 }
