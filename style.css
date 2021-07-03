@@ -27,7 +27,7 @@ body {
 .info {
     padding-top: 16px;
     padding-left: 16px;
-    padding-bottom: 175px;
+    padding-bottom: 225px;
     position: fixed;
     width: 100%;
     text-align: left;
@@ -64,24 +64,25 @@ ul {
     list-style-type: none;
     position: absolute;
     display: inline-block;
-    margin-top: 200px;
+    margin-top: 250px;
+    width: 100%;
 }
 
 li {
     margin-top: 12px;
     margin-left: 24px;
-    font-size: 28px;
-    line-height: 2;
+    font-size: 48px;
+    line-height: 2.2;
 
-    width: 50px;
+\
 }
 
-.insta {
+.headtext {
     margin-top: 16px;
-    font-size: 28px;
+    font-size: 32px;
 }
 
-.insta:hover {
+.headtext:hover {
     color: blue;
     text-decoration: none;
 }
