@@ -40,6 +40,8 @@ a {
     color: black;
     text-align: center;
 
+    width: 50px;
+
 }
 
 a:hover {
@@ -64,16 +66,21 @@ ul {
     display: inline-block;
     margin-top: 250px;
     width: 100%;
+
 }
 
 li {
-    margin-top: 12px;
+    margin-top: 16px;
+    margin-left: 16px;
     font-size: 48px;
     line-height: 2.2;
+
+
 }
 
 .headtext {
     margin-top: 16px;
+    margin-left: 16px;
     font-size: 32px;
 }
 
@@ -101,12 +108,4 @@ li {
     font-size: 8px;
 }
 
-@media all and (min-width:600px) {
-canvas {
-        display: none;
-    }
-
-    @media all and (min-width:1024px) {
-canvas {
-        display: block;
-    }
+@media all and (min-width:600px) {}

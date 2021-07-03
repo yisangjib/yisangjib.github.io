@@ -1,66 +1,90 @@
-const nbEllipses = 7;
-const smallestDiameter = 70;
-const diameterIncrement = 25;
-const controlPointOffset = 10;
-
-var x = 0,
-    y = 0;
-var positionHistory = [];
-var angleMeter;
+let numBalls = 10;
+let spring = 0.1;
+let gravity = 0.2;
+let friction = -0.99;
+let balls = [];
 
 function setup() {
-    createCanvas(displayWidth, displayHeight+400);
-
-
-    noStroke();
-    smooth();
-    while (positionHistory.length < nbEllipses * 2) {
-        positionHistory.push([0, 0, 0]);
+    createCanvas(windowWidth, windowHeight + 300);
+    for (let i = 0; i < numBalls; i++) {
+        balls[i] = new Ball(
+            random(width),
+            random(height),
+            random(120, 70),
+            i,
+            balls
+        );
     }
-    angleMeter = new AngleMeter(smallestDiameter / 2.0);
-    x = positionHistory[0][0];
-    y = positionHistory[0][1];
+    stroke(0);
+    strokeWeight(2);
+    fill(255);
 }
 
 function draw() {
-    positionHistory.pop();
-    x = 0.6 * x + 0.4 * mouseX;
-    y = 0.6 * y + 0.4 * mouseY;
-    angleMeter.drag(x, y);
-    positionHistory.unshift([x, y, angleMeter.angle]);
-    drawEllipses();
-}
-
-function drawEllipses() {
     background(255);
-    for (var i = 0; i < nbEllipses; i++) {
-        let positionIndex = 2 * (nbEllipses - 1 - i);
-        let position = positionHistory[positionIndex];
-        let majorAxis = smallestDiameter + diameterIncrement * (nbEllipses - 1 - i);
-        drawEllipse(position, majorAxis, i % 2 == 0 ? 255 : 0);
-    }
+    balls.forEach(ball => {
+        ball.collide();
+        ball.move();
+        ball.display();
+    });
 }
 
-function drawEllipse(x_y_angle, majorAxis, fillColor) {
-    fill(fillColor);
-    push();
-    translate(x_y_angle[0], x_y_angle[1]);
-    rotate(x_y_angle[2]);
-    ellipse(-controlPointOffset, 0, majorAxis, majorAxis * 0.75);
-    pop();
-}
-
-class AngleMeter {
-    constructor(distance) {
-        this.angle = 0;
-        this.draggedPoint = [0, 0];
-        this.distance = distance;
+class Ball {
+    constructor(xin, yin, din, idin, oin) {
+        this.x = xin;
+        this.y = yin;
+        this.vx = 0;
+        this.vy = 0;
+        this.diameter = din;
+        this.id = idin;
+        this.others = oin;
     }
-    drag(x, y) {
-        const dx = x - this.draggedPoint[0];
-        const dy = y - this.draggedPoint[1];
-        this.angle = Math.atan2(dy, dx);
-        this.draggedPoint[0] = x - (Math.cos(this.angle) * this.distance);
-        this.draggedPoint[1] = y - (Math.sin(this.angle) * this.distance);
+
+    collide() {
+        for (let i = this.id + 1; i < numBalls; i++) {
+            // console.log(others[i]);
+            let dx = this.others[i].x - this.x;
+            let dy = this.others[i].y - this.y;
+            let distance = sqrt(dx * dx + dy * dy);
+            let minDist = this.others[i].diameter / 2 + this.diameter / 2;
+            //   console.log(distance);
+            //console.log(minDist);
+            if (distance < minDist) {
+                //console.log("2");
+                let angle = atan2(dy, dx);
+                let targetX = this.x + cos(angle) * minDist;
+                let targetY = this.y + sin(angle) * minDist;
+                let ax = (targetX - this.others[i].x) * spring;
+                let ay = (targetY - this.others[i].y) * spring;
+                this.vx -= ax;
+                this.vy -= ay;
+                this.others[i].vx += ax;
+                this.others[i].vy += ay;
+            }
+        }
+    }
+
+    move() {
+        this.vy += gravity;
+        this.x += this.vx;
+        this.y += this.vy;
+        if (this.x + this.diameter / 2 > width) {
+            this.x = width - this.diameter / 2;
+            this.vx *= friction;
+        } else if (this.x - this.diameter / 2 < 0) {
+            this.x = this.diameter / 2;
+            this.vx *= friction;
+        }
+        if (this.y + this.diameter / 2 > height) {
+            this.y = height - this.diameter / 2;
+            this.vy *= friction;
+        } else if (this.y - this.diameter / 2 < 0) {
+            this.y = this.diameter / 2;
+            this.vy *= friction;
+        }
+    }
+
+    display() {
+        ellipse(this.x, this.y, this.diameter, this.diameter);
     }
 }
