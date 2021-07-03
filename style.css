@@ -26,11 +26,9 @@ body {
 
 .info {
     padding-top: 16px;
-    padding-left: 16px;
     padding-bottom: 225px;
     position: fixed;
     width: 100%;
-    text-align: left;
     background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 28%, rgba(255, 255, 255, 1) 59%, rgba(255, 255, 255, 0) 100%);
 
 }
@@ -70,11 +68,8 @@ ul {
 
 li {
     margin-top: 12px;
-    margin-left: 24px;
     font-size: 48px;
     line-height: 2.2;
-
-\
 }
 
 .headtext {
