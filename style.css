@@ -100,3 +100,13 @@ li {
     position: fixed;
     font-size: 8px;
 }
+
+@media all and (min-width:600px) {
+canvas {
+        display: none;
+    }
+
+    @media all and (min-width:1024px) {
+canvas {
+        display: block;
+    }
