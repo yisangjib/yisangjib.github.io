@@ -22,8 +22,6 @@
 
 body {
     font-family: 'NormalBatang-Regular', serif;
-    font-weight: 200;
-    width: 100%;
 }
 
 .info {
@@ -42,7 +40,7 @@ a {
     display: block;
     text-decoration: none;
     color: black;
-    width: 50px;
+    text-align: center;
 }
 
 a:hover {
@@ -51,15 +49,29 @@ a:hover {
     cursor: pointer;
 }
 
+.listtype {
+    width: 100%;
+    background-color: white;
+    opacity: .5;
+
+
+
+
+}
+
 ul {
     list-style-type: none;
+    position: fixed;
+    display: inline-block;
+    margin-top: 200px;
 }
 
 li {
-    margin-top: 16px;
-    margin-left: 16px;
+    margin-top: 12px;
+    margin-left: 24px;
     font-size: 28px;
     line-height: 2;
+
 
 }
 
@@ -73,30 +85,20 @@ li {
     text-decoration: none;
 }
 
-.textlink {
-    width: 100%;
-    margin: 0 auto;
-    font-size: 28px;
-    padding-top: 300px;
-
-}
-
 .footerleft {
     width: 40%;
-    margin: 100px 16px 16px 16px;
-    padding-bottom: 12px;
+    margin: 100px 16px 0px 16px;
+    bottom: 16px;
     text-align: left;
     position: absolute;
-    display: block;
     font-size: 8px;
 }
 
 .footerright {
     width: 100%;
     margin: 100px 0px 0px -16px;
-    padding-bottom: 12px;
+    bottom: 16px;
     text-align: right;
     position: absolute;
-    display: block;
     font-size: 8px;
 }
