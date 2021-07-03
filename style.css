@@ -1,35 +1,44 @@
 * {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 @font-face {
-    font-family: "NormalBatang-Regular";
-    src: url(fonts/NormalBatang-Regular.eot);
-    src: local(※), url(fonts/NormalBatang-Regular.woff) format("woff")
+    font-family: "SpoqaHanSansNeo-Regular";
+    src: local(※), url(fonts/SpoqaHanSansNeo-Regular.woff) format("woff")
+}
+
+@font-face {
+    font-family: "SpoqaHanSansNeo-Bold";
+    src: local(※), url(fonts/SpoqaHanSansNeo-Bold.woff) format("woff")
 }
 
 body {
-    font-family: NormalBatang-Regular, serif;
+    font-family: 'IBM Plex Mono', monospace;
     width: 100%;
-    margin-top: 16px;
     text-align: center;
 }
 
 .info {
-    padding-bottom: 140px;
+    padding-top: 16px;
+    padding-bottom: 120px;
     position: fixed;
-    width: 98%;
+    width: 100%;
     text-align: center;
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 24%, rgba(255, 255, 255, 1) 59%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 28%, rgba(255, 255, 255, 1) 59%, rgba(255, 255, 255, 0) 100%);
+
 }
 
 a {
     display: block;
     text-decoration: none;
     color: black;
+}
 
+a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
 }
 
 a:hover {
@@ -45,12 +54,18 @@ li {
     font-size: 28px;
 }
 
+.insta {
+    margin-top: 16px;
+    font-size: 28px;
+}
+
 .textlink {
     width: 100%;
     margin: 0 auto;
     font-size: 28px;
+    padding-top: 300px;
 }
 
-p{
+p {
     font-size: 28px;
 }
