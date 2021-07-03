@@ -109,4 +109,8 @@ li {
     font-size: 8px;
 }
 
+#defaultCanvas0 {
+    pointer-events: none;
+}
+
 @media all and (min-width:600px) {}
