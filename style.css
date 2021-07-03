@@ -41,6 +41,7 @@ a {
     text-decoration: none;
     color: black;
     text-align: center;
+
 }
 
 a:hover {
@@ -72,7 +73,7 @@ li {
     font-size: 28px;
     line-height: 2;
 
-
+    width: 50px;
 }
 
 .insta {

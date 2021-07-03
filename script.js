@@ -9,7 +9,9 @@ var positionHistory = [];
 var angleMeter;
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    createCanvas(displayWidth, displayHeight+400);
+
+
     noStroke();
     smooth();
     while (positionHistory.length < nbEllipses * 2) {
