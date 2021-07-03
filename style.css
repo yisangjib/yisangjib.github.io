@@ -61,7 +61,7 @@ a:hover {
 
 ul {
     list-style-type: none;
-    position: fixed;
+    position: absolute;
     display: inline-block;
     margin-top: 200px;
 }
@@ -86,19 +86,20 @@ li {
 }
 
 .footerleft {
+
     width: 40%;
-    margin: 100px 16px 0px 16px;
+    margin: 0px 16px 0px 16px;
     bottom: 16px;
     text-align: left;
-    position: absolute;
+    position: fixed;
     font-size: 8px;
 }
 
 .footerright {
     width: 100%;
-    margin: 100px 0px 0px -16px;
+    margin: 0px 0px 0px -16px;
     bottom: 16px;
     text-align: right;
-    position: absolute;
+    position: fixed;
     font-size: 8px;
 }
