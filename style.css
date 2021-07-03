@@ -41,6 +41,7 @@ a {
     text-align: center;
 
     width: 50px;
+    z-index: 999;
 
 }
 

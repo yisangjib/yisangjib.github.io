@@ -5,7 +5,7 @@ let friction = -0.99;
 let balls = [];
 
 function setup() {
-    createCanvas(windowWidth, windowHeight + 300);
+    createCanvas(displayWidth, displayHeight+500);
     for (let i = 0; i < numBalls; i++) {
         balls[i] = new Ball(
             random(width),
