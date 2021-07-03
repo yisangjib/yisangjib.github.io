@@ -68,6 +68,11 @@ li {
     font-size: 28px;
 }
 
+.insta:hover {
+    color: blue;
+    text-decoration: none;
+}
+
 .textlink {
     width: 100%;
     margin: 0 auto;
