@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: "SpoqaHanSansNeo-Regular";
+    src: local(※), url(../fonts/SpoqaHanSansNeo-Regular.woff) format("woff")
+}
+
+div {}
+
+
+
+@media all and (min-width:300px) {
+
+	div{
+top: 16px;
+left: 16px;
+	}
+
+    #p5_loading {
+        font-family: 'SpoqaHanSansNeo-Regular', sans-serif;
+        font-size: 48px;
+        line-height: 1.6;
+        word-break: keep-all;
+        display: inline;
+        position: relative;
+    }
+}
+
+@media all and (min-width:1024px) {
+
+    #p5_loading {
+        font-family: 'SpoqaHanSansNeo-Regular', sans-serif;
+        font-size: 72px;
+        line-height: 1.6;
+        word-break: keep-all;
+        display: inline;
+        position: relative;
+    }
+}
