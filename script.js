@@ -1,3 +1,5 @@
+
+
 // He likes to take pictures to intuitively view, and his first film is quite amateurish.
 
 let numBalls = 10;
