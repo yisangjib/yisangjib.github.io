@@ -1,7 +1,7 @@
 var t;
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    createCanvas(windowWidth, windowHeight+500);
     background(255);
     t = 0;
 }

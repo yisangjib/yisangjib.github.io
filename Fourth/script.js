@@ -4,7 +4,7 @@ let mesPoints = []; // Syntaxe P5js
 //vo id setup() {
 function setup() {
     //size(600, 600); // syntaxe Pjs
-    createCanvas(windowWidth, windowHeight); // syntaxe P5js
+    createCanvas(windowWidth, windowHeight + 500); // syntaxe P5js
     //mesPoints = new PVector[0]; // syntaxe Pjs inutile
     for (var x = 0; x < width; x += 30) {
         for (var y = 0; y < height; y += 30) {

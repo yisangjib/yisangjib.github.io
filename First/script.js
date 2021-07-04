@@ -7,7 +7,7 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    createCanvas(windowWidth, windowHeight+500);
   background(10);
 
     let numberX = round(windowWidth/gridSize);

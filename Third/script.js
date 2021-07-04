@@ -1,7 +1,7 @@
 function setup() {
     sys = new LCurveSystem();
     sys.init();
-    createCanvas(windowWidth + 10, windowHeight + 10);
+    createCanvas(windowWidth + 50, windowHeight + 500);
     smooth();
     sys.draw();
 }

@@ -3,7 +3,7 @@ let yStep = 10;
 let arcSize = 400;
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    createCanvas(windowWidth, windowHeight + 500);
     colorMode(HSB, 255);
     smooth(16);
     mouseX = width / 10;
@@ -26,7 +26,7 @@ function draw() {
         for (let x = 0; x < width + arcSize; x += arcSize) {
             stroke(y / 3 % 255, 255, 255);
             arc(x, y, arcSize, arcSize / 3, y, PI);
-            arc(x + arcSize/2, y, arcSize / 2, arcSize / 2, PI, TWO_PI);
+            arc(x + arcSize / 2, y, arcSize / 2, arcSize / 2, PI, TWO_PI);
         }
     }
 }
