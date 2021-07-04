@@ -5,25 +5,45 @@
 }
 
 @font-face {
-    font-family: "SpoqaHanSansNeo-Regular";
-    src: local(※), url(../fonts/SpoqaHanSansNeo-Regular.woff) format("woff")
+    font-family: "NormalBatang-Regular";
+    src: url(../fonts/NormalBatang-Regular.eot);
+    src: local(※), url(fonts/NormalBatang-Regular.woff) format("woff")
 }
 
-div {}
+body {
+    font-family: 'NormalBatang-Regular', sans-serif;
+}
+
+.ocunningluv {
+    position: fixed;
+    text-align: left;
+    margin-top: 32px;
+    margin-left: 32px;
+    font-size: 32px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.ocunningluv:hover {
+    color: blue;
+
+}
 
 
 
 @media all and (min-width:300px) {
 
-	div{
-top: 16px;
-left: 16px;
-	}
+    div {
+        top: 16px;
+        left: 16px;
+    }
 
     #p5_loading {
-        font-family: 'SpoqaHanSansNeo-Regular', sans-serif;
         font-size: 48px;
-        line-height: 1.6;
+        line-height: 1.2;
         word-break: keep-all;
         display: inline;
         position: relative;
@@ -35,7 +55,7 @@ left: 16px;
     #p5_loading {
         font-family: 'SpoqaHanSansNeo-Regular', sans-serif;
         font-size: 72px;
-        line-height: 1.6;
+        line-height: 1.2;
         word-break: keep-all;
         display: inline;
         position: relative;
