@@ -1,3 +1,5 @@
+// He likes to take pictures to intuitively view, and his first film is quite amateurish.
+
 let numBalls = 10;
 let spring = 0.1;
 let gravity = 0.2;
@@ -5,7 +7,7 @@ let friction = -0.99;
 let balls = [];
 
 function setup() {
-    createCanvas(displayWidth, displayHeight+500);
+    createCanvas(windowWidth, windowHeight+500);
     for (let i = 0; i < numBalls; i++) {
         balls[i] = new Ball(
             random(width),
