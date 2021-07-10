@@ -128,6 +128,7 @@ li {
 #defaultCanvas0 {
     pointer-events: none;
     cursor: none;
+    z-index: 1;
 }
 
 @media all and (min-width:600px) {}
