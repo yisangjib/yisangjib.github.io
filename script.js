@@ -2,7 +2,7 @@
 
 // He likes to take pictures to intuitively view, and his first film is quite amateurish.
 
-let numBalls = 10;
+let numBalls = 12;
 let spring = 0.1;
 let gravity = 0.2;
 let friction = -0.99;
@@ -14,7 +14,7 @@ function setup() {
         balls[i] = new Ball(
             random(width),
             random(height),
-            random(120, 70),
+            random(150, 90),
             i,
             balls
         );
