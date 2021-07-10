@@ -40,7 +40,7 @@ a {
     text-align: center;
 
     width: 50px;
-    z-index: 999;
+
 
 }
 
@@ -54,6 +54,7 @@ a:hover {
     width: 100%;
     background-color: white;
     opacity: .5;
+    z-index: 999;
 }
 
 ul {
@@ -68,6 +69,8 @@ ul {
     -webkit-user-select: none;
     -khtml-user-select: none;
     user-select: none;
+
+    z-index: 999;
 
 }
 
