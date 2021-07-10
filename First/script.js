@@ -1,5 +1,5 @@
 let img;
-let gridSize = 50;
+let gridSize = 75;
 grids = [];
 
 function preload() {
