@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.js"></script>
     <script src="jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).bind("mobileinit", function() {
+        $.mobile.ajaxLinksEnabled = false;
+        $.mobile.ajaxFormsEnabled = false;
+        $.mobile.ajaxEnabled = false;
+    });
+    </script>
     <script src="script.js"></script>
 </head>
 
@@ -19,21 +26,15 @@
     </div>
     <p class="listtype">
         <ul>
-<!--             <li><a href="https://ocunningluv.github.io/First/index.html" target="_blank">1</a></li>
+            <li><a href="https://ocunningluv.github.io/First/index.html" target="_blank">1</a></li>
             <li><a href="https://colonslashslash.neocities.org/" target="_blank">2</a></li>
             <li><a href="https://ocunningluv.github.io/Third/index.html" target="_blank">3</a></li>
             <li><a href="https://ocunningluv.github.io/Fourth/index.html" target="_blank">4</a></li>
             <li><a href="https://ocunningluv.github.io/Fifth/index.html" target="_blank">5</a></li>
             <li><a href="https://ocunningluv.github.io/Sixth/index.html" target="_blank">6</a></li>
-            <li><a href="https://ocunningluv.github.io/Seventh/index.html" target="_blank">7</a></li> -->
+            <li><a href="https://ocunningluv.github.io/Seventh/index.html" target="_blank">7</a></li>
 
-            <li><a href="#" onclick="window.open('https://ocunningluv.github.io/First/index.html')">1</a></li>
-            <li><a href="#" onclick="window.open('https://colonslashslash.neocities.org/')">2</a></li>
-            <li><a href="#" onclick="window.open('https://ocunningluv.github.io/Third/index.html')">3</a></li>
-            <li><a href="#" onclick="window.open('https://ocunningluv.github.io/Fourth/index.html')">4</a></li>
-            <li><a href="#" onclick="window.open('https://ocunningluv.github.io/Fifth/index.html')">5</a></li>
-            <li><a href="#" onclick="window.open('https://ocunningluv.github.io/Sixth/index.html')">6</a></li>
-            <li><a href="#" onclick="window.open('https://ocunningluv.github.io/Seventh/index.html')">7</a></li>
+
         </ul>
     </p>
     <p class="footerleft">Copyright 2021. <br>Park jeong gyeon</p>
