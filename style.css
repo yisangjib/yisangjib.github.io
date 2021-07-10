@@ -29,7 +29,7 @@ body {
     position: fixed;
     width: 100%;
     background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 28%, rgba(255, 255, 255, 1) 59%, rgba(255, 255, 255, 0) 100%);
-
+    z-index: 2;
 }
 
 a {
@@ -102,6 +102,7 @@ li {
     text-align: left;
     position: fixed;
     font-size: 8px;
+    z-index: 2;
 
     -ms-user-select: none;
     -moz-user-select: -moz-none;
@@ -117,6 +118,7 @@ li {
     text-align: right;
     position: fixed;
     font-size: 8px;
+    z-index: 2;
 
     -ms-user-select: none;
     -moz-user-select: -moz-none;
@@ -126,6 +128,7 @@ li {
 }
 
 #defaultCanvas0 {
+    position: absolute;
     pointer-events: none;
     cursor: none;
     z-index: 1;
