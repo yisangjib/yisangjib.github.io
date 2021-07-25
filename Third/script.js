@@ -1,7 +1,7 @@
 function setup() {
     sys = new LCurveSystem();
     sys.init();
-    createCanvas(windowWidth + 50, windowHeight + 500);
+    createCanvas(windowWidth + 50, windowHeight + 300);
     smooth();
     sys.draw();
 }
@@ -9,17 +9,16 @@ function setup() {
 function draw() {
 }
 
-
 function LCurveSystem() {
     this.weight = 2;
-    this.detail = 0.01;
+    this.detail = 0.03;
     this.num = 1000;
     this.curves = [];
 
     this.init = function() {
         var pos = 0;
         for (var i = 0; i < this.num; i++) {
-            this.curves.push(new LCurve(pos, this.detail, color(random(255), random(255), random(255))));
+            this.curves.push(new LCurve(pos, this.detail, color(random(50), random(255), random(255))));
             pos = pos + this.weight;
         }
     }
