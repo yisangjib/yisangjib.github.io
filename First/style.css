@@ -53,7 +53,7 @@ a {
     }
 
     #p5_loading {
-        font-size: 48px;
+        font-size: 500px;
         line-height: 1.2;
         word-break: keep-all;
         display: inline;
@@ -65,7 +65,7 @@ a {
 
     #p5_loading {
         font-family: 'SpoqaHanSansNeo-Regular', sans-serif;
-        font-size: 72px;
+        font-size: 700px;
         line-height: 1.2;
         word-break: keep-all;
         display: inline;
