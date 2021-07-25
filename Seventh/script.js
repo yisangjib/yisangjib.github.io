@@ -8,7 +8,7 @@ function setup() {
 
 function draw() {
     // fade the background by giving it a low opacity
-    background(0, 0);
+    background(5, 5);
 
     var x = width * noise(t);
     var y = height * noise(t + 5);
@@ -17,8 +17,8 @@ function draw() {
     var b = 255 * noise(t + 20);
 
     noStroke();
-    fill(r, g, b);
-    ellipse(x, y, 100, 100);
+    fill(r+50, g+50, b+50);
+    ellipse(x, y, 150, 150);
 
     t = t + 0.01;
 }
