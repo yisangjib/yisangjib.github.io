@@ -3,7 +3,7 @@ let gridSize = 75;
 grids = [];
 
 function preload() {
-  img = loadImage('https://source.unsplash.com/'+ windowWidth + 'x' + windowHeight + '/?cloud');
+  img = loadImage('https://source.unsplash.com/'+windowWidth+'x'+windowHeight+'/?cloud,clouding');
 }
 
 function setup() {
