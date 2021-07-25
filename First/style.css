@@ -32,3 +32,20 @@ a {
 
 }
 
+
+@media all and (min-width:300px) {
+
+#p5_loading{
+    font-size: 300px;
+    text-align: center;
+}
+
+}
+
+@media all and (min-width:1024px) {
+
+#p5_loading{
+    font-size: 500px;
+}
+
+}
