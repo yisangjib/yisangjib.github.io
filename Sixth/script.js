@@ -1,7 +1,7 @@
 const nbEllipses = 10;
-const smallestDiameter = 100;
-const diameterIncrement = 50;
-const controlPointOffset = 20;
+const smallestDiameter = 300;
+const diameterIncrement = 40;
+const controlPointOffset = 30;
 
 var x = 0,
     y = 0;
