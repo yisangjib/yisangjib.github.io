@@ -1,6 +1,6 @@
 const nbEllipses = 10;
 const smallestDiameter = 100;
-const diameterIncrement = 30;
+const diameterIncrement = 50;
 const controlPointOffset = 20;
 
 var x = 0,
@@ -9,7 +9,7 @@ var positionHistory = [];
 var angleMeter;
 
 function setup() {
-    createCanvas(windowWidth, windowHeight + 500);
+    createCanvas(windowWidth, windowHeight + 300);
     noStroke();
     smooth();
     while (positionHistory.length < nbEllipses * 2) {
@@ -30,17 +30,17 @@ function draw() {
 }
 
 function drawEllipses() {
-    background(255);
+    background(0);
     for (var i = 0; i < nbEllipses; i++) {
         let positionIndex = 2 * (nbEllipses - 1 - i);
         let position = positionHistory[positionIndex];
         let majorAxis = smallestDiameter + diameterIncrement * (nbEllipses - 1 - i);
-        drawEllipse(position, majorAxis, i % 2 == 0 ? 255 : 0);
+        drawEllipse(position, majorAxis, i % 6 == 3 ? 255 : 50);
     }
 }
 
 function drawEllipse(x_y_angle, majorAxis, fillColor) {
-    fill(fillColor);
+    fill(fillColor, 255, 0);
     push();
     translate(x_y_angle[0], x_y_angle[1]);
     rotate(x_y_angle[2]);
