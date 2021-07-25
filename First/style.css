@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -14,22 +14,12 @@ body {
     font-family: 'NormalBatang-Regular', sans-serif;
 }
 
-button {
-    background-color: none;
-    background-color: transparent !important;
-    background-image: none !important;
-    border-color: transparent;
-
-}
-
 .ocunningluv {
     position: fixed;
     text-align: left;
     margin-top: 12px;
-    margin-left: 20px;
+    margin-left: 24px;
     font-size: 72px;
-
-    z-index: 999;
 }
 
 a {
@@ -42,33 +32,3 @@ a {
 
 }
 
-
-
-
-@media all and (min-width:300px) {
-
-    div {
-        top: 16px;
-        left: 16px;
-    }
-
-    #p5_loading {
-        font-size: 500px;
-        line-height: 1.2;
-        word-break: keep-all;
-        display: inline;
-        position: relative;
-    }
-}
-
-@media all and (min-width:1024px) {
-
-    #p5_loading {
-        font-family: 'SpoqaHanSansNeo-Regular', sans-serif;
-        font-size: 700px;
-        line-height: 1.2;
-        word-break: keep-all;
-        display: inline;
-        position: relative;
-    }
-}
