@@ -12,14 +12,14 @@ function setup() {
 }
 
 function draw() {
-	background(0);
+	background(255);
 	orbitControl();
 	//texture
 	let fc = (frameCount % CYCLE)/CYCLE;
 	let step = (tex.width)/20;
 	//tex.clear();
-	tex.background(0,10);
-	tex.stroke(255);
+	tex.background(255,5);
+	tex.stroke(0);
 	tex.strokeWeight(step/10);
 	for(let x = step*(- 3) ; x < tex.width + step*3; x+=step){
 		tex.beginShape();
@@ -29,7 +29,7 @@ function draw() {
 		}
 		tex.endShape();
 	}
-	rotateY(0.8);
+	rotateY(0.1);
 	rotateX(1);
 	sphere(min(width,height)*0.9,100,100);
 }

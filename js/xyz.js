@@ -216,7 +216,7 @@ function start() {
         e.preventDefault();
     };
 
-    canvas.onmousemove = function (e) {
+    canvas.onmouseup = function (e) {
         mouse.down = false;
         e.preventDefault();
     };

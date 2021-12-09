@@ -184,7 +184,7 @@ function draw() {
   pop(); //translate(centerX, centerY);
 }
 
-function mouseMoved() {
+function mouseClicked() {
   Ω = (Ω + 1) % 200;
   initGrid();
   draw();
