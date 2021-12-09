@@ -1,0 +1,379 @@
+::-moz-selection {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.99);
+}
+
+::selection {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.99);
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  pointer-events: visible;
+
+  padding: 0;
+  margin: 0;
+
+  -webkit-user-drag: none;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+  -webkit-user-drag: none;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+td:not([align]),
+th:not([align]) {
+  text-align: inherit;
+}
+
+html {
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  overflow: hidden;
+  min-width: 100%;
+  background-color: rgba(200, 200, 200, 1);
+}
+
+@media screen and (min-width: 512px) {
+  html {
+    font-size: 3.125vw;
+  }
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: Iowan Old Style, Apple Garamond, Baskerville,
+    Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+@font-face {
+  font-family: "MonumentExtended-Regular";
+  src: url(./fonts/MonumentExtended-Regular.otf);
+  src: local(※), url(./fonts/MonumentExtended-Regular.woff) format("woff");
+}
+
+@media screen and (min-width: 512px) {
+  body {
+    font-weight: 600;
+  }
+}
+
+code,
+pre {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-family: monospace;
+}
+
+body {
+  font-family: "MonumentExtended-Regular";
+  cursor: grab;
+  width: 100%;
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.7;
+}
+
+/* // desktop */
+
+.desktop {
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+#menubar {
+  width: 100%;
+  height: 2vw;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 1);
+  font-size: 0.25rem;
+
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-auto-rows: minmax(2vw, auto);
+  column-gap: 16px;
+  align-content: start;
+}
+
+#title {
+  font-size: 0.25rem;
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+  color: #fff;
+  transition: color 0.25s;
+
+  cursor: pointer;
+}
+
+#title:hover {
+  color: yellow;
+}
+
+/* weather */
+
+.weather {
+  position: absolute;
+  font-size: 0.5rem;
+  margin: 3vw 0 0 90%;
+  color: rgba(150, 150, 150, 0.7);
+}
+
+.CurrIcon,
+.CurrTemp {
+  display: inline-block;
+  text-align: center;
+}
+
+.City {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+#stats {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+h1 {
+  font-size: 0.3rem;
+  width: 100%;
+
+  text-align: center;
+}
+
+.iframe {
+  margin: 16px;
+  text-align: center;
+}
+
+iframe {
+  width: 84px;
+  border: 1px solid rgba(150, 150, 150, 0.1);
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  vertical-align: middle;
+
+  margin: 0 auto;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  display: none;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: gray;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px gray;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.none {
+  display: none;
+}
+
+#defaultCanvas0 {
+  width: 375px;
+  height: 812px;
+  position: absolute;
+  top: 52.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(150, 150, 150, 0.1);
+}
+
+@media screen and (max-width: 375px) {
+  #defaultCanvas0 {
+    transform: scale(0.75) translate(-67.5%, -67.5%);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#c {
+  display: block;
+  z-index: 3 !important;
+}
+#info {
+  position: absolute;
+  left: 50%;
+  top: 96%;
+  padding: 16px;
+  color: #ccc;
+
+  font-size: 0.25rem;
+
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  width: auto;
+  height: auto;
+}
+
+#top {
+  background: #fff;
+  width: 100%;
+  height: auto;
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+
+@media screen and (max-width: 375px) {
+  #menubar {
+    height: 5vw;
+  }
+
+  #title {
+    font-size: 16px;
+  }
+
+  #info {
+    top: 95%;
+    font-size: 12px;
+  }
+}
