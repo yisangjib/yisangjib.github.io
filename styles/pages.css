@@ -176,10 +176,12 @@ a {
 
 a:active {
   color: yellow;
+  text-decoration: none;
 }
 
 a:hover {
   color: yellow;
+  text-decoration: none;
 }
 
 p {
