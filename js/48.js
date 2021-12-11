@@ -14,7 +14,7 @@ function setup() {
 }
 
 function draw() {
-	background(200);
+	background(255);
 	translate((width / 2) - (height / 2), 0);
 
 	let xpos = constrain(mouseX, 0, width);

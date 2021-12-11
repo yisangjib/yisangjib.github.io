@@ -20,7 +20,7 @@ function setup()
 
 function draw()
 {
-    background(200);
+    background(255);
     for (var i = 0; i < particleArray.length; i++)
     {
         particleArray[i].move();

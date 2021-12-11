@@ -8,7 +8,7 @@ function setup() {
     angleMode(DEGREES);
 }
 function draw() {
-  background(80),
+  background(255),
     lights(),
     ambientLight(5),
     push(),

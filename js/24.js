@@ -7,7 +7,7 @@ function setup(){
 }
 
 function draw(){
-  background(200);
+  background(255);
   noStroke()
   t=frameCount/30;
   nj=int(width/(width/30))

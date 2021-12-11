@@ -10,7 +10,7 @@ function setup() {
 
   reset();
   strokeWeight(1);
-  stroke(255);
+  stroke(0);
 }
 
 function draw() {
@@ -56,7 +56,7 @@ function attract(attractIndex, posX, posY) {
 }
 
 function reset() {
-  background(200);
+  background(255);
 
   for (let i = 0; i < numAttractors; i++) {
     attractors[i] = createVector(

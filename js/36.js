@@ -1,10 +1,10 @@
 let bubbles = [];
-let x = 200;
+let x = 255;
 
 function setup() {
 		createCanvas(windowWidth, windowHeight);
 	background(x);
-	for(let i = 0; i < 3; i++){
+	for(let i = 0; i < 2; i++){
 		let x = random(width);
 		let y = random(height);
 		let s = 200;
@@ -12,9 +12,16 @@ function setup() {
 		let b = new Bubble(x, y, s);
 		bubbles.push(b);
 	}
+
 }
 
+
 function touchEnded() {
+	for(let b of bubbles){
+		b.divide(mouseX,mouseY);
+	}
+}
+function touchMoved() {
 	for(let b of bubbles){
 		b.divide(mouseX,mouseY);
 	}
@@ -39,9 +46,9 @@ class Bubble {
     this.y = y;
 		this.r = r;
 		
-		this.a = 255;
-		this.b = 255;
-		this.c = 255;
+		this.a = 0;
+		this.b = 0;
+		this.c = 0;
   }
 
   move() {

@@ -10,7 +10,7 @@ let middleX = innerWidth / 2;
 let middleY = innerHeight / 2;
 
 function draw() {
-	background(200);
+	background(255);
 	//Draw Sun
 	fill(0);
 	noStroke();

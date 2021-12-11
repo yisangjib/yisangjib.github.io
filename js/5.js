@@ -36,7 +36,7 @@ function Classifier(a, b) {
   }
   
   this.display = function() {
-    strokeWeight(2);
+    strokeWeight(1);
     stroke(0);
     var x1 = -width/2;
     var y1 = this.f(x1);

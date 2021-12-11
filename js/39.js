@@ -10,7 +10,7 @@ function setup() {
 function draw() {
 
 	//background(200, 100, 80);
-	background(200);
+	background(255);
 		noFill();
 		stroke(0, 0, 0);
 		strokeWeight( weight );

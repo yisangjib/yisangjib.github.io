@@ -4,7 +4,7 @@ function setup() {
 }
 
 function draw() {
-	background(200);
+	background(255);
 	// ambientMaterial(250, 20, 20);
 	rotateX(frameCount * 0.05);
 	rotateY(frameCount * 0.05);

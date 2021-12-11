@@ -14,7 +14,7 @@ function setup() {
 }
 
 function draw() {
-	background(200);
+	background(255);
 	if (frameCount - lapse > 2){
     lapse = frameCount;
 	  randX = random(width);

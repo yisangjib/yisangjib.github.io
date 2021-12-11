@@ -9,11 +9,11 @@ function setup() {
 }
 
 function draw() {
-  background(200);
+  background(255);
   angle = cos(frameCount * 0.009);
   strokeWeight(3);
   stroke(0);
-  fill(200);
+  fill(255);
   translate(width / 2, height / 2);
   for (var i = 0; i < 200; i++) {
     rotate(angle);

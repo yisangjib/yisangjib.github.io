@@ -6,7 +6,7 @@ function setup() {
 	let s = min(windowWidth,windowHeight);
 	tex = createGraphics(s*2,s*2);
 	tex.noFill();
-	tex.background(200);
+	tex.background(255);
 	texture(tex);
 	noStroke();
 }

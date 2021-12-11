@@ -8,7 +8,7 @@ var g = 0.1;
 var acceleration =0;
 
 function draw(){
-background(200);
+background(255);
 
 makeball();
 yPos += acceleration;

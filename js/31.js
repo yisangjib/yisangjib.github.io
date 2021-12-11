@@ -8,7 +8,7 @@ function setup() {
 
 function draw() {
 	translate(0,0,-160);
-  background(200);
+  background(255);
   rotateX(frameCount * 0.01);
   rotateY(frameCount * 0.01);
 	
