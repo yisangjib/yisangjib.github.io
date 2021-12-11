@@ -128,9 +128,7 @@ button,
 input,
 select,
 textarea {
-  font-family: Iowan Old Style, Apple Garamond, Baskerville,
-    Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
-    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
 }
 
 @font-face {
@@ -146,7 +144,7 @@ textarea {
 
 @media screen and (min-width: 512px) {
   body {
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 
@@ -185,14 +183,16 @@ a:hover {
 }
 
 p {
-  font-family: "NormalBatang-Regular";
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  letter-spacing: 1.2px;
   position: absolute;
 
   color: black;
-  margin: 24px 0 0 16px;
+  margin: 16px 0 0 16px;
   font-size: 0.5rem;
   z-index: 1;
   transition: color 0.3s;
+  text-align: left;
 }
 
 p.h0 {
@@ -200,49 +200,45 @@ p.h0 {
   top: 50%;
   transform: translate(-50%, -50%);
 
-  text-align: center;
 }
 p.h-left1 {
-  left: 24px;
+  left: 16px;
 
-  text-align: center;
 }
 p.h-left2 {
   left: 48px;
 
-  text-align: center;
 }
 p.h-left-center {
   top: 50%;
-  left: 24px;
+  left: 16px;
   margin: 0;
   transform: translate(0, -50%);
 
   text-align: center;
 }
 p.h-left-white {
-  left: 24px;
+  left: 16px;
   color: white;
-  text-align: center;
   transition: color 0.3;
 }
 
 p.h-bottom {
+
   width: 100%;
   left: 50%;
   top: 90%;
   transform: translate(-50%, -50%);
-  bottom: 24px;
-  margin: 0;
-  text-align: center;
+  
+  bottom: 16px;
+
   z-index: 3;
 }
 p.h-bottom-white {
   color: #fff;
   left: 10rem;
-  bottom: 24px;
+  bottom: 16px;
   margin: 0;
-  text-align: center;
   z-index: 3;
   transition: color 0.3;
 }
@@ -251,7 +247,6 @@ p.h-center {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
   z-index: 3;
 }
 
@@ -259,8 +254,8 @@ footer {
   position: absolute;
   font-size: 0.15rem;
   width: 50%;
-  left: 24px;
-  bottom: 24px;
+  left: 16px;
+  bottom: 16px;
 
   z-index: 1;
 }

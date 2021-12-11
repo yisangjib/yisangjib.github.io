@@ -8,6 +8,8 @@
     />
     <title>XYZ-sketchbook</title>
     <meta name="description" content="" />
+    <meta http-equiv="refresh" content="30;URL='./1.html'" />
+
     <link
       rel="apple-touch-icon"
       sizes="57x57"
@@ -85,30 +87,15 @@
   </head>
 
   <body>
-    <p id="rand_pos">
-      <a href="../index.html">커튼</a>을 걷자 작은
-      <a href="./1.html">점</a>이 움직인다.
+    <p class="h-left1">
+      <a href="./1.html">커튼을 걷자 <a href="./1.html">미세한 점</a>이 움직인다.
     </p>
 
     <footer>strokeWeight(), point()</footer>
     <div id="info"></div>
-    
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/fadeOut.js"></script>
-    <script>
-      window.onload = function () {
-        var bodyWidth = document.body.clientWidth - 500;
-        var bodyHeight = document.body.clientHeight;
-        var randPosX = Math.floor(Math.random() * bodyWidth);
-        var randPosY = Math.floor(Math.random() * bodyHeight);
-
-        $("#rand_pos").css("left", randPosX);
-        $("#rand_pos").css("top", randPosY);
-
-        posLog.innerHTML = posXY;
-      };
-    </script>
     <script src="../js/0.js"></script>
   </body>
 </html>

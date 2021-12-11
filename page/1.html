@@ -100,18 +100,5 @@
     <script src="../js/jquery.min.js"></script>
     <script src="../js/1.js"></script>
     <script src="../js/fadeOut.js"></script>
-    <script>
-      window.onload = function () {
-        var bodyWidth = document.body.clientWidth - 500;
-        var bodyHeight = document.body.clientHeight;
-        var randPosX = Math.floor(Math.random() * bodyWidth);
-        var randPosY = Math.floor(Math.random() * bodyHeight);
-
-        $("#rand_pos").css("left", randPosX);
-        $("#rand_pos").css("top", randPosY);
-
-        posLog.innerHTML = posXY;
-      };
-    </script>
   </body>
 </html>
