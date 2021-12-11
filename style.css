@@ -196,13 +196,8 @@ body {
   align-self: center;
   justify-self: center;
   color: #fff;
-  transition: color 0.25s;
 
   cursor: pointer;
-}
-
-#title:hover {
-  color: yellow;
 }
 
 /* weather */

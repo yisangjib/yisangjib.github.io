@@ -86,56 +86,11 @@
   </head>
 
   <body>
-    <header id="menubar">
-      <div id="title" onclick="location.href='./page/0.html'">
-        XYZ-sketchbook
-      </div>
-    </header>
+    <p class="h-left1">
+      선의 경로에서 아무 점도 찾을 수 없습니다. <br />Dot not found in path.
+    </p>
 
-    <section>
-      <div class="weather">
-        <div class="CurrIcon"></div>
-        <div class="CurrTemp"></div>
-      </div>
 
-      <canvas id="c"></canvas>
 
-      <div id="info">
-        <a id="close" href=""
-          >Open the curtain with the mouse move and drag.</a
-        >
-      </div>
-    </section>
- 
-
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/xyz.js"></script>
-    <script type="text/javascript" language="JavaScript">
-      var mobileKeyWords = new Array(
-        "iPhone",
-        "iPod",
-        "BlackBerry",
-        "Android",
-        "Windows CE",
-        "Windows CE;",
-        "LG",
-        "MOT",
-        "SAMSUNG",
-        "SonyEricsson",
-        "Mobile",
-        "Symbian",
-        "Opera Mobi",
-        "Opera Mini",
-        "IEmobile"
-      );
-
-      for (var word in mobileKeyWords) {
-        if (navigator.userAgent.match(mobileKeyWords[word]) != null) {
-          window.location.href = "m.index.html";
-          break;
-        }
-      }
-    </script>
   </body>
 </html>
