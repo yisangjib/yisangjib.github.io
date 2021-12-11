@@ -1,4 +1,4 @@
-var size = 50; //declaring a global variable
+var size = 75; //declaring a global variable
 var transparency = 1; //how transparent are the circles?
 var spread = 30; //how far away can the spray be? 
 
@@ -9,8 +9,8 @@ function setup() {
 function draw() {
 	//local variables:
 	var r = mouseX/width * 255;
-	var g = mouseX/height * 255;
-	var b = random(25);
+	var g = mouseY/height * 255;
+	var b = random(100);
 	noStroke(); //get rid of border around shape
 	fill(r, g, b, transparency);
 	//for loop: i is the counter variable

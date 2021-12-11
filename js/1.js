@@ -3,7 +3,7 @@ function setup() {
   initializeFields();
 	createCanvas(windowWidth, windowHeight);
 
-  stroke(10, 0, 0);
+  stroke(0, 0, 0);
 }
 
 function draw() {
