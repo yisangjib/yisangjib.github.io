@@ -102,7 +102,7 @@ html {
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
 
-  background-color: rgba(200, 200, 200, 1);
+  
   overflow: hidden;
   min-height: 100%;
 }
@@ -173,12 +173,12 @@ a {
 }
 
 a:active {
-  color: yellow;
+  color: blue;
   text-decoration: none;
 }
 
 a:hover {
-  color: yellow;
+  color: blue;
   text-decoration: none;
 }
 
@@ -202,7 +202,6 @@ p.h0 {
 
 }
 p.h-left1 {
-  left: 16px;
 
 }
 p.h-left2 {
@@ -211,14 +210,12 @@ p.h-left2 {
 }
 p.h-left-center {
   top: 50%;
-  left: 16px;
   margin: 0;
   transform: translate(0, -50%);
 
   text-align: center;
 }
 p.h-left-white {
-  left: 16px;
   color: white;
   transition: color 0.3;
 }

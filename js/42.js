@@ -6,7 +6,6 @@ function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL),
     colorMode(HSB, luv, 100, 100, 1),
     angleMode(DEGREES);
-  // background(0);
 }
 function draw() {
   background(80),

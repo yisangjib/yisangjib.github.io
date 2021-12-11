@@ -167,6 +167,7 @@ body {
 p {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
   margin: 16px;
+  font-size: 0.5rem;
 }
 
 /* // desktop */

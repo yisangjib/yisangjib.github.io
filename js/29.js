@@ -9,7 +9,7 @@ var start = true;
 
 function setup(){
 canvas = createCanvas(windowWidth, windowHeight);
-background(200);
+background(255);
 
 var vertices = [];
 

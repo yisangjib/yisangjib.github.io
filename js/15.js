@@ -5,7 +5,7 @@ let cols;
 let lapse = 0; // mouse timer
 
 function setup() {
-  createCanvas(375, 812);
+  createCanvas(812, 812);
   rectMode(CENTER);
   noStroke();
   cols = createCols(url);

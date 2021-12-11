@@ -9,7 +9,7 @@ function draw() {
 	background(200);
 	var dx=mouseX-width/2;
 	var dy=mouseY-height/2;
-	pointLight(255,255,0,dx,dy,-20);
+	pointLight(0,0,255,dx,dy,-20);
 	angle+=.03
 	noStroke();
 	specularMaterial(255,255,255);
