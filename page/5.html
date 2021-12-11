@@ -87,7 +87,7 @@
   </head>
 
   <body>
-    <p class="h-left-white">
+    <p id="rand_pos" class="white">
       흰색과 검은색, 반대편과 <a href="./6.html">여분</a>이 생겼다.
     </p>
 
@@ -97,7 +97,19 @@
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/fadeOut.js"></script>
+      <script src="../js/fadeOut.js"></script>  <script>
+      window.onload = function(){
+  var bodyWidth = document.body.clientWidth-500;
+  var bodyHeight = document.body.clientHeight;
+  var randPosX = Math.floor((Math.random()*bodyWidth));
+  var randPosY = Math.floor((Math.random()*bodyHeight));
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+};
+    </script>
 
     <script src="../js/5.js"></script>
   </body>

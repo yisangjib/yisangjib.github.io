@@ -88,7 +88,7 @@
 
   <body>
     <p class="h-left-white">
-      커튼을 <a href="../index.html">잔잔하게</a> 다시 내리자.
+      <a href="../index.html">커튼</a>을 잔잔하게 다시 내리자.
     </p>
     <footer>ellipse(), triangle()</footer>
 
@@ -96,7 +96,19 @@
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/fadeOut.js"></script>
+      <script src="../js/fadeOut.js"></script>  <script>
+      window.onload = function(){
+  var bodyWidth = document.body.clientWidth-500;
+  var bodyHeight = document.body.clientHeight;
+  var randPosX = Math.floor((Math.random()*bodyWidth));
+  var randPosY = Math.floor((Math.random()*bodyHeight));
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+};
+    </script>
 
     <script src="../js/50.js"></script>
   </body>

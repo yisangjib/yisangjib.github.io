@@ -87,7 +87,7 @@
   </head>
 
   <body>
-    <p class="h-left1">
+    <p id="rand_pos">
       응집된 형태는 <a href="./38.html">중력</a>을 만든다.
     </p>
     <footer>ellipse(), triangle()</footer>
@@ -96,7 +96,19 @@
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/fadeOut.js"></script>
+      <script src="../js/fadeOut.js"></script>  <script>
+      window.onload = function(){
+  var bodyWidth = document.body.clientWidth-500;
+  var bodyHeight = document.body.clientHeight;
+  var randPosX = Math.floor((Math.random()*bodyWidth));
+  var randPosY = Math.floor((Math.random()*bodyHeight));
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+};
+    </script>
 
     <script src="../js/37.js"></script>
   </body>

@@ -88,7 +88,7 @@
 
   <body>
     <p class="h-left-white">
-      공간이 <a href="./50.html">다시 닫히기 전</a>에,
+      <a href="./50.html">공간</a>이 다시 닫혀 <a href="./a???.html">길을 잃기 전</a>에,
     </p>
     <footer>ellipse(), triangle()</footer>
 
@@ -96,7 +96,19 @@
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/fadeOut.js"></script>
+      <script src="../js/fadeOut.js"></script>  <script>
+      window.onload = function(){
+  var bodyWidth = document.body.clientWidth-500;
+  var bodyHeight = document.body.clientHeight;
+  var randPosX = Math.floor((Math.random()*bodyWidth));
+  var randPosY = Math.floor((Math.random()*bodyHeight));
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+};
+    </script>
 
     <script src="../js/49.js"></script>
   </body>

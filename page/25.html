@@ -87,7 +87,7 @@
   </head>
 
   <body>
-    <p class="h-left-white">
+    <p id="rand_pos" class="white">
       제 3의 축은 <a href="./26.html">가운데</a>로, 흰색에서 검은색으로,
     </p>
     <footer>ellipse(), triangle()</footer>
@@ -96,7 +96,19 @@
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/fadeOut.js"></script>
+      <script src="../js/fadeOut.js"></script>  <script>
+      window.onload = function(){
+  var bodyWidth = document.body.clientWidth-500;
+  var bodyHeight = document.body.clientHeight;
+  var randPosX = Math.floor((Math.random()*bodyWidth));
+  var randPosY = Math.floor((Math.random()*bodyHeight));
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+};
+    </script>
 
     <script src="../js/25.js"></script>
   </body>

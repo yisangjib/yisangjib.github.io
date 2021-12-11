@@ -87,7 +87,7 @@
   </head>
 
   <body>
-    <p class="h-left-center">
+    <p id="rand_pos">
       사각형의 <a href="./19.html">잔상</a>이 일렁거린다.
     </p>
     <footer>ellipse(), triangle()</footer>
@@ -96,7 +96,19 @@
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/fadeOut.js"></script>
+      <script src="../js/fadeOut.js"></script>  <script>
+      window.onload = function(){
+  var bodyWidth = document.body.clientWidth-500;
+  var bodyHeight = document.body.clientHeight;
+  var randPosX = Math.floor((Math.random()*bodyWidth));
+  var randPosY = Math.floor((Math.random()*bodyHeight));
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+};
+    </script>
 
     <script src="../js/18.js"></script>
   </body>

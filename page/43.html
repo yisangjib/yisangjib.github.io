@@ -87,7 +87,7 @@
   </head>
 
   <body>
-    <p class="h-left1">
+    <p id="rand_pos">
       중력은 <a href="./44.html">다른 요소와의 관계</a>로부터 시작한다.
     </p>
     <footer>ellipse(), triangle()</footer>
@@ -96,7 +96,19 @@
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/fadeOut.js"></script>
+      <script src="../js/fadeOut.js"></script>  <script>
+      window.onload = function(){
+  var bodyWidth = document.body.clientWidth-500;
+  var bodyHeight = document.body.clientHeight;
+  var randPosX = Math.floor((Math.random()*bodyWidth));
+  var randPosY = Math.floor((Math.random()*bodyHeight));
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+};
+    </script>
 
     <script src="../js/43.js"></script>
   </body>

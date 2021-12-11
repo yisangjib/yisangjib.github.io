@@ -87,7 +87,7 @@
   </head>
 
   <body>
-    <p class="h-left1">
+    <p id="rand_pos">
       원은 자유롭게 움직일 수 있어 점의 역할을 대신해
       <a href="./10.html">위치값</a>이 된다.
     </p>
@@ -97,7 +97,19 @@
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/fadeOut.js"></script>
+      <script src="../js/fadeOut.js"></script>  <script>
+      window.onload = function(){
+  var bodyWidth = document.body.clientWidth-500;
+  var bodyHeight = document.body.clientHeight;
+  var randPosX = Math.floor((Math.random()*bodyWidth));
+  var randPosY = Math.floor((Math.random()*bodyHeight));
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+};
+    </script>
 
     <script src="../js/8.js"></script>
   </body>

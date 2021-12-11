@@ -88,7 +88,7 @@
 
   <body>
     <p class="h-bottom">
-      점이 겹겹이 쌓인다. 점의 <a href="./3.html">면적</a>은 허상일 뿐이다.
+      점이 겹겹이 쌓인다. 점의 <a href="./3.html">면적</a>은 <a href="./a.html">허상</a>일 뿐이다.
     </p>
 
     <footer>stroke(), line()</footer>
@@ -97,7 +97,19 @@
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/fadeOut.js"></script>
+      <script src="../js/fadeOut.js"></script>  <script>
+      window.onload = function(){
+  var bodyWidth = document.body.clientWidth-500;
+  var bodyHeight = document.body.clientHeight;
+  var randPosX = Math.floor((Math.random()*bodyWidth));
+  var randPosY = Math.floor((Math.random()*bodyHeight));
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+};
+    </script>
 
     <script src="../js/2.js"></script>
   </body>

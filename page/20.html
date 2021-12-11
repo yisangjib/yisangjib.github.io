@@ -87,8 +87,8 @@
   </head>
 
   <body>
-    <p class="h-left-white">
-      그 외에 점과 선이 <a href="./21.html">암시하는 것</a>은 물결 사이의
+    <p id="rand_pos" class="white">
+      그 외에 점과 선이 암시하는 것은 <a href="./21.html">물결</a> 사이의
       공간,
     </p>
     <footer>ellipse(), triangle()</footer>
@@ -97,7 +97,19 @@
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/fadeOut.js"></script>
+      <script src="../js/fadeOut.js"></script>  <script>
+      window.onload = function(){
+  var bodyWidth = document.body.clientWidth-500;
+  var bodyHeight = document.body.clientHeight;
+  var randPosX = Math.floor((Math.random()*bodyWidth));
+  var randPosY = Math.floor((Math.random()*bodyHeight));
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+};
+    </script>
 
     <script src="../js/20.js"></script>
   </body>

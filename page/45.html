@@ -87,14 +87,26 @@
   </head>
 
   <body>
-    <p class="h-left1">방향이 <a href="./46.html">어긋나기도</a> 한다.</p>
+    <p id="rand_pos">방향이 <a href="./46.html">어긋나기도</a> 한다.</p>
     <footer>ellipse(), triangle()</footer>
 
     <div id="info"></div>
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/fadeOut.js"></script>
+      <script src="../js/fadeOut.js"></script>  <script>
+      window.onload = function(){
+  var bodyWidth = document.body.clientWidth-500;
+  var bodyHeight = document.body.clientHeight;
+  var randPosX = Math.floor((Math.random()*bodyWidth));
+  var randPosY = Math.floor((Math.random()*bodyHeight));
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+};
+    </script>
 
     <script src="../js/45.js"></script>
   </body>

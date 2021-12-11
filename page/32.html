@@ -88,7 +88,7 @@
 
   <body>
     <p class="h-bottom-white">
-      공간 세계는 선으로 <a href="./33.html">연결</a>되어 있다.
+      공간 세계는 <a href="./2.html">선</a>으로 <a href="./33.html">연결</a>되어 있다.
     </p>
     <footer>ellipse(), triangle()</footer>
 
@@ -96,7 +96,19 @@
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/fadeOut.js"></script>
+      <script src="../js/fadeOut.js"></script>  <script>
+      window.onload = function(){
+  var bodyWidth = document.body.clientWidth-500;
+  var bodyHeight = document.body.clientHeight;
+  var randPosX = Math.floor((Math.random()*bodyWidth));
+  var randPosY = Math.floor((Math.random()*bodyHeight));
+  
+  $('#rand_pos').css('left', randPosX);
+  $('#rand_pos').css('top', randPosY);
+  
+  posLog.innerHTML = posXY
+};
+    </script>
 
     <script src="../js/32.js"></script>
   </body>
