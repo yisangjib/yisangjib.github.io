@@ -1,7 +1,7 @@
 var opacity = 2; 
 function setup(){
   createCanvas(windowWidth, windowHeight);
-	background(200);
+	background(255);
 }
 function draw() {
   rectangle();

@@ -7,7 +7,7 @@ function setup() {
 }
 
 function draw() {
-	background(200)
+	background(255)
 	var ang = map(mouseX,0,width,0,-PI*2,true)
 	var ang2 = map(mouseY,0,height,0,-PI*2,true)
 	x=lerp(x,mouseX,0.01)

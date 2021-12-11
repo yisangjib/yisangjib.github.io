@@ -58,7 +58,7 @@ function draw() {
     yoff += 0.1;
   }
 
-  background(200);
+  background(255);
   translate(0, 50);
   rotateZ(180);
   rotateY(-180);

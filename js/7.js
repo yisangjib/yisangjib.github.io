@@ -10,7 +10,7 @@ function setup() {
   rectMode(CENTER);
   strokeWeight(1);
   frameRate(3);
-  fill(200);
+  fill(255);
   noLoop();
 }
 

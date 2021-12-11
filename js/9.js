@@ -7,7 +7,7 @@ function setup() {
 }
 
 function draw() {
-  background(200);
+  background(255);
   make_triangle(millis() / 30);
 }
 

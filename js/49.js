@@ -3,10 +3,10 @@ var angle=0;
  
 function setup() {
 	createCanvas(windowWidth, windowHeight, WEBGL);
-	background(200);
+	background(255);
 }
 function draw() {
-	background(200);
+	background(255);
 	var dx=mouseX-width/2;
 	var dy=mouseY-height/2;
 	pointLight(0,0,255,dx,dy,-20);
