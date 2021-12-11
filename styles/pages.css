@@ -293,8 +293,7 @@ li:nth-child(10n-1) {
 }
 
 #rand_pos {
-  position: absolute;
-  padding: 100px;
+  padding: 300px;
   word-break: keep-all;
 }
 
