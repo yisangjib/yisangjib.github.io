@@ -174,11 +174,11 @@ a {
   transition: color 0.25s;
 }
 
-a:active{
+a:active {
   color: yellow;
 }
 
-a:hover{
+a:hover {
   color: yellow;
 }
 
@@ -245,7 +245,6 @@ p.h-bottom-white {
   transition: color 0.3;
 }
 
-
 p.h-center {
   top: 50%;
   left: 50%;
@@ -292,11 +291,12 @@ li:nth-child(10n-1) {
 }
 
 #rand_pos {
-padding: 100px;
-word-break: keep-all;
+  position: absolute;
+  padding: 100px;
+  word-break: keep-all;
 }
 
-.white{
+.white {
   color: #fff;
 }
 
@@ -652,10 +652,10 @@ input:checked + .slider:before {
   display: none;
 }
 
-#c { 
-  position: absolute; 
-  width: 100%; 
-  height: 100%; 
+#c {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -677,7 +677,7 @@ input:checked + .slider:before {
     font-size: 1rem;
   }
 
-  footer{
+  footer {
     font-size: 0.5rem;
   }
 }
