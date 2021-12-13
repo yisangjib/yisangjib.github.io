@@ -166,24 +166,23 @@ body {
 
 a {
   font-size: 0.5rem;
-  color: #000;
-  text-decoration: underline;
-  text-underline-position: under;
-  transition: color 0.25s;
+  color: rgba(200, 200, 200, 1);
+  text-decoration: none;
+  transition: 0.25s;
 }
 
 a:active {
-  color: blue;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 a:hover {
-  color: blue;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 p {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  font-family: "NormalBatang-Regular";
   letter-spacing: 1.2px;
   position: absolute;
 
@@ -309,8 +308,8 @@ li:nth-child(10n-1) {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 30px;
-  background-color: black;
-  color: #fff;
+  background-color: rgba(200, 200, 200, 1);
+  color: black;
   text-align: center;
   border-radius: 3px;
   padding: 4px;
@@ -328,10 +327,10 @@ li:nth-child(10n-1) {
   text-align: left;
   word-break: keep-all;
   width: 300px;
-  top: 150%;
-  left: 50%;
+  top: 125%;
+  left: 40%;
   margin-left: -25px;
-  padding: 16px;
+  padding: 12px;
 }
 
 
