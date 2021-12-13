@@ -13,7 +13,6 @@ setTimeout(function () {
   function resizeCanvas() {
     defaultCanvas0.width = window.innerWidth;
     defaultCanvas0.height = window.innerHeight;
-                
     drawStuff(); 
   }
   

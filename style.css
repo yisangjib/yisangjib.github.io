@@ -109,7 +109,6 @@ html {
 
   overflow: hidden;
   min-width: 100%;
-  background-color: rgba(200, 200, 200, 1);
 }
 
 @media screen and (min-width: 512px) {
@@ -169,6 +168,33 @@ p {
   margin: 16px;
   font-size: 0.5rem;
 }
+
+ul{
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  margin: 16px;
+  display: grid;
+  grid-template-columns: repeat(10, 3fr);
+  grid-auto-columns: minmax(100px, auto);
+  grid-column-gap: 16px;
+
+}
+
+li{
+  font-size: 0.5rem;
+
+
+  justify-items: center;
+  align-content: center;
+}
+
+
+li:nth-child(1){
+  font-size: 0.5rem;
+  grid-column: 6;
+
+}
+
+
 
 /* // desktop */
 
