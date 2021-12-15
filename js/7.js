@@ -8,7 +8,7 @@ let differenceTaille = 12;
 function setup() {
   createCanvas(windowWidth, windowHeight/2);
   rectMode(CENTER);
-  strokeWeight(1);
+  strokeWeight(0.1);
   frameRate(3);
   fill(255);
   noLoop();

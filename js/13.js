@@ -62,9 +62,9 @@ function setEllipse(points, radius, controlRadius) {
 }
 
 function drawEllipse() {
-  strokeWeight(3);
+  strokeWeight(1);
   stroke(color(200));
-  fill(color(255));
+  fill(color(150));
   for (var i = 0; i < pts; i++) {
     if (i == pts - 1)
       bezier(px[i], py[i], cx[i], cy[i], cx2[i], cy2[i], px[0], py[0]);
@@ -88,7 +88,7 @@ function drawEllipse() {
 }
 
 function touchEnded() {
-  pts += 1;
+  pts += 3;
 }
 
 function initializeFields() {

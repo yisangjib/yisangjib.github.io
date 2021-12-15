@@ -8,6 +8,7 @@ class Ball{
 		this.p.add(this.v)
 	}
 	draw(){
+		fill(200);
 		rect(this.p.x,this.p.y,20,20)
     noStroke()
 	}

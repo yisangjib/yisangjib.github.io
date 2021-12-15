@@ -182,7 +182,7 @@ a:hover {
 }
 
 p {
-  font-family: "NormalBatang-Regular";
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
   letter-spacing: 1.2px;
   position: absolute;
 
@@ -213,6 +213,7 @@ p.h-left2 {
 }
 p.h-left-center {
   top: 50%;
+  left: 16px;
   margin: 0;
   transform: translate(0, -50%);
 
@@ -323,7 +324,7 @@ li:nth-child(10n-1) {
 }
 
 .tooltip .tooltip-bottom {
-  font-size: 0.3rem;
+  font-size: 0.4rem;
   text-align: left;
   word-break: keep-all;
   width: 300px;
