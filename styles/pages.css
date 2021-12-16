@@ -326,7 +326,7 @@ li:nth-child(10n-1) {
 }
 
 .tooltip .tooltip-bottom {
-  font-size: 0.35rem;
+  font-size: 0.5rem;
   text-align: left;
   word-break: keep-all;
   width: 300px;
