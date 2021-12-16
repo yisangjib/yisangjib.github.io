@@ -86,17 +86,24 @@
     <link rel="stylesheet" href="../styles/pages.css" />
   </head>
 
-  <body>
-<p class="h-left1">
+  <body id="body">
+
+
+
+<p class="h-left-white">
       <a class="tooltip" href="./32.html">뒤쪽<span class="tooltiptext tooltip-bottom"
         >좌표 평면에서 뒤쪽이 생기면 좌표 공간이 된다. 
         </span
-      ></a>까지 보려면 <a href="./2.html">선</a>이 필요하다.
+      ></a>까지 보려면 <a href="./2.html">점</a>이 필요하다.
     </p>
-    <footer>ellipse(), triangle()</footer>
+    <footer class="ft-white">zoomin, zoomout</footer>
 
     <div id="info"></div>
+    <div id="WebGL-output"></div>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/90/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.90.0/examples/js/controls/OrbitControls.js"></script>
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
       <script src="../js/fadeOut.js"></script>   

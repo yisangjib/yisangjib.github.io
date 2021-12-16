@@ -8,7 +8,7 @@
     />
     <title>1MB-sketchbook</title>
     <meta name="description" content="" />
-    <meta http-equiv="refresh" content="15;URL='./page/0.html'" />
+    
     <link
       rel="apple-touch-icon"
       sizes="57x57"
@@ -108,9 +108,41 @@
     </section>
  
 
+    <div id="stats">
+      <h1>Select an area</h1>
+      <a id="map-link" target="_blank">Map</a>    
+      <form>
+        <select name="geo">
+          <option value="everest" selected>0</option>
+          <option value="athabasca">1</option>
+          <option value="coldeliseran">2</option>
+          <option value="franzjosefglacier">3</option>
+          <option value="grouse">4</option>
+          <option value="jotunheimen">5</option>
+          <option value="k2">6</option>
+          <option value="kangchenjunga">7</option>
+          <option value="everest-valley">8</option>
+          <option value="lakecomo">9</option>
+          <option value="petra">10</option>
+          <option value="sanfrancisco">11</option>
+          <option value="valparaiso">12</option>
+        </select>
+      </form> 
+      <span id="loading"></span>
+    </div>
+    <div id="viewport"></div>
+
+
+
+
+
+ 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+    <script src='https://s3.ca-central-1.amazonaws.com/kevinnewcombe/three-terrain/_js/OrbitControls.js'></script><script  src="./script.js"></script>
+    <script src="./js/p5.min.js"></script>
     <script src="./js/jquery.min.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/xyz.js"></script>
+    <script src="./js/curtain.js"></script>
     <script type="text/javascript" language="JavaScript">
       var mobileKeyWords = new Array(
         "iPhone",

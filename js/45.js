@@ -1,237 +1,85 @@
-var colors   =  ["#000","#fff","#808080", "#c0c0c0"];
+var width = window.innerWidth;
+var height = window.innerHeight;
 
-// set weights for each color..you can set  your own weights 
+var renderer = new THREE.WebGLRenderer({ antialias: true });
+var scene = new THREE.Scene();
+var camera = new THREE.PerspectiveCamera(75, width / height, 1, 10000);
 
-var weights = [2, 2, 2, 2, 2,2];
-var nAgents = 1000;
-let agent = [];
+renderer.setClearColor(new THREE.Color(0xffffff), 1);
 
-var direction = -1;
+renderer.setSize(width, height);
+document.body.appendChild(renderer.domElement);
+/*document.body.addEventListener('resize', resize);*/
 
-var border =  -200;
+scene.add(camera);
 
+camera.position.z = - 100;
+camera.lookAt(new THREE.Vector3());
 
-function setup() {
-  	createCanvas(windowWidth, windowHeight);
-	colorMode(HSB, 360, 100, 100,100);
-	rectMode(CENTER);
-  strokeCap(SQUARE);
+var l = 100;
+var phi = Math.floor(Math.random() * 5) + 2;
+var radius = 50;
+var vertices = [];
 
-  background(0,0,100);
+for (var i = 0; i < l; i++) {
 
-  for(let i=0;i < nAgents;i++)
-  {
-    agent.push(new Agent());
-  }
-	
-	smooth(4);
-	//pixelDensity(2);
-}
+  var pct = i / (l - 1);
+  var theta = Math.PI * 2 * pct * phi;
 
-function draw() {
-	
-	
-	if (frameCount > 1000)
-	{
-		noLoop();
-	}
-	
-	// push();
-	
-	// translate(width/2,height/2 - 1000);
-	
-	// rotate(PI/4.0);
-	
-	// scale(1.9);
-	
-  for(let i=0;i < agent.length;i++)
-  {
-    agent[i].update();
-	}
-	
-	// pop();
-	
-	noFill();
-	stroke(100);
-	strokeWeight(3);
-	rect(width/2,height/2,width,height);
-	
+  var taper = Math.sin(pct) * radius / 4;
+
+  var x = taper * Math.cos(theta);
+  var y = radius * EasingQuadraticIn(seat(pct)) * 2 - radius;
+  var z = taper * Math.sin(theta);
+
+  vertices.push(new THREE.Vector3(x, y, z));
 
 }
 
-// select random colors with weights from palette 
+var light = new THREE.PointLight(0xffffff, 2, 200);
 
-function myRandom(colors,weights)
-{ 
-    let tt = 0;
-    let sum = 0;
- 
-    for(let i=0;i < colors.length; i++)
-    {
-      sum += weights[i];
-    }
- 
-    let rr = random(0,sum);
- 
-    for(let j=0;j < weights.length;j++)
-    {
- 
-      if (weights[j] >= rr)
-      {
-        return colors[j];
-      }
-        rr -= weights[j];
-    }
- 
-    return tt;
- }
+var geometry = new THREE.TubeGeometry(new THREE.SplineCurve3(vertices), 250, 4, 32, false);
+var material = new THREE.MeshPhongMaterial({
+  color: 'rgb(255, 150, 255)',
+  side: THREE.DoubleSide,
+  shininess: 2500,
+  emissive: new THREE.Color('rgb(0, 0, 255)'),
+  metal: false
+});
 
-// paintining agent 
+var mesh = new THREE.Mesh(geometry, material);
+mesh.scale.multiplyScalar(2);
 
+scene.add(mesh);
+scene.add(camera);
+camera.add(light);
 
-class Agent {
-  constructor()
-  {this.p     = createVector(random(border,width - border),random(border,height-border));
-  
-    this.pOld  = createVector(this.p.x,this.p.y);
-    
-    this.step  = 1;
-	 
-		if(random(0,1) > 0.2)
-		{
-			this.direction = -1;
-			this.scale = 10;
-		}else
-		{
-			this.direction = 1;
-		  this.scale = 40;
-		}
+window.addEventListener('resize', resize, false);
 
-	  //this.scale = floor(random(10,60));
-	 
-	  this.color = generateColor();
-	 
-	  if (random(0,1) > 0.50)
-	  {
-		  this.myFill = true;
-	  }else
-	  {
-		  this.myFill = false;
-	  }
-	 
-			
-		this.strokeWidth = 1;
-	 
-    this.isOutside = false; 
-  }
-  
-	setDirection(myDirection){
-		this.direction *= -1;
-	}
-	
-	setScale(myScale) {
-		this.scale = myScale;
-	}
-	
-	setColor(myColor) {
-	  this.color = generateColor();
-	}
-	
-	
-  update() {
-		
-		//this.scaleX = floor(map(this.p.x,0,height,3,13));
-		//this.scaleY = floor(map(this.p.y,0,height,33,43));
-		
-    this.p.x += this.direction*vector_field(this.p.x,this.p.y,this.scale).x*this.step;
-    this.p.y += this.direction*vector_field(this.p.x,this.p.y,this.scale).y*this.step;
-    
-    strokeWeight(this.strokeWidth);
-    stroke(this.color);
-		
-		let x = (this.pOld.x + this.p.x)/2.0;
-		let y = (this.pOld.y + this.p.y)/2.0;
-		
-		line(this.pOld.x,this.pOld.y,this.p.x,this.p.y);
-    
-    this.pOld.set(this.p);
-		
-		curve(this.pOld.x,this.pOld.y,this.pOld.x +  randomGaussian()*10,this.pOld.y + randomGaussian()*10,this.p.x,this.p.y);
-		
-		line(this.pOld.x,this.pOld.y,this.p.x,this.p.y);
-    
-		if (this.myFill)
-		{
-		  this.pOld.set(this.p);
-		}
-		
-		//line(this.pOld.x,this.pOld.y,this.p.x,this.p.y);
-		
-	  //this.p.set(this.pOld);
-		
-		//point(this.p.x,this.p.y);
+loop();
 
-    
-  }
-    
+function loop() {
+  requestAnimationFrame(loop);
+  mesh.rotation.y -= 1 / 30;
+  renderer.render(scene, camera);
 }
 
-// vector field function 
-// the painting agents follow the flow defined 
-// by this function 
+function resize() {
 
+  width = window.innerWidth;
+  height = window.innerHeight;
 
-function vector_field(x,y,myScale) {
-  
-	let u, v;
-	
-	
-	x = map(x,border,width-border,0,myScale);
-  y = map(y,border,height-border,0,myScale);
-	
-	u = -2.0*(floor(y) % 2) + 1;
-	v = -2.0*(floor(x) % 2) + 1;
+  renderer.setSize(width, height);
 
-	//u = sin(2.0*y - x);
-  //v = cos(2.0*x + y);
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
 
-  return createVector(u,v);
 }
 
-
-function generateColor()
-{
-	  let temp   =  myRandom(colors,weights);
-    
-	  myColor = color(hue(temp) + randomGaussian()*10,
-		              saturation(temp) + randomGaussian()*10,
-		              brightness(temp) + randomGaussian(), 
-									random(10,90));
-
-	  return myColor;
+function EasingQuadraticIn(k) {
+  return k * k;
 }
 
-
-// function to select 
-
-function myRandom(colors,weights)
-{
-    let sum = 0;
- 
-    for(let i=0;i < colors.length; i++)
-    {
-      sum += weights[i];
-    }
- 
-    let rr = random(0,sum);
- 
-    for(let j=0;j < weights.length;j++)
-    {
- 
-      if (weights[j] >= rr)
-      {
-        return colors[j];
-      }
-        rr -= weights[j];
-    }
- }
+function seat(t) {
+  return (Math.pow(2 * t - 1, 3) + 1) / 2;
+}

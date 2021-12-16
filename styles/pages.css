@@ -196,10 +196,6 @@ p {
   text-align: left;
 }
 
-ul{
-  font-size: 0.5rem;
-}
-
 p.h0 {
   left: 50%;
   top: 50%;
@@ -343,6 +339,10 @@ li:nth-child(10n-1) {
   margin-left: -5px;
   border-color: transparent transparent black transparent;
 }
+
+/* 50.js */
+
+
 
 /** Container **/
 main {
