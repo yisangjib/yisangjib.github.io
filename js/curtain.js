@@ -35,7 +35,7 @@ function init() {
   /*     camera     */
   /*                */
   /* ************** */
-  camera = new THREE.PerspectiveCamera(10, WIDTH / HEIGHT, 0.1, 200000);
+  camera = new THREE.PerspectiveCamera(5, WIDTH / HEIGHT, 0.1, 200000);
   camera.position.set(0, 10000, -20000 );
   scene.add(camera);
 
