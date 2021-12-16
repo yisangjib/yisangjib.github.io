@@ -96,6 +96,7 @@ th:not([align]) {
 html {
   max-width: 100%;
   font-size: 16px;
+  font-weight: 600;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -109,7 +110,8 @@ html {
 
 @media screen and (min-width: 512px) {
   html {
-    font-size: 3.125vw;
+    font-size: 1.725vw;
+
   }
 }
 
@@ -159,13 +161,12 @@ body {
   font-family: "Arnold_Regular", sans-serif;
 
   width: 100%;
-  font-size: 0.5rem;
+  font-size: 1rem;
   text-align: left;
   line-height: 1.7;
 }
 
 a {
-  font-size: 0.4rem;
   mix-blend-mode: overlay;
   text-decoration: none;
   transition: 0.25s;
@@ -184,11 +185,12 @@ a:hover {
 p {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
   letter-spacing: 1.2px;
+  word-break: keep-all;
   position: absolute;
 
   color: black;
-  margin: 16px 0 0 16px;
-  font-size: 0.4rem;
+  margin: 16px 16px 0 16px;
+
   z-index: 1;
   transition: color 0.3s;
   text-align: left;
