@@ -113,8 +113,8 @@
       <a id="map-link" target="_blank">Map</a>    
       <form>
         <select name="geo">
-          <option value="everest" selected>0</option>
-          <option value="athabasca">1</option>
+          <option value="sanfrancisco" selected>0</option>
+          <option value="everest">1</option>
           <option value="coldeliseran">2</option>
           <option value="franzjosefglacier">3</option>
           <option value="grouse">4</option>
@@ -143,31 +143,6 @@
     <script src="./js/p5.min.js"></script>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/curtain.js"></script>
-    <script type="text/javascript" language="JavaScript">
-      var mobileKeyWords = new Array(
-        "iPhone",
-        "iPod",
-        "BlackBerry",
-        "Android",
-        "Windows CE",
-        "Windows CE;",
-        "LG",
-        "MOT",
-        "SAMSUNG",
-        "SonyEricsson",
-        "Mobile",
-        "Symbian",
-        "Opera Mobi",
-        "Opera Mini",
-        "IEmobile"
-      );
 
-      for (var word in mobileKeyWords) {
-        if (navigator.userAgent.match(mobileKeyWords[word]) != null) {
-          window.location.href = "m.index.html";
-          break;
-        }
-      }
-    </script>
   </body>
 </html>
