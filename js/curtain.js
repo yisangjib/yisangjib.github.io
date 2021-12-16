@@ -30,18 +30,20 @@ function init() {
 
   scene.fog = new THREE.Fog( 0x111111, 22000, 25000 );
 
-  /* ************** */
+
   /*                */
   /*     camera     */
-  /*                */
-  /* ************** */
-  camera = new THREE.PerspectiveCamera(5, WIDTH / HEIGHT, 0.1, 200000);
+
+
+
+
+  camera = new THREE.PerspectiveCamera(12, WIDTH / HEIGHT, 0.1, 200000);
   camera.position.set(0, 10000, -20000 );
   scene.add(camera);
 
   controls = new THREE.OrbitControls(camera, renderer.domElement);
   controls.autoRotate = true;
-  controls.autoRotateSpeed = 1.25; 
+  controls.autoRotateSpeed = 0.75; 
   createGroundPlane();
   animate();
 }
@@ -60,7 +62,7 @@ function createGroundPlane(){
   totalX = 150;
   totalZ = 150;
 
-  particleDistance = 25;
+  particleDistance = 15;
   for ( var x = 0; x < totalX; x ++ ) {
     xplot = x - Math.round((totalX-1)/2);
     zArray = new Array();
@@ -120,12 +122,12 @@ function loadGeography(filename){
         };  
       }
     } else {
-      alert('Sorry, there was an error loading the geography.');
+      alert('there was an error loading the geography.');
     }
   };
 
   request.onerror = function() {
-    alert('Sorry, there was an error loading the geography.');
+    alert('there was an error loading the geography.');
   };
   request.send();
 }
