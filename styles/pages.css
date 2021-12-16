@@ -165,7 +165,7 @@ body {
 }
 
 a {
-  font-size: 0.5rem;
+  font-size: 0.4rem;
   mix-blend-mode: overlay;
   text-decoration: none;
   transition: 0.25s;
@@ -188,7 +188,7 @@ p {
 
   color: black;
   margin: 16px 0 0 16px;
-  font-size: 0.5rem;
+  font-size: 0.4rem;
   z-index: 1;
   transition: color 0.3s;
   text-align: left;
