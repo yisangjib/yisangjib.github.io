@@ -92,21 +92,30 @@
       </div>
     </header>
 
-    <section>
 
-      <canvas id="c"></canvas>
 
-      <div id="info">
-        <a id="close" href=""
-          ></a
-        >
-      </div>
-    </section>
+    <div id="stats">
+
+      <a id="map-link" target="_blank"></a>    
+      <form>
+        <select name="geo">
+          <option value="sanfrancisco" selected>a</option>
+
+          <option value="lakecomo">b</option>
+          <option value="everest-valley">c</option>
+          <option value="everest">d</option>
+        </select>
+      </form> 
+      <span id="loading"></span>
+    </div>
+    <div id="viewport"></div>
  
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+    <script src="https://s3.ca-central-1.amazonaws.com/kevinnewcombe/three-terrain/_js/OrbitControls.js"></script>
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/p5.min.js"></script>
+
     <script src="../js/script.js"></script>
-    <script src="../js/xyz.js"></script>
+    <script src="../js/curtain.js"></script>
   </body>
 </html>

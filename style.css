@@ -326,17 +326,21 @@ input:checked + .slider:before {
 }
 
 /* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
 
-.slider.round:before {
+div.button1{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+
+  margin: 300px;
   border-radius: 50%;
+  background-color: yellow;
+  mix-blend-mode: darken;
+
+  z-index: 2;
 }
 
-.none {
-  display: none;
-}
+
 
 #defaultCanvas0 {
   width: 375px;
@@ -466,8 +470,6 @@ select:focus {
   font-size: 0.75rem;
 
 }
-
-
 
 @media (min-width: 768px) {
 

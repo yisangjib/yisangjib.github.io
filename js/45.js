@@ -81,5 +81,5 @@ function EasingQuadraticIn(k) {
 }
 
 function seat(t) {
-  return (Math.pow(2 * t - 1, 3) + 1) / 2;
+  return (Math.pow(2 * t - 1, 1) + 1) / 2;
 }

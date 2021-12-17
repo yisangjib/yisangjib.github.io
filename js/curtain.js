@@ -37,13 +37,13 @@ function init() {
 
 
 
-  camera = new THREE.PerspectiveCamera(12, WIDTH / HEIGHT, 0.1, 200000);
-  camera.position.set(0, 10000, -20000 );
+  camera = new THREE.PerspectiveCamera(8, WIDTH / HEIGHT, 0.1, 200000);
+  camera.position.set(0, 10000, -1000 );
   scene.add(camera);
 
   controls = new THREE.OrbitControls(camera, renderer.domElement);
   controls.autoRotate = true;
-  controls.autoRotateSpeed = 0.75; 
+  controls.autoRotateSpeed = 0.15; 
   createGroundPlane();
   animate();
 }

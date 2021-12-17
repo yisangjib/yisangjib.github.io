@@ -1,58 +1,89 @@
-let MAX_INIT_SIZE, MAX_ANGLE_STEP, SIZE_MULT, MIN_SIZE;
-let initSize, initAngle, initColIndex;
-let url = "https://coolors.co/app/fff-C8C8C8";
-let cols;
-let lapse = 0; // mouse timer
+let cells = [];
+let blocks = [];
+let easing = 0.07;
+let bgcolor = [];
+let boxcolor = [];
+let interimcolor = [];
+let newFlag = false;
 
 function setup() {
-  createCanvas(812, 812);
-  rectMode(CENTER);
-  noStroke();
-  cols = createCols(url);
-  //init param
-  MAX_INIT_SIZE = max(width, height) * 1.5;
-  MAX_ANGLE_STEP = PI / 20;
-  SIZE_MULT = 0.95;
-  MIN_SIZE = 2;
-  initSize = MAX_INIT_SIZE;
-  initAngle = 0;
-  initColIndex = 0;
+	noStroke();
+	initColors();
+	createCanvas(windowWidth, windowHeight);
+	reset();
 }
 
 function draw() {
-  let count = sin(frameCount / 150);
-  let angleStep = MAX_ANGLE_STEP * count;
-  let colIndex = initColIndex;
-  let size = initSize;
-  let angle = initAngle;
-
-  while (size > MIN_SIZE) {
-    push();
-    translate(width / 2, height / 2);
-    rotate(angle);
-    fill(cols[colIndex % cols.length]);
-    rect(0, 0, size, size, colIndex + size * 0.15);
-    pop();
-    angle += angleStep * map(size, MIN_SIZE, MAX_INIT_SIZE, 1, 0, false);
-    size *= SIZE_MULT;
-    colIndex++;
-  }
-
-  initSize -= MAX_INIT_SIZE * 0.002 * (1 + abs(count));
-  initAngle += angleStep * 0.1;
-
-  if (initSize < MAX_INIT_SIZE * SIZE_MULT) {
-    initSize /= SIZE_MULT;
-    initColIndex = (initColIndex + cols.length - 1) % cols.length;
-  }
+	if (second() == 0 && newFlag == false) {
+		reset();
+		for (let i = 0; i < 3; i++) {
+			bgcolor[i] = int(boxcolor[i]);
+		}
+		for (let i = 0; i < 3; i++) {
+			boxcolor[i] = interimcolor[i];
+			interimcolor[i] = 255;
+		}
+		newFlag = true;
+	}
+	background(color(bgcolor[0], bgcolor[1], bgcolor[2]));
+	while (blocks.length <= second()) {
+		createBlock(color(boxcolor[0], boxcolor[1], boxcolor[2]));
+	}
+	for (let i = 0; i < blocks.length; i++) {
+		if (i == 30) newFlag = false;
+		blocks[i].update();
+		blocks[i].display();
+	}
 }
 
-function createCols(_url) {
-  let slash_index = _url.lastIndexOf("/");
-  let pallate_str = _url.slice(slash_index + 1);
-  let arr = pallate_str.split("-");
-  for (let i = 0; i < arr.length; i++) {
-    arr[i] = "#" + arr[i];
-  }
-  return arr;
+function initColors() {
+	for (let i = 0; i < 30; i++) {
+		bgcolor[i] = 255;
+		boxcolor[i] = 0;
+		interimcolor[i] = 255;
+	}
 }
+
+function mousePressed() {
+  reset();
+	initColors();
+}
+
+function reset() {
+	blocks = [];
+	cells = [];
+}
+
+function createBlock(color) {
+	  let index = int(random(0, 10));
+	  while (cells[index] == 1) index = int(random(0, 10));
+		let index2 = index;
+	  while (true) {
+			index2 += 10;
+			if (index2 >= 60 || cells[index2] == 1) break;
+			index = index2;
+		}
+		let blockpos = (index % 10) * (windowWidth / 10);
+		blocks[blocks.length] = new Block(blockpos, -windowHeight / 6, color, index);
+	  cells[index] = 1;
+}
+
+function Block(x, y, c, i) {
+  this.position = createVector(x, y);
+  this.color = c;
+	this.index = i;
+}
+
+Block.prototype.update = function() {
+	let pos = ((windowHeight / 6) * int(this.index / 10)) - this.position.y - 2;
+	let dy = pos * easing;
+	let vec = createVector(0, dy);
+	this.position.add(vec);
+};
+
+Block.prototype.display = function() {
+  fill(this.color);
+	var bwidth = windowWidth / 10;
+	var bheight = windowHeight / 6;
+  rect(this.position.x, this.position.y, bwidth + 1, bheight + 1);
+};

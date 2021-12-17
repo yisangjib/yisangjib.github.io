@@ -297,6 +297,17 @@ li:nth-child(10n-1) {
 
 /* tooltip */
 
+iframe {
+  position: fixed;
+  z-index: 999;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 50%;
+  border: 1px solid;
+}
+
 
 .tooltip {
   position: relative;
@@ -453,7 +464,7 @@ main {
   align-items: center;
   z-index: 1001 !important;
 
-  background-color: rgba(200, 200, 200, 1);
+  background-color: rgba(255, 255, 255, 1);
   background-image: linear-gradient(
       rgba(150, 150, 150, 1) 0.01em,
       transparent 0.1em
