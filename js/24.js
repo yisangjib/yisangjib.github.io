@@ -43,7 +43,7 @@ function initGeometry(geometry) {
 	var color = new THREE.Color();
 	for (var i = 0, i3 = 0, l = count; i < l; i++, i3 += 3) {
 		age[i] = Math.random()*maxAge,
-		color.setHSL(Math.random(), 1.0, 0.5),
+		color.setHSL(Math.random(), 1.0, 0.9),
 		customColor[i3+0] = color.r;
 		customColor[i3+1] = color.g;
 		customColor[i3+2] = color.b;
