@@ -248,7 +248,7 @@ p.h-center {
 footer {
   position: absolute;
   font-size: 0.15rem;
-  width: 50%;
+  width: 30%;
   left: 16px;
   bottom: 16px;
 
@@ -312,7 +312,7 @@ li:nth-child(10n-1) {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
   background-color: rgba(200, 200, 200, 0.7);
 }
 .mark1 {
@@ -431,7 +431,7 @@ iframe {
 }
 
 .tooltip .tooltip-bottom {
-  font-size: 0.5rem;
+  font-size: 0.45rem;
   text-align: left;
   word-break: keep-all;
   width: 300px;
