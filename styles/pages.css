@@ -159,27 +159,25 @@ pre {
 
 body {
   font-family: "Arnold_Regular", sans-serif;
-
   width: 100%;
-  font-size: 1rem;
+  font-size: 0.5rem;
   text-align: left;
   line-height: 1.7;
 }
 
 a {
   mix-blend-mode: overlay;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-position: under;
   transition: 0.25s;
 }
 
 a:active {
-  text-decoration: underline;
-  text-underline-position: under;
+  text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
-  text-underline-position: under;
+  text-decoration: none;
 }
 
 p {
@@ -297,8 +295,8 @@ li:nth-child(10n-1) {
 
 .modalHeader1 {
   grid-column: 1;
-
-
+  margin: 0 auto;
+  text-align: center;
   transform: translate(-50%, -50%);
   left: 50%;
 }
@@ -307,7 +305,7 @@ li:nth-child(10n-1) {
   display: block;
   position: fixed;
   z-index: 100;
-  padding-top: 3vh;
+  padding-top: 5vh;
 
   line-height: 1.75;
   left: 0;
