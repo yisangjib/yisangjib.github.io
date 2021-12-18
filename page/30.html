@@ -8,7 +8,6 @@
     />
     <title>1MB-sketchbook</title>
     <meta name="description" content="" />
-   
 
     <link
       rel="apple-touch-icon"
@@ -83,27 +82,45 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/alphardex/aqua.css/dist/aqua.min.css'>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/alphardex/aqua.css/dist/aqua.min.css"
+    />
     <link rel="stylesheet" href="../styles/pages.css" />
   </head>
 
   <body>
-<p class="h-left-white">d. 
-      <a href="./31.html">좌표 공간</a>이 생겼다.
-    </p>
+    <p href="#" id="mark1"></p>
+    <div id="mark1Modal" class="ebcf_modal1">
+      <div class="ebcf_modal-content0">
+        <span class="ebcf_close1"></span>
+        <div class="exit">
+          <p class="modalHeader1">d. 좌표 공간이 생겼다.</p>
+        </div>
+      </div>
+    </div>
+
+    <figure>
+      <div onclick="location.href='./31.html'">
+        <img src="../images/arrow-g.png" class="bottom" />
+      </div>
+      <div onclick="history.back()">
+        <img src="../images/arrow-g.png" class="left" />
+      </div>
+      <div onclick="location.href='./10.html'">
+        <img src="../images/arrow-g.png" class="right" />
+      </div>
+    </figure>
     <footer class="ft-white">ellipse(), triangle()</footer>
 
     <div id="info"></div>
+    <div id="container"></div>
 
-    <div class="relative w-screen h-screen">
-      <div class="bouncy-balloon w-full h-full bg-black bg-white-grad-1 overflow-hidden"></div>
-    </div>
-
- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
-    <script src="../js/p5.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-      <script src="../js/fadeOut.js"></script>  
-        
+    <script src="../js/fadeOut.js"></script>
+    <script src="../js/modal.js"></script>
 
     <script type="module" src="../js/30.js"></script>
   </body>

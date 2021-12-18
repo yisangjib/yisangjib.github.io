@@ -8,7 +8,6 @@
     />
     <title>1MB-sketchbook</title>
     <meta name="description" content="" />
-  
 
     <link
       rel="apple-touch-icon"
@@ -87,19 +86,39 @@
   </head>
 
   <body>
-<p class="h-left1">
-      <a href="./48.html">사각형</a> 안에서 <a class="tooltip" href="./10.html">삼각형<span class="tooltiptext tooltip-bottom"
-        >사각형을 반으로 쪼갠 것.  
-        </span
-      ></a>이 나타난다.
-    </p>
+    <p href="#" id="mark1"></p>
+    <div id="mark1Modal" class="ebcf_modal1">
+      <div class="ebcf_modal-content0">
+        <span class="ebcf_close1"></span>
+        <div class="exit">
+          <p class="modalHeader1">      사각형 안에서
+            <a class="tooltip"
+              >삼각형<span class="tooltiptext tooltip-bottom"
+                >사각형을 반으로 쪼갠 것.
+              </span></a
+            >이 나타난다.</p>
+        </div>
+      </div>
+    </div>
+
+    <figure>
+      <div onclick="location.href='./10.html'">
+        <img src="../images/arrow-k.png" class="bottom" />
+      </div>
+      <div onclick="history.back()">
+        <img src="../images/arrow-k.png" class="left" />
+      </div>
+
+    </figure>
+
     <footer>ellipse(), triangle()</footer>
 
     <div id="info"></div>
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-      <script src="../js/fadeOut.js"></script>   
+    <script src="../js/fadeOut.js"></script>
+    <script src="../js/modal.js"></script>
 
     <script src="../js/9.js"></script>
   </body>

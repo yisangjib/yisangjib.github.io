@@ -8,7 +8,6 @@
     />
     <title>1MB-sketchbook</title>
     <meta name="description" content="" />
-   
 
     <link
       rel="apple-touch-icon"
@@ -87,14 +86,38 @@
   </head>
 
   <body>
-<p class="h-left1"><a href="./39.html">다시</a> 선으로.</p>
+
+    <p href="#" id="mark1"></p>
+    <div id="mark1Modal" class="ebcf_modal1">
+      <div class="ebcf_modal-content0">
+        <span class="ebcf_close1"></span>
+        <div class="exit">
+          <p class="modalHeader1">
+            다시 선으로.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <figure>
+      <div onclick="location.href='./39.html'">
+        <img src="../images/arrow-k.png" class="bottom" />
+      </div>
+      <div onclick="history.back()">
+        <img src="../images/arrow-k.png" class="left" />
+      </div>
+      <div onclick="location.href='./10.html'">
+        <img src="../images/arrow-k.png" class="right" />
+      </div>
+    </figure>
     <footer>ellipse(), triangle()</footer>
 
     <div id="info"></div>
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-      <script src="../js/fadeOut.js"></script>   
+    <script src="../js/fadeOut.js"></script>
+    <script src="../js/modal.js"></script>
 
     <script src="../js/38.js"></script>
   </body>

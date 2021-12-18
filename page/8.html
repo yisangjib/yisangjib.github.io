@@ -8,7 +8,6 @@
     />
     <title>1MB-sketchbook</title>
     <meta name="description" content="" />
-   
 
     <link
       rel="apple-touch-icon"
@@ -87,17 +86,36 @@
   </head>
 
   <body>
-<p class="h-left1">
-      원은 자유롭게 움직일 수 있어 점의 역할을 대신해
-      <a href="./10.html">위치값</a>이 된다.
-    </p>
+    <p href="#" id="mark1"></p>
+    <div id="mark1Modal" class="ebcf_modal1">
+      <div class="ebcf_modal-content0">
+        <span class="ebcf_close1"></span>
+        <div class="exit">
+          <p class="modalHeader1">
+            원은 자유롭게 움직일 수 있어 점의 역할을 대신해 위치값이 된다.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <figure>
+      <div onclick="location.href='./9.html'">
+        <img src="../images/arrow-k.png" class="bottom" />
+      </div>
+      <div onclick="history.back()">
+        <img src="../images/arrow-k.png" class="left" />
+      </div>
+
+    </figure>
+
     <footer class="ft-white">ellipse(), triangle()</footer>
 
     <div id="info"></div>
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-      <script src="../js/fadeOut.js"></script>   
+    <script src="../js/fadeOut.js"></script>
+    <script src="../js/modal.js"></script>
 
     <script src="../js/8.js"></script>
   </body>

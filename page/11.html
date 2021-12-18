@@ -87,20 +87,41 @@
   </head>
 
   <body>
-    <p class="h-center">
-      자유 곡선은 이름 그대로 자유롭다. 마우스에
-      <a class="tooltip" href="./12.html">종속<span class="tooltiptext tooltip-bottom"
-        >지금 이곳으로 들어올 수 있게 만든 도구이자 장치. 
-        </span
-      ></a>되는 것 말곤.
-    </p>
+    <p href="#" id="mark1"></p>
+    <div id="mark1Modal" class="ebcf_modal1">
+      <div class="ebcf_modal-content0">
+        <span class="ebcf_close1"></span>
+        <div class="exit">
+          <p class="modalHeader1">
+            자유 곡선은 이름 그대로 자유롭다. 마우스에
+            <a class="tooltip">종속<span class="tooltiptext tooltip-bottom"
+              >지금 이곳으로 들어올 수 있게 만든 도구이자 장치. 
+              </span
+            ></a>되는 것 말곤.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <figure>
+      <div onclick="location.href='./12.html'">
+        <img src="../images/arrow-k.png" class="bottom" />
+      </div>
+      <div onclick="history.back()">
+        <img src="../images/arrow-k.png" class="left" />
+      </div>
+
+    </figure>
+
     <footer>ellipse(), triangle()</footer>
 
     <div id="info"></div>
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-      <script src="../js/fadeOut.js"></script>   
+      <script src="../js/fadeOut.js"></script>
+    <script src="../js/modal.js"></script>   
 
     <script src="../js/11.js"></script>
   </body>

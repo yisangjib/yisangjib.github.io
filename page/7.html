@@ -8,7 +8,6 @@
     />
     <title>1MB-sketchbook</title>
     <meta name="description" content="" />
-  
 
     <link
       rel="apple-touch-icon"
@@ -87,16 +86,42 @@
   </head>
 
   <body>
-<p class="h-center">
-      사각형. 지금 이곳과 가장 <a class="tooltip" href="./9.html">잘 맞는 도형<span class="tooltiptext tooltip-bottom"
-        >점 네 개를 순차적으로 이을 때 만들 수 있는 도형. 여기서는 내각의 합이 360도인 닫힌 도형을 말한다.  
-        </span
-      ></a>이다.
+    <p class="h-left1">
+      사각형. 지금 이곳과 가장
+      <a class="tooltip"
+        >잘 맞는 도형<span class="tooltiptext tooltip-bottom"
+          >점 네 개를 순차적으로 이을 때 만들 수 있는 도형. 여기서는 내각의
+          합이 360도인 닫힌 도형을 말한다.
+        </span></a
+      >이다.
     </p>
-    <p class="h-left1">원. <a class="tooltip" href="./8.html">점의 숙명<span class="tooltiptext tooltip-bottom"
-      >한 점으로부터 일정 거리 점의 집합. 완벽함의 상징이다. 
-      </span
-    ></a>이다.</p>
+
+    <p href="#" id="mark1"></p>
+    <div id="mark1Modal" class="ebcf_modal1">
+      <div class="ebcf_modal-content0">
+        <span class="ebcf_close1"></span>
+        <div class="exit">
+          <p class="modalHeader1">
+            원.
+            <a class="tooltip"
+              >점의 숙명<span class="tooltiptext tooltip-bottom"
+                >한 점으로부터 일정 거리 점의 집합. 완벽함의 상징이다.
+              </span></a
+            >이다.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <figure>
+      <div onclick="location.href='./8.html'">
+        <img src="../images/arrow-k.png" class="bottom" />
+      </div>
+      <div onclick="history.back()">
+        <img src="../images/arrow-k.png" class="left" />
+      </div>
+
+    </figure>
 
     <footer>ellipse(), triangle()</footer>
 
@@ -104,7 +129,8 @@
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-      <script src="../js/fadeOut.js"></script>   
+    <script src="../js/fadeOut.js"></script>
+    <script src="../js/modal.js"></script>
 
     <script src="../js/7.js"></script>
   </body>

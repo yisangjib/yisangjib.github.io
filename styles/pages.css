@@ -103,7 +103,6 @@ html {
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
 
-  
   overflow: hidden;
   min-height: 100%;
 }
@@ -111,7 +110,6 @@ html {
 @media screen and (min-width: 512px) {
   html {
     font-size: 1.725vw;
-
   }
 }
 
@@ -130,7 +128,9 @@ button,
 input,
 select,
 textarea {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial,
+    sans-serif;
 }
 
 @font-face {
@@ -183,7 +183,9 @@ a:hover {
 }
 
 p {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial,
+    sans-serif;
   letter-spacing: 1.2px;
   word-break: keep-all;
   position: absolute;
@@ -200,14 +202,11 @@ p.h0 {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-
 }
 p.h-left1 {
-
 }
 p.h-left2 {
   left: 48px;
-
 }
 p.h-left-center {
   top: 50%;
@@ -223,12 +222,11 @@ p.h-left-white {
 }
 
 p.h-bottom {
-
   width: 100%;
   left: 50%;
   top: 90%;
   transform: translate(-50%, -50%);
-  
+
   bottom: 16px;
 
   z-index: 3;
@@ -295,24 +293,126 @@ li:nth-child(10n-1) {
   color: #fff;
 }
 
+/* modal */
+
+.modalHeader1 {
+  grid-column: 1;
+
+
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+.ebcf_modal1 {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  padding-top: 3vh;
+
+  line-height: 1.75;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(200, 200, 200, 0.7);
+}
+.mark1 {
+  text-align: left;
+  cursor: pointer;
+  width: 200px;
+  bottom: 0;
+  left: 0;
+}
+
+.ebcf_modal-content0 {
+  background-color: #acc476;
+  padding-left: 6px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.ebcf_close1:hover,
+.ebcf_close1:focus {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* modal */
+
+#container {
+  width: 100%;
+  height: 100%;
+}
+
+/* arrow */
+
+img.bottom {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 0.5rem;
+
+  width: 1.25rem;
+  transition: opacity 0.175s;
+  cursor: pointer;
+  z-index: 1001 !important;
+}
+img.left {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 45%;
+  left: 0.5rem;
+
+  transform: rotate(90deg);
+  transform-origin: center;
+
+  width: 1.25rem;
+  transition: opacity 0.175s;
+  cursor: pointer;
+  z-index: 1001 !important;
+}
+
+img.right {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 45%;
+  right: 0.5rem;
+
+  transform: rotate(-90deg);
+  transform-origin: center;
+
+  width: 1.25rem;
+  transition: opacity 0.175s;
+  cursor: pointer;
+  z-index: 1001 !important;
+}
+
+img.bottom:hover {
+  opacity: 0.3;
+}
+img.left:hover {
+  opacity: 0.3;
+}
+img.right:hover {
+  opacity: 0.3;
+}
+
 /* tooltip */
 
 iframe {
   position: fixed;
   z-index: 999;
-  top:50%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
   height: 50%;
-  border: 1px solid;
 }
-
 
 .tooltip {
   position: relative;
   display: inline-block;
-
 }
 
 .tooltip .tooltiptext {
@@ -343,7 +443,6 @@ iframe {
   padding: 12px;
 }
 
-
 .tooltip .tooltip-bottom::after {
   bottom: 100%;
   left: 50%;
@@ -352,8 +451,6 @@ iframe {
 }
 
 /* 50.js */
-
-
 
 /** Container **/
 main {
@@ -480,8 +577,6 @@ main {
 section {
   display: inline;
 }
-
-
 
 /* The switch - the box around the slider */
 .switch {

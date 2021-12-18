@@ -87,9 +87,30 @@
   </head>
 
   <body>
-    <p class="h-left-white">
-      제 3의 축은 <a href="./26.html">가운데</a>로, 흰색에서 검은색으로,
-    </p>
+
+    <p href="#" id="mark1"></p>
+    <div id="mark1Modal" class="ebcf_modal1">
+      <div class="ebcf_modal-content0">
+        <span class="ebcf_close1"></span>
+        <div class="exit">
+          <p class="modalHeader1">
+            제 3의 축은 가운데로, 흰색에서 검은색으로,
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <figure>
+      <div onclick="location.href='./26.html'">
+        <img src="../images/arrow-w.png" class="bottom" />
+      </div>
+      <div onclick="history.back()">
+        <img src="../images/arrow-w.png" class="left" />
+      </div>
+      <div onclick="location.href='./10.html'">
+        <img src="../images/arrow-w.png" class="right"/>
+      </div>
+    </figure>
     <footer>ellipse(), triangle()</footer>
 
     <div id="info"></div>
@@ -105,6 +126,7 @@
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/fadeOut.js"></script>
+    <script src="../js/modal.js"></script>
 
     <script src="../js/25.js"></script>
   </body>

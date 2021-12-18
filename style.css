@@ -325,21 +325,23 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
+/* arrow */
 
-div.button1{
+img.bottom {
   position: absolute;
-  width: 300px;
-  height: 300px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 0.5rem;
 
-  margin: 300px;
-  border-radius: 50%;
-  background-color: yellow;
-  mix-blend-mode: darken;
-
-  z-index: 2;
+  width: 1.25rem;
+  transition: opacity 0.175s;
+  cursor: pointer;
+  z-index: 1001 !important;
 }
 
+img.bottom:hover {
+  opacity: 0.5;
+}
 
 
 #defaultCanvas0 {
@@ -440,27 +442,25 @@ canvas:active {
   cursor: -moz-grabbing;
 }
 
-
 #map-link {
   font-size: 0.5rem;
   margin-top: 0.65rem;
   float: right;
 }
 
-#loading{
+#loading {
   font-size: 0.5rem;
 }
 
-select {  
+select {
   max-width: 150px;
   width: 20%;
   border: none;
-  
+
   padding: 0.1rem;
   color: white;
   font-size: 0.5rem;
   background-color: black;
-
 }
 select:focus {
   outline: 0;
@@ -468,18 +468,14 @@ select:focus {
 #loading {
   width: 100%;
   font-size: 0.75rem;
-
 }
 
 @media (min-width: 768px) {
-
-
   #stats {
     position: absolute;
     top: 0;
 
     width: 100%;
     height: auto;
-
   }
 }

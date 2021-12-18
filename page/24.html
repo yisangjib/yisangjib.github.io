@@ -87,12 +87,34 @@
   </head>
 
   <body>
-    <p class="h-left-white">
-      모든 것이 모여 <a class="tooltip" href="./25.html">제 3의 축<span class="tooltiptext tooltip-bottom"
-        >넌지시 알려주는 것. 평면 세계의 여기저기서 나타난다. 
-        </span
-      ></a>을 암시한다.
-    </p>
+
+    <p href="#" id="mark1"></p>
+    <div id="mark1Modal" class="ebcf_modal1">
+      <div class="ebcf_modal-content0">
+        <span class="ebcf_close1"></span>
+        <div class="exit">
+          <p class="modalHeader1">
+            모든 것이 모여 <a class="tooltip" >제 3의 축<span class="tooltiptext tooltip-bottom"
+              >넌지시 알려주는 것. 평면 세계의 여기저기서 나타난다. 
+              </span
+            ></a>을 암시한다.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <figure>
+      <div onclick="location.href='./25.html'">
+        <img src="../images/arrow-g.png" class="bottom" />
+      </div>
+      <div onclick="history.back()">
+        <img src="../images/arrow-g.png" class="left" />
+      </div>
+      <div onclick="location.href='./10.html'">
+        <img src="../images/arrow-g.png" class="right"/>
+      </div>
+    </figure>
+
     <footer>ellipse(), triangle()</footer>
 
     <div id="info"></div>
@@ -126,7 +148,8 @@
     <script src='https://cdn.rawgit.com/mrdoob/three.js/r75/examples/js/controls/OrbitControls.js'></script>
 
     <script src="../js/jquery.min.js"></script>
-      <script src="../js/fadeOut.js"></script>   
+      <script src="../js/fadeOut.js"></script>
+    <script src="../js/modal.js"></script>   
 
     <script src="../js/24.js"></script>
   </body>

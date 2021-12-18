@@ -87,19 +87,40 @@
   </head>
 
   <body>
-<p class="h-left1">
-      <a href="./24.html">제 3의 축</a>으로 인해 <a class="tooltip" href="./45.html">공간이 휘어진다<span class="tooltiptext tooltip-bottom"
-        >공간 좌표의 세계의 큰 특징 중 하나다.
-      </span></a
-    >.
-    </p>
+    <p href="#" id="mark1"></p>
+    <div id="mark1Modal" class="ebcf_modal1">
+      <div class="ebcf_modal-content0">
+        <span class="ebcf_close1"></span>
+        <div class="exit">
+          <p class="modalHeader1">
+            제 3의 축으로 인해 <a class="tooltip">공간이 휘어진다<span class="tooltiptext tooltip-bottom"
+              >공간 좌표의 세계의 큰 특징 중 하나다.
+            </span></a
+          >.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <figure>
+      <div onclick="location.href='./45.html'">
+        <img src="../images/arrow-k.png" class="bottom" />
+      </div>
+      <div onclick="history.back()">
+        <img src="../images/arrow-k.png" class="left" />
+      </div>
+      <div onclick="location.href='./10.html'">
+        <img src="../images/arrow-k.png" class="right"/>
+      </div>
+    </figure>
     <footer>ellipse(), triangle()</footer>
 
     <div id="info"></div>
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-      <script src="../js/fadeOut.js"></script>   
+      <script src="../js/fadeOut.js"></script>
+    <script src="../js/modal.js"></script>   
 
     <script src="../js/44.js"></script>
   </body>

@@ -7,7 +7,7 @@ const border = 50;
 
 function setup() {
     	createCanvas(windowWidth, windowHeight);
-    size = min(width-border*2, height-border*3) / 12;
+    size = min(width-border*2, height-border*3) / 16;
 
     col1 = color(255, 255, 255);
     col2 = color(0);
@@ -19,8 +19,8 @@ function setup() {
     tile.fill(col2);
     tile.beginShape();
         for(let a = HALF_PI; a <= PI+HALF_PI/40; a+=TWO_PI/30){
-            let x = sin(a) * size/2.01 + size/2;
-            let y = cos(a) * size/2.01 + size/2;
+            let x = sin(a) * size/2.5 + size/2;
+            let y = cos(a) * size/2.5 + size/2;
             tile.vertex(x, y);
         }
     tile.endShape();
@@ -28,8 +28,8 @@ function setup() {
     tile.fill(col3);
     tile.beginShape();
         for(let a = -HALF_PI; a <= HALF_PI; a+=TWO_PI/30){
-            let x = sin(a) * size/2.01 + size/2;
-            let y = cos(a) * size/2.01 + size/2;
+            let x = sin(a) * size/2.5 + size/2;
+            let y = cos(a) * size/2.5 + size/2;
             tile.vertex(x, y);
         }
     tile.endShape();

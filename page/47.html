@@ -87,19 +87,42 @@
   </head>
 
   <body>
-    <p class="h-left-white">
-      이 <a href="./48.html">모든 건</a> <a class="tooltip" href="./401.html">파이 조각<span class="tooltiptext tooltip-bottom"
-        >점과 선처럼, 공간 세계의 도형도 조각의 일부다. 
-      </span></a
-    >을 나누는 것처럼,
-    </p>
+
+    <p href="#" id="mark1"></p>
+    <div id="mark1Modal" class="ebcf_modal1">
+      <div class="ebcf_modal-content0">
+        <span class="ebcf_close1"></span>
+        <div class="exit">
+          <p class="modalHeader1">
+            모든 건 <a class="tooltip">파이 조각<span class="tooltiptext tooltip-bottom"
+              >점과 선처럼, 공간 세계의 도형도 조각의 일부다. 
+            </span></a
+          >을 나누는 것처럼,
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <figure>
+      <div onclick="location.href='./48.html'">
+        <img src="../images/arrow-w.png" class="bottom" />
+      </div>
+      <div onclick="history.back()">
+        <img src="../images/arrow-w.png" class="left" />
+      </div>
+      <div onclick="location.href='./10.html'">
+        <img src="../images/arrow-w.png" class="right"/>
+      </div>
+    </figure>
     <footer>ellipse(), triangle()</footer>
 
     <div id="info"></div>
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
-      <script src="../js/fadeOut.js"></script>   
+      <script src="../js/fadeOut.js"></script>
+    <script src="../js/modal.js"></script>   
 
     <script src="../js/47.js"></script>
   </body>
