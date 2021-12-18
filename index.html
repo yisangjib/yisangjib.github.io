@@ -108,5 +108,33 @@
     <script src="./js/p5.min.js"></script>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/xyz.js"></script>
+
+    <script type="text/javascript" language="JavaScript">
+      var mobileKeyWords = new Array(
+        "iPhone",
+        "iPod",
+        "BlackBerry",
+        "Android",
+        "Windows CE",
+        "Windows CE;",
+        "LG",
+        "MOT",
+        "SAMSUNG",
+        "SonyEricsson",
+        "Mobile",
+        "Symbian",
+        "Opera Mobi",
+        "Opera Mini",
+        "IEmobile"
+      );
+
+      for (var word in mobileKeyWords) {
+        if (navigator.userAgent.match(mobileKeyWords[word]) != null) {
+          window.location.href = "m.index.html";
+
+          break;
+        }
+      }
+    </script>
   </body>
 </html>
