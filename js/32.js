@@ -1,95 +1,70 @@
-var particleArray = []
+var container;
+	var camera, controls, scene, renderer;
+	var sphere, plane;
+	var start = Date.now();
+	init();
+	animate();
 
-function mouseClicked()
-{
-    if (particleArray.length < 100)
-    {
-        particleArray.push(new createParticles(mouseX, mouseY));
-    }
-}
+	function init() {
+	  var width = window.innerWidth || 2;
+	  var height = window.innerHeight || 2;
+	  container = document.createElement('div');
+	  document.body.appendChild(container);
+	  var info = document.createElement('div');
+	//   info.style.position = 'absolute';
+	//   info.style.top = '10px';
+	//   info.style.width = '100%';
+	//   info.style.textAlign = 'center';
+	//   info.innerHTML = 'Drag to change the view';
+	  container.appendChild(info);
+	  camera = new THREE.PerspectiveCamera(70, width / height, 1, 1000);
+	  camera.position.y = 150;
+	  camera.position.z = 500;
+	  controls = new THREE.TrackballControls(camera);
+	  scene = new THREE.Scene();
+	  var light = new THREE.PointLight(0xffffff);
+	  light.position.set(500, 500, 500);
+	  scene.add(light);
+	  var light = new THREE.PointLight(0xffffff, 0.25);
+	  light.position.set(-500, -500, -500);
+	  scene.add(light);
+	  sphere = new THREE.Mesh(new THREE.SphereGeometry(200, 20, 10), new THREE.MeshLambertMaterial());
+	  scene.add(sphere);
+	  // Plane
+	  plane = new THREE.Mesh(new THREE.PlaneBufferGeometry(400, 400), new THREE.MeshBasicMaterial({
+	    color: 0xe0e0e0
+	  }));
+	  plane.position.y = -200;
+	  plane.rotation.x = -Math.PI / 2;
+	  scene.add(plane);
+	  renderer = new THREE.CanvasRenderer();
+	  renderer.setClearColor(0xf0f0f0);
+	  renderer.setSize(width, height);
+	  // container.appendChild( renderer.domElement );
+	  effect = new THREE.AsciiEffect(renderer);
+	  effect.setSize(width, height);
+	  container.appendChild(effect.domElement);
+	  //
+	  window.addEventListener('resize', onWindowResize, false);
+	}
 
-function setup()
-{
-    
-    	createCanvas(windowWidth, windowHeight);
-    for(var i = 0 ; i < 70; i++)
-    {
-        particleArray.push(new createParticles(random(width), random(height)));
-    }
-}
+	function onWindowResize() {
+	  camera.aspect = window.innerWidth / window.innerHeight;
+	  camera.updateProjectionMatrix();
+	  renderer.setSize(window.innerWidth, window.innerHeight);
+	  effect.setSize(window.innerWidth, window.innerHeight);
+	}
+	//
+	function animate() {
+	  requestAnimationFrame(animate);
+	  render();
+	}
 
-function draw()
-{
-    background(255);
-    for (var i = 0; i < particleArray.length; i++)
-    {
-        particleArray[i].move();
-        for (var j = i; j < particleArray.length; j++)
-        {
-            particleArray[i].lineGenerator(particleArray[j].valX(), particleArray[j].valY());
-        }
-        particleArray[i].display();
-        particleArray[i].checkEdges();
-    }
-    //ellipse(windowWidth/2, windowHeight/2, 100, 100);
-}
-
-function createParticles(x, y)
-{
-    this.angle = random(-1, 1);
-    this.x = x;
-    this.y = y;
-    this.diameter = random(10, 15);
-    this.speedX = random(-1.5, 1.5);
-    this.speedY = random(-1.5, 1.5);
-    this.opacity = random(180, 255);
-    this.move = function()
-    {
-        this.x += this.speedX;
-        this.y += this.speedY;
-    }
-    this.display = function()
-    {
-        var d = (sin(this.angle + PI/2) * this.diameter/2) + this.diameter/2;
-        fill(0, 0, 0, this.opacity);
-        //stroke(255);
-        noStroke();
-        ellipse(this.x, this.y, d, d);
-        this.angle += random(0.01, 0.05);
-    }
-
-    this.lineGenerator = function(a, b)
-    {
-        if (dist(this.x, this.y, mouseX, mouseY) < 127)
-        {
-            stroke(0, 0, 0, 255 - 2*dist(this.x, this.y, mouseX, mouseY));
-            line(this.x, this.y, mouseX, mouseY);
-        }
-        if (dist(this.x, this.y, a, b) < 127)
-        {
-            stroke(0, 0, 0, 255 - 2*dist(this.x, this.y, a, b));
-            line(this.x, this.y, a, b);
-        }
-    }
-
-    this.checkEdges = function() 
-    {
-        if (this.x > (width + this.diameter) || this.x < (0 - this.diameter))
-        {
-            this.x = width - this.x;
-        }
-        if (this.y > (height + this.diameter) || this.y < (0 - this.diameter))
-        {
-            this.y = height- this.y;
-        }
-    }
-
-    this.valX = function()
-    {
-        return this.x;
-    }
-    this.valY = function()
-    {
-        return this.y;
-    }
-}
+	function render() {
+	  var timer = Date.now() - start;
+	  sphere.position.y = Math.abs(Math.sin(timer * 0.002)) * 150;
+	  sphere.rotation.x = timer * 0.0003;
+	  sphere.rotation.z = timer * 0.0002;
+	  controls.update();
+	  effect.render(scene, camera);
+	}

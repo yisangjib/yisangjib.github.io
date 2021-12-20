@@ -83,6 +83,7 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/alphardex/aqua.css/dist/aqua.min.css'>
     <link rel="stylesheet" href="../styles/pages.css" />
   </head>
 
@@ -92,14 +93,11 @@
       <div class="ebcf_modal-content0">
         <span class="ebcf_close1"></span>
         <div class="exit">
-          <p class="modalHeader1">
-            <a class="tooltip">궤적<span class="tooltiptext tooltip-bottom"
-              >잔상의 또 다른 차원. 움직임의 흔적.
+          <p class="modalHeader1">형태 안에서 
+            <a class="tooltip">비틀리기도<span class="tooltiptext tooltip-bottom"
+              >힘과 방향이 다른 쪽으로 잡아당겨 생긴다. 잔상의 또 다른 차원이자 움직임의 흔적이다. 
               </span
-            ></a>은 <a class="tooltip">힘・방향<span class="tooltiptext tooltip-bottom"
-              >움직임의 원천. 
-              </span
-            ></a>과 관계 있다.
+            ></a> 한다.
           </p>
         </div>
       </div>
@@ -107,10 +105,10 @@
 
     <figure>
       <div onclick="location.href='./36.html'">
-        <img src="../images/arrow-k.png" class="bottom" />
+        <img src="../images/arrow-g.png" class="bottom" />
       </div>
       <div onclick="history.back()">
-        <img src="../images/arrow-k.png" class="left" />
+        <img src="../images/arrow-g.png" class="left" />
       </div>
 
     </figure>
@@ -118,10 +116,14 @@
 
     <div id="info"></div>
 
+    <div class="relative w-screen h-screen">
+      <div class="twisted-shape w-full h-full bg-black-1"></div>
+    </div>
+
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
       <script src="../js/fadeOut.js"></script>
     <script src="../js/modal.js"></script>   
-    <script src="../js/35.js"></script>
+    <script type="module" src="../js/35.js"></script>
   </body>
 </html>

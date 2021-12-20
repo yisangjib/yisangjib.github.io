@@ -1,92 +1,121 @@
-const step = 20;
-const smoothing = 4;
-const weight = 1;
+var camera,
+    scene,
+    render,
+    mouseX = 0,
+    mouseY = 0,
+    particles = [];
 
-function setup() {
-		createCanvas(windowWidth, windowHeight);
-		colorMode(HSB, 360, 100, 100, 1.0);
+function init() {
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+  
+  var fieldOfView = 80; // Angle for the field of view
+  var aspectRatio = width / height;
+  var minDistClip = 1; // everything closer than this is not rendered
+  var maxDistClip = 4000; // everything further than this is not rendered 
+  camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, minDistClip, maxDistClip);
+  
+  camera.position.z = 1000; // Move camera backwards to (0, 0, 1000)
+  
+  scene = new THREE.Scene();
+  scene.add(camera);
+  
+  renderer = new THREE.WebGLRenderer();
+  renderer.setSize(width, height);
+  document.body.appendChild(renderer.domElement); // Insert the <canvas> element onto the page
+  
+  makeParticles();
+  
+  document.addEventListener( 'mousemove', onMouseMove, false );
+  
+  renderFrames(update);
 }
 
-function draw() {
-
-	//background(200, 100, 80);
-	background(255);
-		noFill();
-		stroke(0, 0, 0);
-		strokeWeight( weight );
-
-		for ( let radius = 0.05; radius < 0.3; radius += 0.05) {	
-				var circle_ = makeCircle(step, radius);
-				circle_ = distortPolygon(circle_);
-				circle_ = chaikin(circle_, smoothing);
-			
-				beginShape();
-						circle_.forEach( 
-							point => 
-							{
-								vertex( w(point[0]), h(point[1]) );
-							});
-				endShape(CLOSE);
-		}
+function update() {
+  updateParticles();
+  renderer.render(scene, camera); // Render the scene from the perspective of the camera
 }
 
-function chaikin(arr, num) {
-		if (num === 0) return arr;
-		const l = arr.length;
-		const smooth = arr.map((c,i) => {
-			return [[0.75*c[0] + 0.25*arr[(i + 1)%l][0],
-							 0.75*c[1] + 0.25*arr[(i + 1)%l][1]],
-							[0.25*c[0] + 0.75*arr[(i + 1)%l][0],
-							0.25*c[1] + 0.75*arr[(i + 1)%l][1]]];
-			}).flat();
-		return num === 1 ? smooth : chaikin(smooth, num - 1)
+function onMouseMove(event) {
+  mouseX = event.clientX;
+	mouseY = event.clientY;
 }
 
-function distortPolygon(polygon) {
-		return polygon.map(
-			point => 
-					{
-						const x = point[0];
-						const y = point[1];
-						const distance = dist(0.1, 0.1, x, y);
-						
-						const p = frameCount / 20;
-						const p2 = frameCount / 20;
-
-						const noiseFn = (x, y) => {
-								const noiseX = (x + 0.31) * distance * 2 + p2;
-								const noiseY = (y - 1.73) * distance * 2 + p2;
-								return noise(noiseX, noiseY, p);
-						};
-
-						const theta = noiseFn(x, y) * Math.PI * 3;
-
-						const amountToNudge = 0.08 - (Math.cos(p) * 0.08);
-						const newX = x + (amountToNudge * Math.cos(theta));
-						const newY = y + (amountToNudge * Math.sin(theta));
-
-						return [newX, newY];
-					}
-			);
+function makeParticles() {
+  var particle, material;
+  
+  // we're gonna move from z position -1000 (far away) 
+	// to 1000 (where the camera is) and add a random particle at every pos. 
+	for ( var zpos= -1000; zpos < 1000; zpos+=20 ) {
+ 
+		// we make a particle material and pass through the 
+		// colour and custom particle render function we defined. 
+		//material = new THREE.ParticleCanvasMaterial( { color: 0xffffff, program: particleRender } );
+		// make the particle
+		// particle = new THREE.Particle(material);
+    var material = new THREE.MeshBasicMaterial({color: 0xffffff, transparent: true, opacity: 0.0});
+    var radius = 0.9;
+    var segments = 30;
+    var particle = new THREE.Mesh(new THREE.CircleGeometry(radius, segments), material);
+ 
+    
+		// give it a random x and y position between -500 and 500
+		particle.position.x = Math.random() * 1000 - 500;
+		particle.position.y = Math.random() * 1000 - 500;
+ 
+		// set its z position
+		particle.position.z = zpos;
+ 
+		// scale it up a bit
+		particle.scale.x = particle.scale.y = 10;
+ 
+		// add it to the scene
+		scene.add( particle );
+ 
+		// and to the array of particles. 
+		particles.push(particle); 
+	}
 }
 
-function makeCircle(numSides, radius) {
-		const points = [];
-		const radiansPerStep = (Math.PI * 2) / numSides;
-		for ( let theta = 0; theta < 2 * Math.PI; theta += radiansPerStep) {
-				const x = 0.5 + radius * Math.cos(theta);
-				const y = 0.5 + radius * Math.sin(theta);
-				points.push( [x, y] );
-		}
-		return points;
+function particleRender( context ) {
+ 
+	// we get passed a reference to the canvas context
+	context.beginPath();
+	// and we just have to draw our shape at 0,0 - in this
+	// case an arc from 0 to 2Pi radians or 360º - a full circle!
+	context.arc( 0, 0, 1, 0,  Math.PI * 2, true );
+	context.fill();
 }
 
-function w(val) {
-		if(val == null) return width;
-		return width * val;
+function updateParticles() { 
+	// iterate through every particle
+	for(var i=0; i<particles.length; i++) {
+		var particle = particles[i]; 
+    var material = particle.material;
+    
+		// and move it forward dependent on the mouseY position. 
+		particle.position.z +=  (mouseY + 3) * 0.1;
+   
+		// if the particle is too close move it to the back
+		if(particle.position.z>1000) {
+      particle.position.z-=2000; 
+    }
+    
+    material.opacity = Math.min(Math.max((particle.position.z + 1000) / 2000, 0), 1);
+	}
+  
+  var width = window.innerWidth;
+  camera.position.x = mouseX - (width/2);
 }
 
-function h(val) {
-		if(val == null) return height;
-		return height * val;
-}
+function renderFrames(callback) {
+  // TODO use requestAnimationFrame
+  //setInterval(callback, 1000/30);
+  function step() {
+    callback();
+    window.requestAnimationFrame(step);
+  }
+  step();
+} 
+
+init();

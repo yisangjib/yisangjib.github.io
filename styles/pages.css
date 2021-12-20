@@ -605,6 +605,14 @@ section {
   display: inline;
 }
 
+:root {
+  --black-color-1: #fff;
+}
+
+.bg-black-1 {
+  background: var(--black-color-1);
+}
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
