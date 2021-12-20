@@ -47,7 +47,7 @@
     renderer.setClearColor(0xcccccc, 1);
     renderer.setSize(WIDTH, HEIGHT);
 
-    camera = new THREE.PerspectiveCamera( 45, WIDTH / HEIGHT, NEAR, FAR);
+    camera = new THREE.PerspectiveCamera( 15, WIDTH / HEIGHT, NEAR, FAR);
 
     scene = new THREE.Scene();
 
@@ -56,7 +56,7 @@
 
     // the camera starts at 0,0,0
     // so pull it back
-    camera.position.z = 300;
+    camera.position.z = 200;
 
     // attach the render-supplied DOM element
     $container.append(renderer.domElement);
@@ -96,7 +96,7 @@
     scene.add(lotus);
     
     // Geometry
-    var radius = 40;
+    var radius = 72;
     var segments = 32;
     var geometry = new THREE.CircleGeometry(radius, segments);
     

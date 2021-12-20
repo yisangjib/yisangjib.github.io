@@ -226,8 +226,6 @@ li:nth-child(1) {
   align-self: center;
   justify-self: center;
   color: #000;
-
-  cursor: pointer;
 }
 
 /* weather */
