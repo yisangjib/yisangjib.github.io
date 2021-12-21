@@ -1,6 +1,6 @@
 let cells = [];
 let blocks = [];
-let easing = 0.07;
+let easing = 0.03;
 let bgcolor = [];
 let boxcolor = [];
 let interimcolor = [];
@@ -44,10 +44,10 @@ function initColors() {
 	}
 }
 
-function mousePressed() {
-  reset();
-	initColors();
-}
+// function mousePressed() {
+//   reset();
+// 	initColors();
+// }
 
 function reset() {
 	blocks = [];

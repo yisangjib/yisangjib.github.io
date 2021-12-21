@@ -247,10 +247,10 @@ p.h-center {
 
 footer {
   position: absolute;
-  font-size: 0.15rem;
-  width: 30%;
-  left: 16px;
-  bottom: 16px;
+  font-size: 0.3rem;
+
+right: 16px;
+bottom: 16px;
 
   z-index: 1;
 }
@@ -262,8 +262,8 @@ ul {
   position: absolute;
   display: inline;
   text-align: center;
-  font-size: 1rem;
-  margin-top: 24px;
+  font-size: 0.75rem;
+  margin: 24px;
 }
 
 li{
@@ -378,9 +378,9 @@ img.bottom {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-  bottom: 0.75rem;
+  bottom: 0.5rem;
 
-  width: 1.5rem;
+  width: 1.2rem;
   transition: opacity 0.175s;
   cursor: pointer;
   z-index: 1001 !important;
@@ -394,7 +394,7 @@ img.left {
   transform: rotate(90deg);
   transform-origin: center;
 
-  width: 1.5rem;
+  width: 1.2rem;
   transition: opacity 0.175s;
   cursor: pointer;
   z-index: 1001 !important;
@@ -409,7 +409,7 @@ img.right {
   transform: rotate(-90deg);
   transform-origin: center;
 
-  width: 1.5rem;
+  width: 1.2rem;
   transition: opacity 0.175s;
   cursor: pointer;
   z-index: 1001 !important;
@@ -709,5 +709,15 @@ input:checked + .slider:before {
 
   .modalBody1 {
     width: 80%;
+  }
+
+  img.bottom {
+    width: 1.5rem;
+  }
+  img.left {
+    width: 1.5rem;
+  }
+  img.right {
+    width: 1.5rem;
   }
 }

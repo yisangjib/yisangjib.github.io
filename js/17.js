@@ -53,7 +53,7 @@ function setup() {
 
 function draw() {
   clear();
-  background(240);
+  background(230);
   for(var i = 0; i < maxc; i++) {
     var px = bezierPoint(x[j[i]],x[j[i]+1],x[j[i]+2],x[j[i]+3],t[i]);
     var py = bezierPoint(y[j[i]],y[j[i]+1],y[j[i]+2],y[j[i]+3],t[i]);
