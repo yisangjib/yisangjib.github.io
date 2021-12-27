@@ -92,8 +92,10 @@
         <span class="ebcf_close1"></span>
         <div class="exit">
           <p class="modalHeader1">
-            제 3의 축은 가운데로, 흰색에서 검은색으로,
+            모든 게 모여 제 3의 축을 암시한다.
           </p>
+
+          <p class="footer">mouseMoved(), rect(), perspectiveCamera();</p>
         </div>
       </div>
     </div>
@@ -106,16 +108,40 @@
         <img src="../images/arrow-w.png" class="left" />
       </div>
     </figure>
-    <footer>ellipse(), triangle()</footer>
+    
 
     <div id="info"></div>
 
-    <div id="three-container"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r73/three.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/THREE.OrbitControls.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script type="x-shader/x-vertex" id="vertexshader">
+      //attribute float size;
+      attribute float age;
+      attribute vec3 velocity;
+      attribute vec3 customColor;
+      varying vec3 vColor;
+      void main() {
+        vColor = customColor;
+        float size = age * 0.1;
+        vec3 pos = velocity * age;
+        vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
+        gl_PointSize = size * (300.0 / -mvPosition.z);
+        gl_Position = projectionMatrix * mvPosition;
+      }
+    </script>
+    <script type="x-shader/x-fragment" id="fragmentshader">
+      uniform vec3 color;
+      uniform sampler2D texture;
+      varying vec3 vColor;
+      void main() {
+        gl_FragColor = vec4(color * vColor, 1.0);
+        gl_FragColor = gl_FragColor * texture2D(texture, gl_PointCoord);
+      }
+    </script>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/r75/examples/js/controls/OrbitControls.js"></script>
 
+    
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/fadeOut.js"></script>

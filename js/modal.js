@@ -91,15 +91,15 @@
  var ebSpan1 = document.getElementsByClassName("exit")[0];
  
  ebBtn1.onclick = function () {
-   ebModal1.style.display = "none";
+  $(".ebcf_modal1").addClass("none");
  };
  
  ebSpan1.onclick = function () {
-   ebModal1.style.display = "none";
+  $(".ebcf_modal1").addClass("none");
  };
  
  window.onclick = function (event) {
    if (event.target == ebModal1) {
-     ebModal1.style.display = "none";
+    $(".ebcf_modal1").addClass("none");
    }
  };

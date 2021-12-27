@@ -1,7 +1,7 @@
 setTimeout(function () {
   testEle = $("#info");
   testEle.fadeOut();
-}, 600);
+}, 800);
 
 (function() {
   const canvas = document.getElementById('defaultCanvas0');

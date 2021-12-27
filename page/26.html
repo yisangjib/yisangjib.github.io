@@ -91,7 +91,10 @@
       <div class="ebcf_modal-content0">
         <span class="ebcf_close1"></span>
         <div class="exit">
-          <p class="modalHeader1">다양한 색과 질감으로,</p>
+          <p class="modalHeader1">제 3의 축은 가운데에서 바깥쪽으로 향한다.</p>
+
+
+          <p class="footer">mouseMoved(), rect(), perspectiveCamera();</p>
         </div>
       </div>
     </div>
@@ -104,27 +107,22 @@
         <img src="../images/arrow-k.png" class="left" />
       </div>
     </figure>
-    <footer>ellipse(), triangle()</footer>
+    
 
     <div id="info"></div>
+
+    <div id="three-container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r73/three.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/THREE.OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+
 
     <script src="../js/p5.min.js"></script>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/fadeOut.js"></script>
     <script src="../js/modal.js"></script>
-    <script>
-      window.onload = function () {
-        var bodyWidth = document.body.clientWidth - 500;
-        var bodyHeight = document.body.clientHeight;
-        var randPosX = Math.floor(Math.random() * bodyWidth);
-        var randPosY = Math.floor(Math.random() * bodyHeight);
-
-        $("#rand_pos").css("left", randPosX);
-        $("#rand_pos").css("top", randPosY);
-
-        posLog.innerHTML = posXY;
-      };
-    </script>
+    
 
     <script src="../js/26.js"></script>
   </body>

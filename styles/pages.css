@@ -96,7 +96,7 @@ th:not([align]) {
 html {
   max-width: 100%;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -136,6 +136,14 @@ textarea {
 @font-face {
   font-family: "Arnold_Regular";
   src: local(※), url(../fonts/Arnold_Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "yoon320";
+  src: local(※), url(../fonts/yoon320.woff) format("woff");
+}
+@font-face {
+  font-family: "yoon330";
+  src: local(※), url(../fonts/yoon330.woff) format("woff");
 }
 
 @font-face {
@@ -180,10 +188,10 @@ a:hover {
 }
 
 p {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
-    segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial,
-    sans-serif;
-  letter-spacing: 1.2px;
+  font-family: "yoon330", -apple-system, BlinkMacSystemFont, avenir next,
+    avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto,
+    arial, sans-serif;
+  letter-spacing: 0.7px;
   word-break: keep-all;
   position: absolute;
 
@@ -195,66 +203,16 @@ p {
   text-align: left;
 }
 
-p.h0 {
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-p.h-left1 {
-  margin-left: 16px;
-}
-p.h-left2 {
-  left: 48px;
-}
-p.h-left-center {
-  top: 50%;
-  left: 16px;
-  margin: 0;
-  transform: translate(0, -50%);
-
-  text-align: center;
-}
-p.h-left-white {
-  color: white;
-  transition: color 0.3;
-}
-
-p.h-bottom {
-  width: 100%;
-  left: 50%;
-  top: 90%;
-  transform: translate(-50%, -50%);
-
-  bottom: 16px;
-
-  z-index: 3;
-}
-p.h-bottom-white {
-  color: #fff;
-  left: 10rem;
-  bottom: 16px;
-  margin: 0;
-  z-index: 3;
-  transition: color 0.3;
-}
-
-p.h-center {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-}
-
-footer {
+.footer {
+  font-family: "Arnold_Regular", sans-serif;
   position: absolute;
-  font-size: 0.3rem;
+  font-size: 0.5rem;
 
-right: 16px;
-bottom: 16px;
-
+  right: 16px;
+  top: 0px;
   z-index: 1;
 }
-footer.ft-white {
+.footer-white {
   color: white;
 }
 
@@ -266,19 +224,18 @@ ul {
   margin: 24px;
 }
 
-li{
+li {
   display: inline;
 }
 
-li a{
+li a {
   color: #fff;
   display: inline;
 }
 
-li a:visited{
+li a:visited {
   color: #000;
 }
-
 
 .container {
   text-align: center;
@@ -299,15 +256,13 @@ li a:visited{
   color: #fff;
 }
 
-header{
+header {
   position: absolute;
   font-size: 1rem;
   color: #000;
   transform: translate(-50%, -50%);
   top: 85%;
   left: 50%;
-
-
 }
 
 /* modal */
@@ -317,12 +272,16 @@ header{
   margin: 0 auto;
   text-align: center;
   transform: translate(-50%, -50%);
+  top: 40%;
   left: 50%;
+
+  padding: 16px;
+  background-color: rgba(220, 220, 220, 1);
+  border-radius: 8px;
 }
 .modalBody1 {
-
   text-align: center;
-  width: 40%;
+  width: 50%;
   transform: translate(-50%, -50%);
   top: 30%;
   left: 50%;
@@ -332,6 +291,7 @@ header{
 }
 
 .ebcf_modal1 {
+  visibility: visible;
   display: block;
   position: fixed;
   z-index: 100;
@@ -363,6 +323,11 @@ header{
 .ebcf_close1:focus {
   cursor: pointer;
   text-decoration: none;
+}
+
+.none {
+  visibility: hidden;
+  height: 0vh;
 }
 
 /* modal */
@@ -703,11 +668,17 @@ input:checked + .slider:before {
     font-size: 1rem;
   }
 
-  footer {
+  .footer {
     font-size: 0.5rem;
+    left: 16px;
+  }
+
+  .modalHeader1 {
+    top: 50%;
   }
 
   .modalBody1 {
+    top: 50%;
     width: 80%;
   }
 

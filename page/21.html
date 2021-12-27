@@ -92,6 +92,7 @@
         <span class="ebcf_close1"></span>
         <div class="exit">
           <p class="modalHeader1">뭉침과 흩어짐,</p>
+          <p class="footer">mouseClick(), frameRate(0), line();</p>
         </div>
       </div>
     </div>
@@ -104,7 +105,7 @@
         <img src="../images/arrow-k.png" class="left" />
       </div>
     </figure>
-    <footer>ellipse(), triangle()</footer>
+    
 
     <div id="info"></div>
 
@@ -112,19 +113,7 @@
     <script src="../js/jquery.min.js"></script>
     <script src="../js/fadeOut.js"></script>
     <script src="../js/modal.js"></script>
-    <script>
-      window.onload = function () {
-        var bodyWidth = document.body.clientWidth - 500;
-        var bodyHeight = document.body.clientHeight;
-        var randPosX = Math.floor(Math.random() * bodyWidth);
-        var randPosY = Math.floor(Math.random() * bodyHeight);
-
-        $("#rand_pos").css("left", randPosX);
-        $("#rand_pos").css("top", randPosY);
-
-        posLog.innerHTML = posXY;
-      };
-    </script>
+    
 
     <script src="../js/21.js"></script>
   </body>

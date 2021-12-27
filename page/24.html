@@ -92,13 +92,10 @@
         <span class="ebcf_close1"></span>
         <div class="exit">
           <p class="modalHeader1">
-            모든 것이 모여
-            <a class="tooltip"
-              >제 3의 축<span class="tooltiptext tooltip-bottom"
-                >넌지시 알려주는 것. 평면 세계의 여기저기서 나타난다.
-              </span></a
-            >을 암시한다.
+            빛과 그림자이다.
           </p>
+
+          <p class="footer">mouseMoved(), rect(), scene.add(shadowLight);</p>
         </div>
       </div>
     </div>
@@ -112,37 +109,17 @@
       </div>
     </figure>
 
-    <footer>ellipse(), triangle()</footer>
+    
 
     <div id="info"></div>
 
-    <script type="x-shader/x-vertex" id="vertexshader">
-      //attribute float size;
-      attribute float age;
-      attribute vec3 velocity;
-      attribute vec3 customColor;
-      varying vec3 vColor;
-      void main() {
-        vColor = customColor;
-        float size = age * 0.1;
-        vec3 pos = velocity * age;
-        vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
-        gl_PointSize = size * (300.0 / -mvPosition.z);
-        gl_Position = projectionMatrix * mvPosition;
-      }
-    </script>
-    <script type="x-shader/x-fragment" id="fragmentshader">
-      uniform vec3 color;
-      uniform sampler2D texture;
-      varying vec3 vColor;
-      void main() {
-        gl_FragColor = vec4(color * vColor, 1.0);
-        gl_FragColor = gl_FragColor * texture2D(texture, gl_PointCoord);
-      }
-    </script>
-    <!-- partial -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js"></script>
-    <script src="https://cdn.rawgit.com/mrdoob/three.js/r75/examples/js/controls/OrbitControls.js"></script>
+          <!-- partial:index.partial.html -->
+          <canvas id="c"></canvas>
+          <!-- partial -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js"></script>
+          <script src="https://unpkg.com/three@0.105.2/examples/js/controls/OrbitControls.js"></script>
+      
+      
 
     <script src="../js/jquery.min.js"></script>
     <script src="../js/fadeOut.js"></script>

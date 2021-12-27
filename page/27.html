@@ -91,9 +91,9 @@
       <div class="ebcf_modal-content0">
         <span class="ebcf_close1"></span>
         <div class="exit">
-          <p class="modalHeader1">
-            형태가 있는 곳에서 없는 곳으로 향한다.
-          </p>
+          <p class="modalHeader1">다양한 색과 질감을 표현한다.</p>
+
+          <p class="footer">frameRate(), ellipse();</p>
         </div>
       </div>
     </div>
@@ -106,7 +106,6 @@
         <img src="../images/arrow-k.png" class="left" />
       </div>
     </figure>
-    <footer>ellipse(), triangle()</footer>
 
     <div id="info"></div>
 
@@ -114,20 +113,6 @@
     <script src="../js/jquery.min.js"></script>
     <script src="../js/fadeOut.js"></script>
     <script src="../js/modal.js"></script>
-    <script>
-      window.onload = function () {
-        var bodyWidth = document.body.clientWidth - 500;
-        var bodyHeight = document.body.clientHeight;
-        var randPosX = Math.floor(Math.random() * bodyWidth);
-        var randPosY = Math.floor(Math.random() * bodyHeight);
-
-        $("#rand_pos").css("left", randPosX);
-        $("#rand_pos").css("top", randPosY);
-
-        posLog.innerHTML = posXY;
-      };
-    </script>
-
     <script src="../js/27.js"></script>
   </body>
 </html>
