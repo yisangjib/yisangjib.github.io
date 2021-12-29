@@ -107,13 +107,13 @@ html {
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
 
-  overflow: hidden;
+  overflow-x: hidden;
   min-width: 100%;
 }
 
 @media screen and (min-width: 512px) {
   html {
-    font-size: 3.125vw;
+    font-size: 2vw;
   }
 }
 
@@ -135,18 +135,28 @@ textarea {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
     segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial,
     sans-serif;
+  line-height: 1.6;
 }
 
 @font-face {
-  font-family: "MonumentExtended-Regular";
-  src: url(./fonts/MonumentExtended-Regular.otf);
-  src: local(※), url(./fonts/MonumentExtended-Regular.woff) format("woff");
+  font-family: "Arnold_Regular";
+  src: url(./fonts/Arnold_Regular.otf);
+  src: local(※), url(./fonts/Arnold_Regular.woff) format("woff");
 }
 
 @media screen and (min-width: 512px) {
   body {
     font-weight: 600;
   }
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  font-family: "Arnold_Regular";
 }
 
 code,
@@ -156,14 +166,113 @@ pre {
   font-family: monospace;
 }
 
+a:link,
+a:visited {
+  color: #bdc3c7;
+}
+
 body {
-  font-family: "MonumentExtended-Regular";
+  font-family: "Arnold_Regular";
   cursor: grab;
   width: 100%;
   font-size: 1rem;
   text-align: left;
   line-height: 1.7;
 }
+
+
+
+
+
+/* desc-info */
+
+#desc-container-1 {
+  margin-top: -4vw;
+  max-width: 500px;
+  max-height: 700px;
+  min-width: 200px;
+  min-height: 250px;
+  background: #fff;
+  color: #000;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#desc-container-1 > iframe {
+  border: none;
+  width: 100%;
+
+}
+
+#desc-container-2 {
+  margin-top: -4vw;
+  max-width: 500px;
+  max-height: 700px;
+  min-width: 200px;
+  min-height: 250px;
+  background: #fff;
+  color: #000;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#desc-container-2 > iframe {
+  border: none;
+  width: 100%;
+}
+
+#desc-container-3 {
+  margin-top: -4vw;
+  max-width: 500px;
+  max-height: 700px;
+  min-width: 200px;
+  min-height: 250px;
+  background: #fff;
+  color: #000;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#desc-container-3 > iframe {
+  border: none;
+  width: 100%;
+}
+
+.title {
+  font-size: 1rem;
+  text-align: center;
+  padding: 16px;
+}
+
+.infospot-title {
+  font-family: "AGChoiJeongHoStd-Regular";
+  position: absolute;
+  font-size: 1.25rem;
+  text-align: left;
+  padding: 16px;
+  color: #000;
+
+  z-index: 1001;
+  cursor: pointer;
+}
+
+.thumbnail {
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.text {
+  padding: 0 16px 16px 16px;
+  font-size: 0.6rem;
+  word-break: keep-all;
+}
+
+li {
+  list-style: none;
+}
+
 
 p {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
@@ -198,14 +307,6 @@ li:nth-child(1) {
 
 /* // desktop */
 
-.desktop {
-  background-color: black;
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-}
-
 #menubar {
   width: 100%;
   height: 2vw;
@@ -221,107 +322,13 @@ li:nth-child(1) {
 }
 
 #title {
-  font-size: 0.25rem;
+  font-size: 0.75rem;
   position: absolute;
   align-self: center;
   justify-self: center;
   color: #000;
 }
 
-/* weather */
-
-.weather {
-  position: absolute;
-  font-size: 0.5rem;
-  margin: 3vw 0 0 90%;
-  color: rgba(150, 150, 150, 0.7);
-}
-
-.CurrIcon,
-.CurrTemp {
-  display: inline-block;
-  text-align: center;
-}
-
-.City {
-  font-size: 0.75rem;
-  text-align: center;
-}
-
-#stats {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-
-h1 {
-  font-size: 0.3rem;
-  width: 100%;
-
-  text-align: center;
-}
-
-.iframe {
-  margin: 16px;
-  text-align: center;
-}
-
-iframe {
-  width: 84px;
-  border: 1px solid rgba(150, 150, 150, 0.1);
-}
-
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  vertical-align: middle;
-
-  margin: 0 auto;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  display: none;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: gray;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px gray;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
 
 /* arrow */
 
@@ -342,55 +349,6 @@ img.bottom:hover {
 }
 
 
-#defaultCanvas0 {
-  width: 375px;
-  height: 812px;
-  position: absolute;
-  top: 52.5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  border: 1px solid rgba(150, 150, 150, 0.1);
-}
-
-@media screen and (max-width: 375px) {
-  #defaultCanvas0 {
-    transform: scale(0.75) translate(-67.5%, -67.5%);
-  }
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-#c {
-  display: block;
-  z-index: 3 !important;
-}
-#info {
-  position: absolute;
-  left: 50%;
-  top: 96%;
-  padding: 16px;
-  color: #ccc;
-
-  font-size: 0.25rem;
-
-  transform: translate(-50%, -50%);
-  text-align: center;
-
-  width: auto;
-  height: auto;
-}
-
-#top {
-  background: #fff;
-  width: 100%;
-  height: auto;
-  position: relative;
-  border-bottom: 1px solid #eee;
-}
 
 @media screen and (max-width: 375px) {
   #menubar {
@@ -404,76 +362,5 @@ a {
   #info {
     top: 95%;
     font-size: 12px;
-  }
-}
-
-html,
-body {
-  background-color: #fff;
-}
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-#stats {
-  width: 100%;
-  text-align: left;
-  color: #fff;
-  margin-top: 24px;
-  padding: 0 24px 24px 24px;
-
-  display: block;
-}
-a {
-  color: #fff;
-}
-canvas {
-  cursor: grab;
-  cursor: -webkit-grab;
-  cursor: -moz-grab;
-}
-
-canvas:active {
-  cursor: grabbing;
-  cursor: -webkit-grabbing;
-  cursor: -moz-grabbing;
-}
-
-#map-link {
-  font-size: 0.5rem;
-  margin-top: 0.65rem;
-  float: right;
-}
-
-#loading {
-  font-size: 0.5rem;
-}
-
-select {
-  max-width: 150px;
-  width: 20%;
-  border: none;
-
-  padding: 0.1rem;
-  color: white;
-  font-size: 0.5rem;
-  background-color: black;
-}
-select:focus {
-  outline: 0;
-}
-#loading {
-  width: 100%;
-  font-size: 0.75rem;
-}
-
-@media (min-width: 768px) {
-  #stats {
-    position: absolute;
-    top: 0;
-
-    width: 100%;
-    height: auto;
   }
 }

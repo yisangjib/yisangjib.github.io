@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+      content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no"
     />
     <title>1MB-sketchbook</title>
     <meta name="description" content="" />
@@ -90,52 +90,39 @@
       <div id="title">1MB-sketchbook</div>
     </header>
 
-    <section>
-      <canvas id="c"></canvas>
-
-      <div id="info">
-        <a id="close" href=""></a>
+    <div id="desc-container-1" style="display: none">
+      <iframe src="./images/preview-1.jpg"></iframe>
+      <div class="title"></div>
+      <div class="text">
+        “이 웹사이트는 X, Y, Z축으로 구성된 좌표계로 이루어져 있다. 이 좌표 세계를 ‘커튼’ 이미지로 설정하고 그것이 선의 세계, 평면 세계, 공간 세계를 직조하게 했다. 각 페이지는 자바스크립트 코드로 생성되어, 독립된 세계이면서 여러 갈래로 얽힌 일종의 미로를 연출한다. 우리의 현실 세계를 추상화한 것처럼.” 
       </div>
-    </section>
+    </div>
 
+    
 
-    <figure>
-      <div onclick="location.href='./page/0.html'">
-        <img src="images/arrow-k.png" class="bottom" />
+    <div id="desc-container-2" style="display: none">
+      <iframe src="./images/preview-2.jpg"></iframe>
+      <div class="title"></div>
+      <div class="text">
+        “이 웹사이트는 X, Y, Z축으로 구성된 좌표계로 이루어져 있다. 이 좌표 세계를 ‘커튼’ 이미지로 설정하고 그것이 선의 세계, 평면 세계, 공간 세계를 직조하게 했다. 각 페이지는 자바스크립트 코드로 생성되어, 독립된 세계이면서 여러 갈래로 얽힌 일종의 미로를 연출한다. 우리의 현실 세계를 추상화한 것처럼.” 
       </div>
-    </figure>
+    </div>
 
-    <script src="./script.js"></script>
+    <div id="desc-container-3" style="display: none">
+      <iframe src="./images/preview-3.jpg"></iframe>
+      <div class="title"></div>
+      <div class="text">
+        “이 웹사이트는 X, Y, Z축으로 구성된 좌표계로 이루어져 있다. 이 좌표 세계를 ‘커튼’ 이미지로 설정하고 그것이 선의 세계, 평면 세계, 공간 세계를 직조하게 했다. 각 페이지는 자바스크립트 코드로 생성되어, 독립된 세계이면서 여러 갈래로 얽힌 일종의 미로를 연출한다. 우리의 현실 세계를 추상화한 것처럼.” 
+      </div>
+    </div>
+
+
+    <script src="./js/three.min.js"></script>
+    <script src="./js/panolens.min.js"></script>
+    <script src="./js/script.js"></script>
     <script src="./js/p5.min.js"></script>
     <script src="./js/jquery.min.js"></script>
-    <script src="./js/xyz.js"></script>
 
-    <script type="text/javascript" language="JavaScript">
-      var mobileKeyWords = new Array(
-        "iPhone",
-        "iPod",
-        "BlackBerry",
-        "Android",
-        "Windows CE",
-        "Windows CE;",
-        "LG",
-        "MOT",
-        "SAMSUNG",
-        "SonyEricsson",
-        "Mobile",
-        "Symbian",
-        "Opera Mobi",
-        "Opera Mini",
-        "IEmobile"
-      );
-
-      for (var word in mobileKeyWords) {
-        if (navigator.userAgent.match(mobileKeyWords[word]) != null) {
-          window.location.href = "m.index.html";
-
-          break;
-        }
-      }
-    </script>
+  
   </body>
 </html>
