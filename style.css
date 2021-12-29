@@ -180,10 +180,6 @@ body {
   line-height: 1.7;
 }
 
-
-
-
-
 /* desc-info */
 
 #desc-container-1 {
@@ -201,7 +197,6 @@ body {
 #desc-container-1 > iframe {
   border: none;
   width: 100%;
-
 }
 
 #desc-container-2 {
@@ -273,7 +268,6 @@ li {
   list-style: none;
 }
 
-
 p {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
     segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial,
@@ -309,20 +303,15 @@ li:nth-child(1) {
 
 #menubar {
   width: 100%;
-  height: 2vw;
   position: absolute;
-  
+
   font-size: 1rem;
-  
-margin-left: 0.1rem;
+  margin-left: 0.1rem;
   display: grid;
   grid-template-columns: repeat(10, minmax(20%, auto));
-  grid-template-rows: repeat(2, minmax(2.5vw, auto));
+  grid-template-rows: repeat(2, minmax(2vw, auto));
   column-gap: 16px;
   align-content: start;
-}
-
-#title {
   color: white;
   mix-blend-mode: difference;
 }
@@ -336,13 +325,11 @@ margin-left: 0.1rem;
 }
 #title:nth-child(3) {
   grid-column: 3 / span 4;
-  
 }
 #title:nth-child(4) {
   grid-column: 3 / span 4;
   grid-row: 2;
 }
-
 
 /* arrow */
 
@@ -361,8 +348,6 @@ img.bottom {
 img.bottom:hover {
   opacity: 0.5;
 }
-
-
 
 @media screen and (max-width: 375px) {
   #menubar {
