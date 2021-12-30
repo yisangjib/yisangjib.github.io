@@ -139,14 +139,32 @@ textarea {
 }
 
 @font-face {
-  font-family: "Arnold_Regular";
-  src: url(./fonts/Arnold_Regular.otf);
-  src: local(※), url(./fonts/Arnold_Regular.woff) format("woff");
+  font-family: "Afrikola-Monospace-0_4-Extra-Bold-Formal";
+  src: url(./fonts/Monospace/Afrikola-Monospace-0_4-Extra-Bold-Formal.otf);
+  src: local(※), url(./fonts/Monospace/Afrikola-Monospace-0_4-Extra-Bold-Formal.woff2) format("woff2");
 }
 
-@media screen and (min-width: 512px) {
+@font-face {
+  font-family: "Afrikola-Monospace-0_4-Regular-Informal";
+  src: url(./fonts/Monospace/Afrikola-Monospace-0_4-Regular-Informal.otf);
+  src: local(※), url(./fonts/Monospace/Afrikola-Monospace-0_4-Regular-Informal.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Afrikola-Monospace-0_4-Regular-Formal";
+  src: url(./fonts/Monospace/Afrikola-Monospace-0_4-Regular-Formal.otf);
+  src: local(※), url(./fonts/Afrikola-Monospace-0_4-Regular-Formal.woff2) format("woff2");
+}
+
+
+@font-face {
+  font-family: "Arnold_Regular";
+  src: url(./fonts/Arnold_Regular.otf);
+  src: local(※), url(./fonts/Arnold_Regular.woff2) format("woff2");
+}
+
+@media screen and (min-width: 375px) {
   body {
-    font-weight: 600;
+    font-weight: 700;
   }
 }
 
@@ -156,7 +174,6 @@ body {
   width: 100%;
   height: 100%;
   background-color: #000;
-  font-family: "Arnold_Regular";
 }
 
 code,
@@ -172,7 +189,7 @@ a:visited {
 }
 
 body {
-  font-family: "Arnold_Regular";
+  font-family: "Afrikola-Monospace-0_4-Regular-Informal";
   cursor: grab;
   width: 100%;
   font-size: 1rem;
@@ -229,6 +246,23 @@ body {
 }
 
 #desc-container-3 > iframe {
+  border: none;
+  width: 100%;
+}
+
+#desc-container-4 {
+  margin-top: -4vw;
+  max-width: 500px;
+  max-height: 700px;
+  min-width: 200px;
+  min-height: 250px;
+  background: #fff;
+  color: #000;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#desc-container-4 > iframe {
   border: none;
   width: 100%;
 }
@@ -317,10 +351,10 @@ li:nth-child(1) {
 }
 
 #title:nth-child(1) {
-  grid-column: 1 / span 1;
+  grid-column: 1 / span 2;
 }
 #title:nth-child(2) {
-  grid-column: 1 / span 1;
+  grid-column: 1 / span 2;
   grid-row: 2;
 }
 #title:nth-child(3) {
@@ -350,8 +384,17 @@ img.bottom:hover {
 }
 
 @media screen and (max-width: 375px) {
-  #menubar {
-    height: 5vw;
+  #title:nth-child(1) {
+    grid-column: 1 / span 2;
+  }
+  #title:nth-child(2) {
+display: none;
+  }
+  #title:nth-child(3) {
+    grid-column: 3 / span 4;
+  }
+  #title:nth-child(4) {
+    display: none;
   }
 
   #title {
