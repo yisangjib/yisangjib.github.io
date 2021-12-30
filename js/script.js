@@ -18,7 +18,7 @@ infospot2.addHoverElement(
 );
 
 infospot3 = new PANOLENS.Infospot(500, PANOLENS.DataImage.Info);
-infospot3.position.set(2800.0, -25.25, 197.56);
+infospot3.position.set(2800.0, -500.25, 0.56);
 infospot3.addHoverElement(
   document.getElementById("desc-container-3"),
   200
