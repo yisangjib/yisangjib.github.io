@@ -162,18 +162,13 @@ textarea {
   src: local(※), url(./fonts/Arnold_Regular.woff2) format("woff2");
 }
 
-@media screen and (min-width: 375px) {
-  body {
-    font-weight: 700;
-  }
-}
-
 html,
 body {
   margin: 0;
   width: 100%;
   height: 100%;
   background-color: #000;
+  font-weight: 700;
 }
 
 code,
