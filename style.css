@@ -135,7 +135,7 @@ textarea {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
     segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial,
     sans-serif;
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 @font-face {
@@ -189,7 +189,6 @@ body {
   width: 100%;
   font-size: 1rem;
   text-align: left;
-  line-height: 1.7;
 }
 
 /* desc-info */
@@ -379,6 +378,19 @@ img.bottom:hover {
 }
 
 @media screen and (max-width: 375px) {
+
+  #menubar {
+    position: absolute;
+
+    display: grid;
+    grid-template-columns: repeat(12, minmax(20%, auto));
+    grid-template-rows: repeat(2, minmax(2vw, auto));
+    column-gap: 16px;
+    align-content: start;
+    color: white;
+    mix-blend-mode: difference;
+  }
+  
   #title:nth-child(1) {
     grid-column: 1 / span 2;
   }
@@ -386,7 +398,8 @@ img.bottom:hover {
 display: none;
   }
   #title:nth-child(3) {
-    grid-column: 3 / span 4;
+    grid-column: 1 / span 4;
+    grid-row: 2;
   }
   #title:nth-child(4) {
     display: none;
