@@ -42,7 +42,6 @@ h4,
 h5,
 h6 {
   font-size: 100%;
-  font-weight: normal;
 }
 
 ul {
@@ -141,20 +140,25 @@ textarea {
 @font-face {
   font-family: "Afrikola-Monospace-0_4-Extra-Bold-Formal";
   src: url(./fonts/Monospace/Afrikola-Monospace-0_4-Extra-Bold-Formal.otf);
-  src: local(※), url(./fonts/Monospace/Afrikola-Monospace-0_4-Extra-Bold-Formal.woff2) format("woff2");
+  src: local(※),
+    url(./fonts/Monospace/Afrikola-Monospace-0_4-Extra-Bold-Formal.woff2)
+      format("woff2");
 }
 
 @font-face {
   font-family: "Afrikola-Monospace-0_4-Regular-Informal";
   src: url(./fonts/Monospace/Afrikola-Monospace-0_4-Regular-Informal.otf);
-  src: local(※), url(./fonts/Monospace/Afrikola-Monospace-0_4-Regular-Informal.woff2) format("woff2");
+  src: local(※),
+    url(./fonts/Monospace/Afrikola-Monospace-0_4-Regular-Informal.woff2)
+      format("woff2");
 }
 @font-face {
   font-family: "Afrikola-Monospace-0_4-Regular-Formal";
   src: url(./fonts/Monospace/Afrikola-Monospace-0_4-Regular-Formal.otf);
-  src: local(※), url(./fonts/Afrikola-Monospace-0_4-Regular-Formal.woff2) format("woff2");
+  src: local(※),
+    url(./fonts/Afrikola-Monospace-0_4-Regular-Formal.woff2)
+      format("woff2");
 }
-
 
 @font-face {
   font-family: "Arnold_Regular";
@@ -382,7 +386,6 @@ img.bottom:hover {
 }
 
 @media screen and (max-width: 375px) {
-
   #desc-container-1 {
     max-width: 300px;
   }
@@ -400,23 +403,24 @@ img.bottom:hover {
     position: absolute;
 
     display: grid;
-    grid-template-columns: repeat(12, minmax(20%, auto));
+    grid-template-columns: repeat(6, minmax(20%, auto));
     grid-template-rows: repeat(2, minmax(2vw, auto));
     column-gap: 16px;
     align-content: start;
     color: white;
     mix-blend-mode: difference;
   }
-  
+
   #title:nth-child(1) {
     grid-column: 1 / span 2;
   }
   #title:nth-child(2) {
-display: none;
+    grid-column: 3 / span 2;
+    grid-row: 1;
+
   }
   #title:nth-child(3) {
-    grid-column: 1 / span 4;
-    grid-row: 2;
+    display: none;
   }
   #title:nth-child(4) {
     display: none;
