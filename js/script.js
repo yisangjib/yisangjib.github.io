@@ -1,5 +1,5 @@
 var infospot1, infospot2, infospot3, infospot4, viewer;
-const panorama = new PANOLENS.ImagePanorama("./images/4.jpg");
+const panorama = new PANOLENS.ImagePanorama("./images/7-2.jpg");
 
 ////////////////////////////////////////////////
 
