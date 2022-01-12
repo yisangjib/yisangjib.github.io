@@ -429,8 +429,7 @@ img.bottom:hover {
     grid-column: 1 / span 2;
   }
   #title:nth-child(2) {
-    grid-column: 3 / span 3;
-    grid-row: 1;
+    grid-column: 1 / span 3;
   }
   #title:nth-child(3) {
     display: none;
