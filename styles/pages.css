@@ -346,7 +346,7 @@ img.bottom {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-  bottom: 0.5rem;
+  bottom: 1.25rem;
 
   width: 1.2rem;
   transition: opacity 0.175s;
