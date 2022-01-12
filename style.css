@@ -344,7 +344,7 @@ li:nth-child(1) {
   font-size: 1rem;
   margin-left: 0.1rem;
   display: grid;
-  grid-template-columns: repeat(10, minmax(20%, auto));
+  grid-template-columns: repeat(10, minmax(15%, auto));
   grid-template-rows: repeat(2, minmax(2vw, auto));
   column-gap: 16px;
   align-content: start;
@@ -385,7 +385,7 @@ img.bottom:hover {
   opacity: 0.5;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
   #desc-container-1 {
     max-width: 300px;
   }
