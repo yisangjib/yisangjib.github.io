@@ -217,10 +217,10 @@ body {
 
 #desc-container-2 {
   margin-top: -4vw;
-  max-width: 500px;
-  max-height: 600px;
-  min-width: 200px;
-  min-height: 250px;
+  max-width: 250px;
+  max-height: 300px;
+  min-width: 100px;
+  min-height: 150px;
   background: #fff;
   color: #000;
   overflow: auto;
@@ -235,10 +235,10 @@ body {
 
 #desc-container-3 {
   margin-top: -4vw;
-  max-width: 500px;
-  max-height: 600px;
-  min-width: 200px;
-  min-height: 250px;
+  max-width: 250px;
+  max-height: 300px;
+  min-width: 100px;
+  min-height: 150px;
   background: #fff;
   color: #000;
   overflow: auto;
@@ -253,10 +253,10 @@ body {
 
 #desc-container-4 {
   margin-top: -4vw;
-  max-width: 500px;
-  max-height: 600px;
-  min-width: 200px;
-  min-height: 250px;
+  max-width: 250px;
+  max-height: 300px;
+  min-width: 100px;
+  min-height: 150px;
   background: #fff;
   color: #000;
   overflow: auto;
@@ -387,16 +387,16 @@ img.bottom:hover {
 
 @media screen and (max-width: 480px) {
   #desc-container-1 {
-    max-width: 300px;
+    max-width: 250px;
   }
   #desc-container-2 {
-    max-width: 300px;
+    max-width: 250px;
   }
   #desc-container-3 {
-    max-width: 300px;
+    max-width: 250px;
   }
   #desc-container-4 {
-    max-width: 300px;
+    max-width: 250px;
   }
 
   .text {
@@ -409,7 +409,7 @@ img.bottom:hover {
     position: absolute;
 
     display: grid;
-    grid-template-columns: repeat(6, minmax(20%, auto));
+    grid-template-columns: repeat(6, minmax(15%, auto));
     grid-template-rows: repeat(2, minmax(2vw, auto));
     column-gap: 16px;
     align-content: start;
@@ -421,7 +421,7 @@ img.bottom:hover {
     grid-column: 1 / span 2;
   }
   #title:nth-child(2) {
-    grid-column: 3 / span 2;
+    grid-column: 3 / span 3;
     grid-row: 1;
 
   }
