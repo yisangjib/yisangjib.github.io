@@ -28,7 +28,7 @@ function draw() {
 	if (somethingChanged) {
 		somethingChanged = false;
 
-		background(255, 50);
+		
 
 		for (var y = 0; y < height; y++) {
 			ias[y] = yoff + y * dy / height;

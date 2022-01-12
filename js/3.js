@@ -5,7 +5,7 @@ let step;
 let n = 100; // number of blobs
 let radius = 0; // diameter of the circle
 let inter = 0.25; // difference between the sizes of two blobs
-let maxNoise = 500;
+let maxNoise = 400;
 
 let noiseProg = (x) => (x);
 

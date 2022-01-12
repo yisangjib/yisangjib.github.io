@@ -1,6 +1,6 @@
 var size = 100; //declaring a global variable
 var transparency = 1; //how transparent are the circles?
-var spread = 30; //how far away can the spray be? 
+var spread = 50; //how far away can the spray be? 
 
 function setup() {
 		createCanvas(windowWidth, windowHeight);
