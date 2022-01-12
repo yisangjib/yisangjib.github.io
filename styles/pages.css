@@ -346,7 +346,7 @@ img.bottom {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-  bottom: 1.25rem;
+  bottom: 0.5rem;
 
   width: 1.2rem;
   transition: opacity 0.175s;
@@ -664,7 +664,7 @@ input:checked + .slider:before {
   display: block;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
   body,
   p,
   a {
@@ -687,6 +687,7 @@ input:checked + .slider:before {
 
   img.bottom {
     width: 1.5rem;
+    bottom: 3vw;
   }
   img.left {
     width: 1.5rem;
