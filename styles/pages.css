@@ -271,7 +271,7 @@ header {
   grid-column: 1;
   margin: 0 auto;
   text-align: center;
-
+  font-size: 0.5rem;
   transform: translate(-50%, -50%);
   top: 25%;
   left: 50%;
@@ -668,7 +668,7 @@ input:checked + .slider:before {
   body,
   p,
   a {
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
 
   .footer {
