@@ -11,6 +11,7 @@ function setup() {
 }
 
 function draw() {
+  
 
   //for (PVector v : mesPoints) {
   for (var i = 0; i < mesPoints.length; i++) {
