@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>CodePen - Spilled Paint ( WebGL Shader )</title>
+    <title>gyeon.cc</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
@@ -10,7 +10,21 @@
     <link rel="stylesheet" href="./assets/style/style.css" />
   </head>
   <body>
-    <!-- partial:index.partial.html -->
+    <article>
+<header><a href="">gyeon.cc</a></header>
+
+<div class="grid">
+
+<li><a href="https://colonslashslash.neocities.org/" target="iframe">colonslashslash</a></li>
+<li><a href="https://underline.neocities.org">underline</a></li>
+<li><a href="">gsfgd</a></li>
+<li><a href="">gsfgd</a></li>
+<li><a href="">gsfgd</a></li>
+<li><a href="">gsfgd</a></li>
+
+</div>
+    </article>
+
     <script id="2d-fragment-shader" type="x-shader/x-fragment">
       // <![CDATA[
         #ifdef GL_ES
@@ -122,7 +136,7 @@
           st.xy *= 0.4;
           float r = snoise(vec3(st.x,st.y,u_time * 0.1));
 
-      	if(r > 0.60){
+      	if(r > 0.0){
       		color = color5;
       	} else if(r > 0.20){
       		color = color4;
