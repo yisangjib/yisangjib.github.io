@@ -16,63 +16,62 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 36px;
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
     segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial,
     sans-serif;
 }
 
-@media screen and (min-width: 900px) {
+@media (min-width: 720px) and (orientation: landscape) {
   html {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
 body {
   font-family: "SpoqaHanSansNeo-Regular", sans-serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
   letter-spacing: 0.02rem;
   line-height: 1.65;
   word-break: keep-all;
   background: #fff;
   color: #000;
+
+  margin-left: 0.25rem;
 }
 
 article {
   margin: 0 auto;
 }
 
+
 article header a {
-  position: fixed;
 
-
-  font-size: 1.25rem;
   color: #000;
 
   z-index: 1;
   text-decoration: underline;
-
-  margin: 0.25rem;
 }
 
-article .grid {
-  width: 100%;
-  position: absolute;
-
-  top: 3rem;
-  margin: 0.25rem;
+article ul {
 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30%, auto));
+  grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+  grid-gap: 1rem;
   grid-template-rows: repeat(auto-fill, 1fr);
   z-index: 10;
 
   cursor: pointer;
 }
 
+
 article li {
   list-style: none;
   display: block;
+}
+
+article li:first-child {
+  font-style: bold;
 }
 
 article a {
@@ -91,6 +90,7 @@ em::after {
   content: "」";
   margin-right: -0.5rem;
 }
+
 
 canvas {
   width: 100%;
