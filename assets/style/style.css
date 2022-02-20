@@ -56,7 +56,7 @@ article header a {
 article ul {
 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(25%, auto));
+  grid-template-columns: repeat(auto-fill, minmax(10%, auto));
   grid-gap: 1rem;
   grid-template-rows: repeat(auto-fill, 1fr);
   z-index: 10;
@@ -68,6 +68,7 @@ article ul {
 article li {
   list-style: none;
   display: block;
+  grid-column: span 2;
 }
 
 article li:first-child {
