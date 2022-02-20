@@ -16,7 +16,7 @@
 }
 
 html {
-  font-size: 36px;
+  font-size: 24px;
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
     segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial,
     sans-serif;
@@ -56,7 +56,7 @@ article header a {
 article ul {
 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+  grid-template-columns: repeat(auto-fill, minmax(25%, auto));
   grid-gap: 1rem;
   grid-template-rows: repeat(auto-fill, 1fr);
   z-index: 10;
