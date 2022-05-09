@@ -177,7 +177,7 @@ template {
 :root {
   --white: #fff;
   --black: #000;
-  --yellow: #efff04;
+  --blue: #1034A6;
   --sand: #f9e9ae;
   --mint: #ceded3;
   --charcoal: #1a1a1a;
@@ -714,9 +714,8 @@ body.logged-in .js-preloader-after-top {
 }
 
 .preloader-words--convicts {
-  font-size: var(--medium-serif);
-  line-height: var(--medium-serif-l);
-  font-family: "serif", serif;
+  font-size: var(--medium-sans);
+  font-family: "sans";
   font-weight: 400;
   font-style: normal;
   padding-top: 3px;
@@ -1330,7 +1329,7 @@ body.logged-in #preloader {
   font-weight: 400;
   font-style: normal;
 
-  color: var(--white);
+  color: var(--black);
 }
 
 .three-columns h2 b {
@@ -1473,6 +1472,7 @@ body.logged-in #preloader {
   min-height: 0;
   float: none;
   width: 100%;
+  margin-top: 15%;
   padding-top: var(--double-gutter);
   padding-bottom: var(--double-gutter);
 }
@@ -1509,7 +1509,7 @@ body.logged-in #preloader {
   content: "";
   width: 100%;
   height: 1px;
-  background: var(--yellow);
+  background: var(--blue);
   display: block;
   position: absolute;
   left: 0;
@@ -1541,13 +1541,13 @@ body.logged-in #preloader {
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   transform-origin: center center;
-  border: 1px solid var(--yellow);
+  border: 2px solid var(--blue);
   border-radius: 100%;
   display: block;
   width: 50%;
   height: 50%;
   z-index: 100;
-  transition: transform 0.45s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.25s cubic-bezier(1, 0, 0, 1);
   pointer-events: none;
 }
 
@@ -2049,7 +2049,7 @@ form input[type="email"] {
   content: "";
   width: 100%;
   height: 1px;
-  background: var(--yellow);
+  background: var(--blue);
   display: block;
   position: absolute;
   left: 0;
@@ -2353,7 +2353,7 @@ html.safari-browser #video-player iframe {
   text-decoration: none;
   z-index: 200;
   cursor: pointer;
-  color: var(--yellow);
+  color: var(--blue);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -2383,7 +2383,7 @@ html.safari-browser #video-player iframe {
 .video-player__progress {
   width: 100%;
   height: var(--gutter);
-  background: var(--yellow);
+  background: var(--blue);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2516,7 +2516,7 @@ html.safari-browser #video-player iframe {
   content: "";
   width: 100%;
   height: 1px;
-  background: var(--yellow);
+  background: var(--blue);
   display: block;
   position: absolute;
   left: 0;
@@ -2640,7 +2640,7 @@ html.safari-browser #video-player iframe {
   font-family: display, sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: var(--yellow);
+  color: var(--blue);
   white-space: nowrap;
   display: inline-block;
   text-transform: uppercase;
@@ -2733,7 +2733,7 @@ html.safari-browser #video-player iframe {
 @media only screen and (max-width: 812px) {
   .homepage-hero h2 {
     bottom: auto;
-    top: calc(50% + 10vh);
+    display: none;
   }
 }
 
@@ -2765,7 +2765,13 @@ html.safari-browser #video-player iframe {
 }
 
 .homepage-hero--wrap svg {
-  padding-top: 12.5%;
+  padding-top: 12%;
+}
+
+@media only screen and (max-width: 812px) {
+  .homepage-hero--wrap svg {
+    padding-top: 50%;
+  }
 }
 
 .homepage-showreel-video-wrap {
@@ -2785,7 +2791,7 @@ html.safari-browser #video-player iframe {
 }
 
 .homepage-showreel-video-wrap video:hover {
-  outline: 1px solid var(--yellow);
+  outline: 1px solid var(--blue);
 }
 
 .homepage-showreel-video-wrap video:hover:before {
@@ -2798,7 +2804,7 @@ html.safari-browser #video-player iframe {
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   transform-origin: center center;
-  background: var(--yellow);
+  background: var(--blue);
   display: block;
   width: 60px;
   height: 33.75px;
@@ -3163,7 +3169,7 @@ html.safari-browser #video-player iframe {
   transition: transform 0.25s cubic-bezier(0.19, 1, 0.22, 1);
   transform: scale(1);
   content: "";
-  background: var(--yellow);
+  background: var(--blue);
   border-radius: 50%;
   width: 96px;
   height: 96px;
@@ -3340,7 +3346,7 @@ html.safari-browser #video-player iframe {
   content: "";
   width: 100%;
   height: 1px;
-  background: var(--yellow);
+  background: var(--blue);
   display: block;
   position: absolute;
   left: 0;
@@ -3809,7 +3815,7 @@ html.safari-browser #video-player iframe {
 
 .about-people .about--wrap .person:hover img,
 .about-people .about--wrap .person img:hover {
-  outline: 1px solid var(--yellow);
+  outline: 1px solid var(--blue);
 }
 
 @media only screen and (max-width: 812px) {
@@ -3905,7 +3911,7 @@ html.safari-browser #video-player iframe {
   content: "";
   width: 100%;
   height: 1px;
-  background: var(--yellow);
+  background: var(--blue);
   display: block;
   position: absolute;
   left: 0;
@@ -4009,7 +4015,7 @@ html.safari-browser #video-player iframe {
 }
 
 .about-clients .clients a:hover {
-  color: var(--yellow);
+  color: var(--blue);
 }
 
 #client-image-hover {
@@ -4103,7 +4109,7 @@ ol {
 }
 
 mark {
-  background-color: transparent;
+  background-color: var(--body-background) !important;
 }
 
 mark > a {
@@ -4117,7 +4123,6 @@ mark > a {
 }
 
 a > span {
-  background-color: transparent;
   pointer-events: none;
   transition: transform 0.1s linear;
 }
