@@ -177,7 +177,7 @@ template {
 :root {
   --white: #fff;
   --black: #000;
-  --blue: #1034A6;
+  --blue: #1034a6;
   --sand: #f9e9ae;
   --mint: #ceded3;
   --charcoal: #1a1a1a;
@@ -293,7 +293,8 @@ form fieldset {
   font-family: sans;
   src: url(../fonts/UniversLTStd-Cn.eot);
   src: url(../fonts/UniversLTStd-Cn.eot?#iefix) format("embedded-opentype"),
-    url(../fonts/UniversLTStd-Cn.woff) format("woff"), url(../fonts/UniversLTStd-Cn.woff2) format("woff2");
+    url(../fonts/UniversLTStd-Cn.woff) format("woff"),
+    url(../fonts/UniversLTStd-Cn.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -701,7 +702,7 @@ body.logged-in .js-preloader-after-top {
 
 #preloader--colour,
 #preloader--colour-2 {
-  background-color: var(--black);
+  background-color: var(--blue);
   left: 0;
   width: 100vw;
   height: 50vh;
@@ -904,6 +905,7 @@ body.logged-in #preloader {
 @media only screen and (max-width: 812px) {
   .main-header--wrap {
     display: block;
+float: right;
   }
 }
 
@@ -1370,12 +1372,10 @@ body.logged-in #preloader {
 .three-columns--wrap {
   display: flow-root;
   margin-top: var(--xl-margin);
-
 }
 
 @media only screen and (max-width: 812px) {
   .three-columns--wrap {
-  
     padding-bottom: var(--xl-margin);
   }
 
@@ -1404,7 +1404,6 @@ body.logged-in #preloader {
   text-align: center;
   float: left;
   padding: 0 0 0 16px;
-
 }
 
 @media only screen and (max-width: 812px) {
@@ -1416,7 +1415,6 @@ body.logged-in #preloader {
 }
 
 .three-columns--col-copy {
-
   text-align: left;
   min-height: 100vh;
   position: -webkit-sticky;
@@ -1500,7 +1498,7 @@ body.logged-in #preloader {
 }
 
 .three-columns--col-links a {
-  color: var(--white);
+  color: var(--black);
   text-decoration: none;
   position: relative;
 }
@@ -4074,80 +4072,79 @@ html.safari-browser #video-player iframe {
 }
 
 @media only screen and (min-width: 812px) {
+  /* // cursor // */
 
-/* // cursor // */
-
-.circle,
-.cursor {
-  display: block;
-  position: fixed;
-  background: #fff;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-.cursor {
-  height: 10px;
-  width: 10px;
-  z-index: 10;
-}
-
-.circle {
-  height: 42px;
-  width: 42px;
-  mix-blend-mode: difference;
-  z-index: 11;
-  transition: left 0.125s ease-out, top 0.125s ease-out, transform 0.125s linear;
-}
-
-ol {
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-}
-
-mark {
-  background-color: var(--body-background) !important;
-}
-
-mark > a {
-  text-decoration: none;
-  background-color: transparent;
-  list-style: none;
-  display: flex;
-
-  z-index: 10;
-  transition: transform 0.3s ease;
-}
-
-a > span {
-  pointer-events: none;
-  transition: transform 0.1s linear;
-}
-
-.circle.hover {
-  transform: translate(-50%, -50%) scale(2.5);
-  animation: liquid 2.5s linear infinite;
-}
-
-@keyframes liquid {
-  0%,
-  100% {
-    border-radius: 18% 72% 46% 54% / 22% 50% 50% 78%;
+  .circle,
+  .cursor {
+    display: block;
+    position: fixed;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
   }
 
-  25% {
-    border-radius: 73% 27% 41% 59% / 49% 20% 90% 51%;
+  .cursor {
+    height: 10px;
+    width: 10px;
+    z-index: 10;
   }
 
-  50% {
-    border-radius: 47% 53% 18% 72% / 49% 76% 24% 51%;
+  .circle {
+    height: 42px;
+    width: 42px;
+    mix-blend-mode: difference;
+    z-index: 11;
+    transition: left 0.125s ease-out, top 0.125s ease-out, transform 0.125s linear;
   }
 
-  75% {
-    border-radius: 48% 52% 68% 32% / 78% 54% 46% 22%;
+  ol {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
   }
-}
+
+  mark {
+    background-color: var(--body-background) !important;
+  }
+
+  mark > a {
+    text-decoration: none;
+    background-color: transparent;
+    list-style: none;
+    display: flex;
+
+    z-index: 10;
+    transition: transform 0.3s ease;
+  }
+
+  a > span {
+    pointer-events: none;
+    transition: transform 0.1s linear;
+  }
+
+  .circle.hover {
+    transform: translate(-50%, -50%) scale(2.5);
+    animation: liquid 2.5s linear infinite;
+  }
+
+  @keyframes liquid {
+    0%,
+    100% {
+      border-radius: 18% 72% 46% 54% / 22% 50% 50% 78%;
+    }
+
+    25% {
+      border-radius: 73% 27% 41% 59% / 49% 20% 90% 51%;
+    }
+
+    50% {
+      border-radius: 47% 53% 18% 72% / 49% 76% 24% 51%;
+    }
+
+    75% {
+      border-radius: 48% 52% 68% 32% / 78% 54% 46% 22%;
+    }
+  }
 }
