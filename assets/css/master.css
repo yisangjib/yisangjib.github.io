@@ -702,7 +702,8 @@ body.logged-in .js-preloader-after-top {
 
 #preloader--colour,
 #preloader--colour-2 {
-  background-color: var(--blue);
+  background-color: var(--white);
+  color: #000;
   left: 0;
   width: 100vw;
   height: 50vh;
@@ -734,7 +735,7 @@ body.logged-in .js-preloader-after-top {
 }
 
 #preloader-words {
-  color: var(--white);
+  color: var(--black);
   font-size: var(--medium-sans);
   line-height: var(--medium-sans-l);
   font-family: sans, sans-serif;
