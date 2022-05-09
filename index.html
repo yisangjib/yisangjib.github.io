@@ -1,179 +1,1017 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>gyeon.cc</title>
+    <meta charset="utf-8" />
+    <title>OHOI</title>
+
+    <meta name="description" content="Troublemakers for a Better World" />
+
+    <!-- viewport / browser config -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height,initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+    />
+    <meta name="google-site-verification" content="SheOMdddBUVYu4le0xOfui2ydrJFNllDM5UDdK0oGRA" />
+
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+    <!-- favicon -->
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://1oji77a0elmxh2hl31g03lea-wpengine.netdna-ssl.com/wp-content/themes/convicts/r/img/favicon.svg"
+    />
+    <link
+      rel="alternate icon"
+      href="https://1oji77a0elmxh2hl31g03lea-wpengine.netdna-ssl.com/wp-content/themes/convicts/r/img/favicon.png"
+    />
+
+    <!-- Modernizer assets -->
+    <script type="text/javascript" src="./assets/js/modernizer.js" id="scripts-js"></script>
+
+    <!-- page assets -->
+
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+
+    <!-- Google Tag Manager for WordPress by gtm4wp.com -->
+    <script data-cfasync="false" data-pagespeed-no-defer>
+      //<![CDATA[
+      var gtm4wp_datalayer_name = "dataLayer";
+      var dataLayer = dataLayer || [];
+      //]]>
+    </script>
+    <!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+    <!-- This site is optimized with the Yoast SEO plugin v16.4 - https://yoast.com/wordpress/plugins/seo/ -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+KR&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="canonical" href="https://convicts.nyc/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Home - Convicts" />
+    <meta property="og:url" content="https://convicts.nyc/" />
+    <meta property="og:site_name" content="Convicts" />
+    <meta property="article:modified_time" content="2022-04-01T00:06:22+00:00" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json" class="yoast-schema-graph">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://convicts.nyc/#website",
+            "url": "https://convicts.nyc/",
+            "name": "Convicts",
+            "description": "Troublemakers for a Better World",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": "https://convicts.nyc/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            ],
+            "inLanguage": "en-AU"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://convicts.nyc/#webpage",
+            "url": "https://convicts.nyc/",
+            "name": "Home - Convicts",
+            "isPartOf": { "@id": "https://convicts.nyc/#website" },
+            "datePublished": "2020-09-03T07:46:19+00:00",
+            "dateModified": "2022-04-01T00:06:22+00:00",
+            "breadcrumb": { "@id": "https://convicts.nyc/#breadcrumb" },
+            "inLanguage": "en-AU",
+            "potentialAction": [{ "@type": "ReadAction", "target": ["https://convicts.nyc/"] }]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://convicts.nyc/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": { "@id": "https://convicts.nyc/#webpage" }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- / Yoast SEO plugin. -->
+
+    <style id="global-styles-inline-css" type="text/css">
+      body {
+        --wp--preset--color--black: #000000;
+        --wp--preset--color--cyan-bluish-gray: #abb8c3;
+        --wp--preset--color--white: #ffffff;
+        --wp--preset--color--pale-pink: #f78da7;
+        --wp--preset--color--vivid-red: #cf2e2e;
+        --wp--preset--color--luminous-vivid-orange: #ff6900;
+        --wp--preset--color--luminous-vivid-amber: #fcb900;
+        --wp--preset--color--light-green-cyan: #7bdcb5;
+        --wp--preset--color--vivid-green-cyan: #00d084;
+        --wp--preset--color--pale-cyan-blue: #8ed1fc;
+        --wp--preset--color--vivid-cyan-blue: #0693e3;
+        --wp--preset--color--vivid-purple: #9b51e0;
+        --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(
+          135deg,
+          rgba(6, 147, 227, 1) 0%,
+          rgb(155, 81, 224) 100%
+        );
+        --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(
+          135deg,
+          rgb(122, 220, 180) 0%,
+          rgb(0, 208, 130) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(
+          135deg,
+          rgba(252, 185, 0, 1) 0%,
+          rgba(255, 105, 0, 1) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(
+          135deg,
+          rgba(255, 105, 0, 1) 0%,
+          rgb(207, 46, 46) 100%
+        );
+        --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(
+          135deg,
+          rgb(238, 238, 238) 0%,
+          rgb(169, 184, 195) 100%
+        );
+        --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(
+          135deg,
+          rgb(74, 234, 220) 0%,
+          rgb(151, 120, 209) 20%,
+          rgb(207, 42, 186) 40%,
+          rgb(238, 44, 130) 60%,
+          rgb(251, 105, 98) 80%,
+          rgb(254, 248, 76) 100%
+        );
+        --wp--preset--gradient--blush-light-purple: linear-gradient(
+          135deg,
+          rgb(255, 206, 236) 0%,
+          rgb(152, 150, 240) 100%
+        );
+        --wp--preset--gradient--blush-bordeaux: linear-gradient(
+          135deg,
+          rgb(254, 205, 165) 0%,
+          rgb(254, 45, 45) 50%,
+          rgb(107, 0, 62) 100%
+        );
+        --wp--preset--gradient--luminous-dusk: linear-gradient(
+          135deg,
+          rgb(255, 203, 112) 0%,
+          rgb(199, 81, 192) 50%,
+          rgb(65, 88, 208) 100%
+        );
+        --wp--preset--gradient--pale-ocean: linear-gradient(
+          135deg,
+          rgb(255, 245, 203) 0%,
+          rgb(182, 227, 212) 50%,
+          rgb(51, 167, 181) 100%
+        );
+        --wp--preset--gradient--electric-grass: linear-gradient(
+          135deg,
+          rgb(202, 248, 128) 0%,
+          rgb(113, 206, 126) 100%
+        );
+        --wp--preset--gradient--midnight: linear-gradient(
+          135deg,
+          rgb(2, 3, 129) 0%,
+          rgb(40, 116, 252) 100%
+        );
+        --wp--preset--duotone--dark-grayscale: url("#wp-duotone-dark-grayscale");
+        --wp--preset--duotone--grayscale: url("#wp-duotone-grayscale");
+        --wp--preset--duotone--purple-yellow: url("#wp-duotone-purple-yellow");
+        --wp--preset--duotone--blue-red: url("#wp-duotone-blue-red");
+        --wp--preset--duotone--midnight: url("#wp-duotone-midnight");
+        --wp--preset--duotone--magenta-yellow: url("#wp-duotone-magenta-yellow");
+        --wp--preset--duotone--purple-green: url("#wp-duotone-purple-green");
+        --wp--preset--duotone--blue-orange: url("#wp-duotone-blue-orange");
+        --wp--preset--font-size--small: 13px;
+        --wp--preset--font-size--medium: 20px;
+        --wp--preset--font-size--large: 36px;
+        --wp--preset--font-size--x-large: 42px;
+      }
+      .has-black-color {
+        color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-color {
+        color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-color {
+        color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-color {
+        color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-color {
+        color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-color {
+        color: var(--wp--preset--color--luminous-vivid-orange) !important;
+      }
+      .has-luminous-vivid-amber-color {
+        color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+      .has-light-green-cyan-color {
+        color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-color {
+        color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-color {
+        color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-color {
+        color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-color {
+        color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-black-background-color {
+        background-color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-background-color {
+        background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-background-color {
+        background-color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-background-color {
+        background-color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-background-color {
+        background-color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-background-color {
+        background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+      }
+      .has-luminous-vivid-amber-background-color {
+        background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+      .has-light-green-cyan-background-color {
+        background-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-background-color {
+        background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-background-color {
+        background-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-black-border-color {
+        border-color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-border-color {
+        border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-border-color {
+        border-color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-border-color {
+        border-color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-border-color {
+        border-color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-border-color {
+        border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+      }
+      .has-luminous-vivid-amber-border-color {
+        border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+      .has-light-green-cyan-border-color {
+        border-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-border-color {
+        border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-border-color {
+        border-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+        background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+      }
+      .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+        background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+      }
+      .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+        background: var(
+          --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+        background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+      }
+      .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+        background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+      }
+      .has-cool-to-warm-spectrum-gradient-background {
+        background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+      }
+      .has-blush-light-purple-gradient-background {
+        background: var(--wp--preset--gradient--blush-light-purple) !important;
+      }
+      .has-blush-bordeaux-gradient-background {
+        background: var(--wp--preset--gradient--blush-bordeaux) !important;
+      }
+      .has-luminous-dusk-gradient-background {
+        background: var(--wp--preset--gradient--luminous-dusk) !important;
+      }
+      .has-pale-ocean-gradient-background {
+        background: var(--wp--preset--gradient--pale-ocean) !important;
+      }
+      .has-electric-grass-gradient-background {
+        background: var(--wp--preset--gradient--electric-grass) !important;
+      }
+      .has-midnight-gradient-background {
+        background: var(--wp--preset--gradient--midnight) !important;
+      }
+      .has-small-font-size {
+        font-size: var(--wp--preset--font-size--small) !important;
+      }
+      .has-medium-font-size {
+        font-size: var(--wp--preset--font-size--medium) !important;
+      }
+      .has-large-font-size {
+        font-size: var(--wp--preset--font-size--large) !important;
+      }
+      .has-x-large-font-size {
+        font-size: var(--wp--preset--font-size--x-large) !important;
+      }
+    </style>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+      id="main-css"
+      href="./assets/css/master.css"
+      type="text/css"
+      media="screen"
     />
-    <link rel="stylesheet" href="./assets/style/style.css" />
+
+    <!-- Google Tag Manager for WordPress by gtm4wp.com -->
+    <script data-cfasync="false" data-pagespeed-no-defer>
+      //<![CDATA[
+      var dataLayer_content = {
+        pagePostType: "frontpage",
+        pagePostType2: "single-page",
+        pagePostAuthor: "grafik",
+      };
+      dataLayer.push(dataLayer_content); //]]>
+    </script>
+    <script data-cfasync="false">
+      //<![CDATA[
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "//www.googletagmanager.com/gtm." + "js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-N8QP4NZ"); //]]>
+    </script>
+    <!-- End Google Tag Manager -->
+    <!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+    <!-- open graph -->
+    <meta property="og:url" content="https://convicts.nyc" />
+    <meta property="og:title" content="Convicts" />
+    <meta property="og:description" content="Troublemakers for a Better World." />
+    <meta
+      property="og:image"
+      content="https://convicts.nyc/wp-content/themes/convicts/r/img/share.png"
+    />
+    <meta property="og:type" content="website" />
   </head>
-  <body>
-    <article>
-      <header>
-        <a href="">gyeon.cc</a>
-        <!-- <address>visual writer</address> -->
-      </header>
 
-      <main>
-        <ul>
-          <li>
-            <a
-              href="https://colonslashslash.neocities.org/"
-              target="_blank"
-              >colonslashslash</a
+  <body class="home page-template page-template-index page-template-index-php page page-id-8">
+    <div id="loader">
+      <div class="loader--wrap">
+        <div id="loader-words">
+          <div class="loader-words--loading ligatures js-loader-words">OHOI</div>
+          <div class="loader-words--changer js-loader-words js-loader-rotate"></div>
+        </div>
+      </div>
+      <div id="loader-icon">
+        <svg
+          version="1.1"
+          id="loader-convicts-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 190.7 138"
+          style="enable-background: new 0 0 190.7 138"
+          xml:space="preserve"
+        >
+          <g>
+            <polygon points="95.7,138 74.8,138 93.1,0 97.6,0 115.9,138 100.2,138 	" />
+            <polygon points="15.3,88.9 0,78.9 70.7,0 73.9,2.1 30,98.5 18.5,91 	" />
+            <polygon points="175.4,88.9 190.7,78.9 120,0 116.7,2.1 160.7,98.5 172.1,91 	" />
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div id="preloader">
+      <div id="preloader--bar"></div>
+      <div id="preloader--colour"></div>
+      <div id="preloader--colour-2"></div>
+      <div id="preloader-words">
+        <div class="preloader-words--convicts ligatures js-preloader-words">Lorem Ipsum</div>
+        <div class="preloader-words--changer js-preloader-words js-preloader-rotate"></div>
+      </div>
+      <div id="preloader-icon">
+        <!-- <svg
+          version="1.1"
+          id="loader-convicts-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 190.7 138"
+          style="enable-background: new 0 0 190.7 138"
+          xml:space="preserve"
+        >
+          <g>
+            <polygon points="95.7,138 74.8,138 93.1,0 97.6,0 115.9,138 100.2,138 	" />
+            <polygon points="15.3,88.9 0,78.9 70.7,0 73.9,2.1 30,98.5 18.5,91 	" />
+            <polygon points="175.4,88.9 190.7,78.9 120,0 116.7,2.1 160.7,98.5 172.1,91 	" />
+          </g>
+        </svg> -->
+      </div>
+    </div>
+
+    <div class="mobile-test" id="mobileTest"></div>
+    <!-- tests for mobile -->
+    <div class="tablet-test" id="tabletTest"></div>
+    <!-- tests for tablet -->
+
+    <div class="circle"></div>
+    <div class="cursor"></div>
+    <!-- cursor -->
+
+    <main class="content-wrap" data-barba="wrapper">
+      <div data-barba="container" data-barba-namespace="home">
+        <div class="main-menu" data-main-menu>
+          <a class="menu-close-link js-menu-trigger-close">Close</a>
+
+          <nav class="main-menu--menu">
+            <ul class="main-menu__ticker ticker">
+              <li
+                id="menu-item-24"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-8 current_page_item menu-item-24"
+              >
+                <a
+                  href=""
+                  aria-current="page"
+                  data-menu-colour="#000000"
+                  data-menu-text-colour="#ffffff"
+                  >OHOI</a
+                >
+                <div class="main-menu__copies js-ticker-copies" data-ids="1,2,3,4,5">
+                  <span class="main-menu__span js-copy">OHOI</span>
+                  <span class="main-menu__span js-copy">OHOI</span>
+                  <span class="main-menu__span js-copy">OHOI</span>
+                  <span class="main-menu__span js-copy">OHOI</span>
+                  <span class="main-menu__span js-copy">OHOI</span>
+                  <span class="main-menu__span js-copy">OHOI</span>
+                  <span class="main-menu__span js-copy">OHOI</span>
+                </div>
+              </li>
+              <li
+                id="menu-item-26"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"
+              >
+                <a href="" data-menu-colour="#f9e9ae" data-menu-text-colour="#000000">Projects</a>
+                <div class="main-menu__copies js-ticker-copies" data-ids="1,2,3,4,5">
+                  <span class="main-menu__span js-copy">Projects</span>
+                  <span class="main-menu__span js-copy">Projects</span>
+                  <span class="main-menu__span js-copy">Projects</span>
+                  <span class="main-menu__span js-copy">Projects</span>
+                  <span class="main-menu__span js-copy">Projects</span>
+                  <span class="main-menu__span js-copy">Projects</span>
+                  <span class="main-menu__span js-copy">Projects</span>
+                </div>
+              </li>
+
+              <li
+                id="menu-item-27"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"
+              >
+                <a href="" data-menu-colour="#ceded3" data-menu-text-colour="#000000">Partners</a>
+                <div class="main-menu__copies js-ticker-copies" data-ids="1,2,3,4,5">
+                  <span class="main-menu__span js-copy">Partners</span>
+                  <span class="main-menu__span js-copy">Partners</span>
+                  <span class="main-menu__span js-copy">Partners</span>
+                  <span class="main-menu__span js-copy">Partners</span>
+                  <span class="main-menu__span js-copy">Partners</span>
+                  <span class="main-menu__span js-copy">Partners</span>
+                  <span class="main-menu__span js-copy">Partners</span>
+                </div>
+              </li>
+
+              <li
+                id="menu-item-25"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"
+              >
+                <a href="" data-menu-colour="#34424d" data-menu-text-colour="#ffffff">Map</a>
+                <div class="main-menu__copies js-ticker-copies" data-ids="1,2,3,4,5">
+                  <span class="main-menu__span js-copy">Map</span>
+                  <span class="main-menu__span js-copy">Map</span>
+                  <span class="main-menu__span js-copy">Map</span>
+                  <span class="main-menu__span js-copy">Map</span>
+                  <span class="main-menu__span js-copy">Map</span>
+                  <span class="main-menu__span js-copy">Map</span>
+                  <span class="main-menu__span js-copy">Map</span>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="main-menu--social">
+            <div class="left col ligatures">
+              <h4>Contact</h4>
+              <p><a href="mailto:OHOI.seoul">OHOI.seoul</a></p>
+            </div>
+
+            <div class="right col ligatures">
+              <h4>Social</h4>
+              <p>
+                <a href="https://www.instagram.com/ohoi" target="_blank" rel="noopener">Instagram</a
+                > <a href="https://www.youtube.com/ohoi" target="_blank" rel="noopener"
+                  >Naver Blog</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="main-menu__image-holder main-menu__image-holder--agency">
+            <img
+              class="main-menu__image new"
+              src="./assets/img/shot_1.jpg"
+              data-menu-image-id="1"
+            />
+
+            <img
+              class="main-menu__image new"
+              src="./assets/img/shot_2.jpg"
+              data-menu-image-id="1"
+            />
+
+            <img
+              class="main-menu__image new"
+              src="./assets/img/shot_3.jpg"
+              data-menu-image-id="1"
+            />
+          </div>
+
+          <div class="main-menu__image-holder main-menu__image-holder--originals">
+            <img
+              class="main-menu__image new"
+              src="./assets/img/shot_4.jpg"
+              data-menu-image-id="2"
+            />
+
+            <img
+              class="main-menu__image new"
+              src="./assets/img/shot_5.jpg"
+              data-menu-image-id="2"
+            />
+
+            <img
+              class="main-menu__image new"
+              src="./assets/img/shot_1.jpg"
+              data-menu-image-id="2"
+            />
+          </div>
+        </div>
+
+        <header class="main-header js-main-header">
+          <div class="main-header--wrap js-preloader-after-top">
+            <a href="/" class="home-link"><span>OHOI PROJECT</span></a>
+            <a href="#" class="menu-link js-menu-trigger-open"><span>Menu</span></a>
+          </div>
+        </header>
+
+        <div class="secret-overlay js-secret-overlay">
+          <div class="secret-overlay--inner"></div>
+        </div>
+        <div class="secret-overlay-wipe js-secret-overlay-wipe"></div>
+
+        <article class="homepage-hero js-homepage-hero" id="js-homepage-hero">
+          <div class="homepage-hero--wrap">
+            <svg
+              version="1.0"
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              viewBox="0 0 908.000000 274.000000"
+              preserveAspectRatio="xMidYMid meet"
             >
-          </li>
-          <li>
-            <a href="https://underline.neocities.org" target="_blank"
-              >underline</a
-            >
-          </li>
-        </ul>
-      </main>
-    </article>
+              <g
+                transform="translate(0.000000,274.000000) scale(0.100000,-0.100000)"
+                fill="#000"
+                stroke="none"
+              >
+                <path
+                  d="M6629 2725 c-410 -56 -779 -277 -1034 -619 l-59 -79 74 -68 c41 -38
+82 -74 91 -79 13 -7 29 7 79 70 173 221 407 388 650 465 152 49 233 60 430 59
+258 -1 412 -35 615 -136 179 -90 383 -270 507 -447 l17 -24 43 36 c24 20 65
+56 92 79 l48 44 -60 79 c-225 299 -508 494 -837 579 -211 55 -448 69 -656 41z"
+                />
+                <path
+                  d="M640 2629 c-453 -336 -679 -842 -630 -1414 31 -372 176 -690 430
+-945 92 -92 263 -230 286 -230 7 0 19 10 27 23 9 12 41 49 71 82 31 33 56 63
+56 66 0 3 -36 34 -81 69 -218 172 -386 405 -463 643 -48 148 -60 237 -60 442
+0 207 10 281 65 447 80 245 258 483 492 658 25 19 47 38 47 41 0 6 -149 179
+-155 179 -2 0 -40 -27 -85 -61z"
+                />
+                <path
+                  d="M2240 2670 c-8 -10 -43 -50 -78 -88 l-62 -70 67 -53 c333 -260 507
+-567 544 -964 24 -262 -18 -507 -126 -730 -87 -180 -231 -354 -407 -492 l-77
+-60 76 -86 c41 -48 78 -87 82 -87 28 0 208 148 313 259 190 199 318 445 379
+731 20 91 23 135 24 325 0 235 -6 286 -55 460 -72 253 -194 459 -386 651 -77
+76 -258 224 -274 223 -3 0 -12 -8 -20 -19z"
+                />
+                <path
+                  d="M3300 1370 l0 -1280 145 0 145 0 0 605 0 605 658 -2 657 -3 3 -602 2
+-603 145 0 145 0 0 1280 0 1280 -145 0 -145 0 0 -530 0 -530 -660 0 -660 0 0
+530 0 530 -145 0 -145 0 0 -1280z"
+                />
+                <path
+                  d="M8480 1635 l0 -1015 300 0 300 0 0 160 0 160 -155 0 -155 0 0 855 0
+855 -145 0 -145 0 0 -1015z"
+                />
+                <path
+                  d="M5632 792 c-45 -42 -82 -81 -82 -85 0 -21 125 -172 220 -267 123
+-123 246 -210 403 -285 246 -118 466 -162 752 -152 454 16 851 206 1131 540
+41 49 87 107 102 129 l27 41 -65 59 c-36 32 -77 67 -91 78 l-26 19 -31 -42
+c-45 -63 -169 -197 -235 -254 -232 -204 -536 -313 -869 -313 -442 0 -791 167
+-1073 515 -43 52 -78 95 -79 95 0 -1 -38 -35 -84 -78z"
+                />
+                <path
+                  d="M8625 453 c-139 -73 -175 -252 -75 -366 47 -54 105 -79 180 -79 99 0
+180 52 216 138 18 43 18 145 1 187 -21 49 -67 98 -112 118 -51 24 -167 25
+-210 2z"
+                />
+              </g>
+            </svg>
 
+            <h2 class="ligatures js-preloader-after-bottom">
+              <ol>
+                <mark>
+                  <a class="link"
+                    ><span> <b>Lorem Ipsum</b> is simply dummy text</span></a
+                  >
+                </mark>
+              </ol>
+            </h2>
+          </div>
+        </article>
 
+        <!-- <div class="homepage-showreel-video-wrap js-video-wrap" id="js-video-wrap">
+          <video
+            loop
+            muted
+            class="homepage-showreel-video js-video-wrap--video"
+            id="js-video-wrap--video"
+            data-video-subheading-left="Troublemakers for a"
+            data-video-subheading-right="Better World"
+            data-video-heading="Showreel"
+            data-slug="showreel"
+            data-vimeo="https://vimeo.com/456373035"
+          >
+            <source
+              src="https://1oji77a0elmxh2hl31g03lea-wpengine.netdna-ssl.com/wp-content/uploads/2020/09/showreel-snippet-web.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div class="homepage-showreel-image-wrap js-image-wrap" id="js-image-wrap">
+          <div
+            class="homepage-showreel-image js-video-wrap--image"
+            id="js-video-wrap--image"
+            data-video-subheading-left="Troublemakers for a"
+            data-video-subheading-right="Better World"
+            data-video-heading="Showreel"
+            data-slug="showreel"
+            data-vimeo="https://vimeo.com/456373035"
+          >
+            <div
+              class="button button--play"
+              data-vimeo="https://vimeo.com/456373035"
+              data-video-subheading-left="Troublemakers for a"
+              data-video-subheading-right="Better World"
+              data-video-heading="Showreel"
+            ></div>
+            <img
+              class="lazy"
+              data-sizes="auto"
+              src="https://1oji77a0elmxh2hl31g03lea-wpengine.netdna-ssl.com/wp-content/uploads/2020/10/Glasert_AUDI_BTS_20190814_1875-1024x1535.jpg"
+              data-srcset="https://1oji77a0elmxh2hl31g03lea-wpengine.netdna-ssl.com/wp-content/uploads/2020/10/Glasert_AUDI_BTS_20190814_1875-1024x1535.jpg 1024w, https://1oji77a0elmxh2hl31g03lea-wpengine.netdna-ssl.com/wp-content/uploads/2020/10/Glasert_AUDI_BTS_20190814_1875-200x300.jpg 200w, https://1oji77a0elmxh2hl31g03lea-wpengine.netdna-ssl.com/wp-content/uploads/2020/10/Glasert_AUDI_BTS_20190814_1875-683x1024.jpg 683w, https://1oji77a0elmxh2hl31g03lea-wpengine.netdna-ssl.com/wp-content/uploads/2020/10/Glasert_AUDI_BTS_20190814_1875-768x1151.jpg 768w, https://1oji77a0elmxh2hl31g03lea-wpengine.netdna-ssl.com/wp-content/uploads/2020/10/Glasert_AUDI_BTS_20190814_1875-1025x1536.jpg 1025w, https://1oji77a0elmxh2hl31g03lea-wpengine.netdna-ssl.com/wp-content/uploads/2020/10/Glasert_AUDI_BTS_20190814_1875-576x863.jpg 576w, https://1oji77a0elmxh2hl31g03lea-wpengine.netdna-ssl.com/wp-content/uploads/2020/10/Glasert_AUDI_BTS_20190814_1875-300x450.jpg 300w, https://1oji77a0elmxh2hl31g03lea-wpengine.netdna-ssl.com/wp-content/uploads/2020/10/Glasert_AUDI_BTS_20190814_1875.jpg 1112w"
+              alt="audi_stephanie_gilmore_water"
+              title="audi_stephanie_gilmore_water"
+            />
+          </div>
+        </div> -->
 
-    <script id="2d-fragment-shader" type="x-shader/x-fragment">
-      // <![CDATA[
-        #ifdef GL_ES
-        precision highp float;
-        #endif
+        <article class="three-columns" id="js-columns">
+          <div class="three-columns--wrap js-columns">
+            <div class="three-columns--col three-columns--col-copy three-columns--col-copy-mobile">
+              <h2 class="ligatures">
+                같으며, 바로 그들을 긴지라 구하기 듣는다. 피부가 우는 영락과 웅대한 가치를 위하여
+                아니다. 그들의 때까지 뜨고, 그들의 때에, 그것은 불러 인간에 청춘의 철환하였는가?
+                같은 그들은 영락과 열락의 얼음 이것을 때문이다. 찾아 오아이스도 미인을 있는가?
+                일월과 사는가 이상을 봄바람이다. 붙잡아 사랑의 크고 고동을 이 품에 낙원을 안고,
+                교향악이다. 것은 그들에게 이상의 천고에 가치를 사라지지 대한 천하를 것이다. 가는
+                끓는 힘차게 인생을 있는가? 인간의 능히 있는 청춘 가지에 보이는 것이다. 살 위하여
+                이상은 공자는 새가 고행을 것은 대한 끓는다. <br /><br />Lorem Ipsum is simply dummy
+                text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                type and scrambled it to make a type specimen book. It has survived not only five
+                centuries, but also the leap into electronic typesetting, remaining essentially
+                unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop publishing software
+                like Aldus PageMaker including versions of Lorem Ipsum.
+              </h2>
+              <div class="three-columns--col-links">
+                <a href="/about/">about</a>
+                <a href="/project/">project</a>
+              </div>
+            </div>
 
-        #define PI 3.14159265359;
+            <div class="three-columns--col js-content three-columns--col--left">
+              <a href="" title="" class="project">
+                <div class="image">
+                  <div class="image-hover"></div>
+                  <img
+                    class="lazy"
+                    alt=""
+                    title="edit_v1.01_11_02_23.Still105"
+                    data-sizes="auto"
+                    src="./assets/img/shot_1.jpg"
+                  />
+                </div>
+                <h2>Lorem Ipsum, Lorem Ipsum</h2>
+              </a>
 
-        uniform vec2 u_resolution;
-        uniform vec2 u_mouse;
-        uniform float u_time;
-        uniform float u_xpos;
-        uniform float u_ypos;
+              <a href="" title="" class="project">
+                <div class="image">
+                  <div class="image-hover"></div>
+                  <img
+                    class="lazy"
+                    alt="audi_stephanie_gilmore_water"
+                    title="audi_stephanie_gilmore_water"
+                    data-sizes="auto"
+                    src="./assets/img/shot_2.jpg"
+                  />
+                </div>
+                <h2>Lorem Ipsum, Lorem Ipsum</h2>
+              </a>
 
-      vec3 mod289(vec3 x) {
-        return x - floor(x * (1.0 / 289.0)) * 289.0;
+              <a href="" title="" class="project">
+                <div class="image">
+                  <div class="image-hover"></div>
+                  <img
+                    class="lazy"
+                    alt="wayne_coyne_smiling_portrait_bw"
+                    title="wayne_coyne_smiling_portrait_bw"
+                    data-sizes="auto"
+                    src="./assets/img/shot_3.jpg"
+                  />
+                </div>
+                <h2>Lorem Ipsum, Lorem Ipsum</h2>
+              </a>
+
+              <a href="" title="" class="project">
+                <div class="image">
+                  <div class="image-hover"></div>
+                  <img
+                    class="lazy"
+                    alt="3x1_denim_model_portrait_outside_bw"
+                    title="3x1_denim_model_portrait_outside_bw"
+                    data-sizes="auto"
+                    src="./assets/img/shot_4.jpg"
+                  />
+                </div>
+                <h2>Lorem Ipsum, Lorem Ipsum</h2>
+              </a>
+
+              <a href="" title="" class="project">
+                <div class="image">
+                  <div class="image-hover"></div>
+                  <img
+                    class="lazy"
+                    alt="michael_brun_haiti_bw_2"
+                    title="michael_brun_haiti_bw_2"
+                    data-sizes="auto"
+                    src="./assets/img/shot_5.jpg"
+                  />
+                </div>
+                <h2>Lorem Ipsum, Lorem Ipsum</h2>
+              </a>
+
+              <a href="" title="" class="project">
+                <div class="image">
+                  <div class="image-hover"></div>
+                  <img
+                    class="lazy"
+                    alt="scott_morrison_bw"
+                    title="scott_morrison_bw"
+                    data-sizes="auto"
+                    src="./assets/img/shot_1.jpg"
+                  />
+                </div>
+                <h2>Lorem Ipsum, Lorem Ipsum</h2>
+              </a>
+            </div>
+
+            <div class="three-columns--col js-content three-columns--col--right">
+              <a href="" title="" class="project">
+                <div class="image">
+                  <div class="image-hover"></div>
+                  <img
+                    class="lazy"
+                    alt=""
+                    title="Screen-Shot-2021-08-02-at-9.55.07-AM"
+                    data-sizes="auto"
+                    src="./assets/img/shot_2.jpg"
+                  />
+                </div>
+                <h2 class="ligatures">Lorem Ipsum, Lorem Ipsum</h2>
+              </a>
+
+              <a href="" title="" class="project">
+                <div class="image">
+                  <div class="image-hover"></div>
+                  <img
+                    class="lazy"
+                    alt=""
+                    title="WGP_7830"
+                    data-sizes="auto"
+                    src="./assets/img/shot_3.jpg"
+                  />
+                </div>
+                <h2 class="ligatures">Lorem Ipsum, Lorem Ipsum</h2>
+              </a>
+
+              <a href="" title="" class="project">
+                <div class="image">
+                  <div class="image-hover"></div>
+                  <img
+                    class="lazy"
+                    alt=""
+                    title="Screen-Shot-2021-10-11-at-10.38.09-AM"
+                    data-sizes="auto"
+                    src="./assets/img/shot_4.jpg"
+                  />
+                </div>
+                <h2 class="ligatures">Lorem Ipsum, Lorem Ipsum</h2>
+              </a>
+
+              <a href="" title="" class="project">
+                <div class="image">
+                  <div class="image-hover"></div>
+                  <img
+                    class="lazy"
+                    alt="kona_oliveira_punching_portrait_bw"
+                    title="kona_oliveira_punching_portrait_bw"
+                    data-sizes="auto"
+                    src="./assets/img/shot_5.jpg"
+                  />
+                </div>
+                <h2 class="ligatures">Lorem Ipsum, Lorem Ipsum</h2>
+              </a>
+            </div>
+
+            <div class="three-columns--col three-columns--col-copy js-three-column-sticky">
+              <h2 class="ligatures">
+                같으며, 바로 그들을 긴지라 구하기 듣는다. 피부가 우는 영락과 웅대한 가치를 위하여
+                아니다. 그들의 때까지 뜨고, 그들의 때에, 그것은 불러 인간에 청춘의 철환하였는가?
+                같은 그들은 영락과 열락의 얼음 이것을 때문이다. 찾아 오아이스도 미인을 있는가?
+                일월과 사는가 이상을 봄바람이다. 붙잡아 사랑의 크고 고동을 이 품에 낙원을 안고,
+                교향악이다. 것은 그들에게 이상의 천고에 가치를 사라지지 대한 천하를 것이다. 가는
+                끓는 힘차게 인생을 있는가? 인간의 능히 있는 청춘 가지에 보이는 것이다. 살 위하여
+                이상은 공자는 새가 고행을 것은 대한 끓는다. <br /><br />Lorem Ipsum is simply dummy
+                text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                type and scrambled it to make a type specimen book. It has survived not only five
+                centuries, but also the leap into electronic typesetting, remaining essentially
+                unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop publishing software
+                like Aldus PageMaker including versions of Lorem Ipsum.
+              </h2>
+              <div class="three-columns--col-links">
+                <a href="/about/">about</a>
+                <a href="/project/">project</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="newsletter newsletter--the-cure" id="newsletter--the-cure">
+          <footer class="main-footer">
+            <div class="main-footer--wrap">
+              <div class="left">
+                <p>
+                  <mark
+                    ><a class="link" href="mailto:ohoi.seoul"
+                      ><span>ohoi.seoul<br />Seoul<br />-</span></a
+                    ></mark
+                  >
+                </p>
+              </div>
+
+              <div class="right">
+                <p>
+                  <a href="https://www.facebook.com/ohoi/" target="_blank" rel="noopener"
+                    >Facebook</a
+                  >
+                  <br /><a href="https://www.instagram.com/ohoi/" target="_blank" rel="noopener"
+                    >Instagram</a
+                  >
+                  <br /><a href="https://www.youtube.com/ohoi/" target="_blank" rel="noopener"
+                    >YouTube</a
+                  >
+                </p>
+              </div>
+            </div>
+          </footer>
+        </article>
+      </div>
+    </main>
+
+    <script type="text/javascript">
+      const loadScript = (source, beforeEl, async = true, defer = true) => {
+        return new Promise((resolve, reject) => {
+          let script = document.createElement("script");
+          const prior = beforeEl || document.getElementsByTagName("script")[0];
+
+          script.async = async;
+          script.defer = defer;
+
+          function onloadHander(_, isAbort) {
+            if (isAbort || !script.readyState || /loaded|complete/.test(script.readyState)) {
+              script.onload = null;
+              script.onreadystatechange = null;
+              script = undefined;
+
+              if (isAbort) {
+                reject();
+              } else {
+                resolve();
+              }
+            }
+          }
+
+          script.onload = onloadHander;
+          script.onreadystatechange = onloadHander;
+
+          script.src = source;
+          prior.parentNode.insertBefore(script, prior);
+        });
+      };
+
+      var mobileTest = document.getElementById("mobileTest");
+
+      if (getComputedStyle(mobileTest).display === "none") {
+        const scriptUrl = "./assets/js/script.min.js";
+        loadScript(scriptUrl).then(
+          () => {},
+          () => {}
+        );
+      } else {
+        const scriptUrl = "./assets/js/script-mobile.min.js";
+        loadScript(scriptUrl).then(
+          () => {},
+          () => {}
+        );
       }
-
-      vec4 mod289(vec4 x) {
-        return x - floor(x * (1.0 / 289.0)) * 289.0;
-      }
-
-      vec4 permute(vec4 x) {
-           return mod289(((x*34.0)+1.0)*x);
-      }
-
-      vec4 taylorInvSqrt(vec4 r)
-      {
-        return 1.79284291400159 - 0.85373472095314 * r;
-      }
-
-      float snoise(vec3 v)
-        {
-        const vec2  C = vec2(1.0/6.0, 1.0/3.0) ;
-        const vec4  D = vec4(0.0, 0.5, 1.0, 2.0);
-
-        vec3 i  = floor(v + dot(v, C.yyy) );
-        vec3 x0 =   v - i + dot(i, C.xxx) ;
-
-        vec3 g = step(x0.yzx, x0.xyz);
-        vec3 l = 1.0 - g;
-        vec3 i1 = min( g.xyz, l.zxy );
-        vec3 i2 = max( g.xyz, l.zxy );
-
-        vec3 x1 = x0 - i1 + C.xxx;
-        vec3 x2 = x0 - i2 + C.yyy;
-        vec3 x3 = x0 - D.yyy;
-
-        i = mod289(i);
-        vec4 p = permute( permute( permute(
-                   i.z + vec4(0.0, i1.z, i2.z, 1.0 ))
-                 + i.y + vec4(0.0, i1.y, i2.y, 1.0 ))
-                 + i.x + vec4(0.0, i1.x, i2.x, 1.0 ));
-
-        float n_ = 0.142857142857;
-        vec3  ns = n_ * D.wyz - D.xzx;
-
-        vec4 j = p - 49.0 * floor(p * ns.z * ns.z);
-
-        vec4 x_ = floor(j * ns.z);
-        vec4 y_ = floor(j - 7.0 * x_ );
-
-        vec4 x = x_ *ns.x + ns.yyyy;
-        vec4 y = y_ *ns.x + ns.yyyy;
-        vec4 h = 1.0 - abs(x) - abs(y);
-
-        vec4 b0 = vec4( x.xy, y.xy );
-        vec4 b1 = vec4( x.zw, y.zw );
-
-        vec4 s0 = floor(b0)*2.0 + 1.0;
-        vec4 s1 = floor(b1)*2.0 + 1.0;
-        vec4 sh = -step(h, vec4(0.0));
-
-        vec4 a0 = b0.xzyw + s0.xzyw*sh.xxyy ;
-        vec4 a1 = b1.xzyw + s1.xzyw*sh.zzww ;
-
-        vec3 p0 = vec3(a0.xy,h.x);
-        vec3 p1 = vec3(a0.zw,h.y);
-        vec3 p2 = vec3(a1.xy,h.z);
-        vec3 p3 = vec3(a1.zw,h.w);
-
-        vec4 norm = taylorInvSqrt(vec4(dot(p0,p0), dot(p1,p1), dot(p2, p2), dot(p3,p3)));
-        p0 *= norm.x;
-        p1 *= norm.y;
-        p2 *= norm.z;
-        p3 *= norm.w;
-
-        vec4 m = max(0.6 - vec4(dot(x0,x0), dot(x1,x1), dot(x2,x2), dot(x3,x3)), 0.0);
-        m = m * m;
-        return 42.0 * dot( m*m, vec4( dot(p0,x0), dot(p1,x1),
-                                      dot(p2,x2), dot(p3,x3) ) );
-        }
-
-        void main() {
-          vec3 color1 = vec3(75.0/255.0,144.0/255.0,210.0/255.0);
-          vec3 color2 = vec3(252.0/255.0,244.0/255.0,111.0/255.0);
-          vec3 color3 = vec3(244.0/255.0,238.0/255.0,87.0/255.0);
-          vec3 color4 = vec3(242.0/255.0,232.0/255.0,99.0/255.0);
-          vec3 color5 = vec3(242.0/255.0,205.0/255.0,96.0/255.0);
-          vec3 color6 = vec3(255.0/255.0,255.0/255.0,255.0/255.0);
-          vec2 lt = vec2(gl_FragCoord.x + u_xpos, gl_FragCoord.y + u_ypos);
-          vec2 st = lt.xy/u_resolution.xy;
-          st.x *= u_resolution.x/u_resolution.y;
-          vec3 color = vec3(0.0);
-          vec2 pos = vec2(st*0.6);
-          float DF = 0.0;
-          float a = 0.0;
-          vec2 vel = vec2(u_time*.1);
-          st.xy *= 0.4;
-          float r = snoise(vec3(st.x,st.y,u_time * 0.1));
-
-      	if(r > 0.0){
-      		color = color5;
-      	} else if(r > 0.20){
-      		color = color4;
-      	} else if(r > -0.20){
-      		color = color3;
-      	} else if(r > -0.60){
-      		color = color2;
-      	} else if(r > -2.0){
-      		color = color1;
-      	}
-
-          gl_FragColor = vec4(color,1.0);
-        }
-      // ]]>
     </script>
-    <script id="2d-vertex-shader" type="x-shader/x-vertex">
-      // <![CDATA[
-      	attribute vec2 a_position;
-      	void main() {
-      		gl_Position = vec4(a_position, 0, 1);
-      	}
-      	// ]]>
-    </script>
-    <canvas id="glscreen"></canvas>
-    <!-- partial -->
-    <script src="./assets/js/jquery.min.js"></script>
-    <!-- <script src="./assets/js/script.js"></script> -->
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>
