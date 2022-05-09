@@ -197,7 +197,7 @@ template {
   --sm-margin: 24px;
   --menu-background: var(--black);
   --menu-text: #fff;
-  --body-background: #fff;
+  --body-background: rgb(252, 246, 208);
   --preloader-background: var(--white);
   --loader-background: var(--white);
   --secret-underline: var(--black);
@@ -1371,12 +1371,12 @@ body.logged-in #preloader {
 .three-columns--wrap {
   display: flow-root;
   margin-top: var(--xl-margin);
-  background-color: var(--charcoal);
+
 }
 
 @media only screen and (max-width: 812px) {
   .three-columns--wrap {
-    background-color: var(--charcoal);
+  
     padding-bottom: var(--xl-margin);
   }
 
@@ -1417,7 +1417,7 @@ body.logged-in #preloader {
 }
 
 .three-columns--col-copy {
-  background-color: var(--charcoal);
+
   text-align: left;
   min-height: 100vh;
   position: -webkit-sticky;
@@ -1444,7 +1444,7 @@ body.logged-in #preloader {
   font-weight: 400;
   font-style: normal;
   margin: 0;
-  color: var(--white);
+  color: var(--black);
   text-indent: 96px;
 }
 
