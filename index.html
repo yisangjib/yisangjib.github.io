@@ -2,34 +2,50 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>OHOI PROJECT</title>
-    <meta name="description" content="우리는 OHOI(오호이)입니다." />
-    <meta name="keywords" content="OHOI" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-    <link rel="stylesheet" href="./assets/css/font.css" />
-    <link rel="stylesheet" href="./assets/css/normalize.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>ALLOSO_WEB_EXAMPLE</title>
+    <meta name="description" content="ALLOSO_WEB_EXAMPLE" />
+    <meta name="keywords" content="ALLOSO_WEB_EXAMPLE" />
+    <meta itemprop="name" content="ALLOSO_WEB_EXAMPLE" />
+    <meta itemprop="description" content="ALLOSO_WEB_EXAMPLE" />
+  
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
-    <div
-      onclick="location.href ='./main'"
-      class="canvas"
-      id="canvas-wrapper"
-      aria-label="neumorphism"
-    ></div>
-    <script src="./assets/js/jquery.min.js"></script>
-    <script src="./assets/js/header.js"></script>
-    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+<main>
+  <div class="logo">
+    <img src="./img/logo.png"/>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/index.js"></script>
 
-        <footer>
-      <p>(주)부동산중개법인 오호이</p>
-      <p>서울특별시 강남대로 160길 11, 201호</p>
-      <p>02-6953-1933</p>
-    </footer>
-  </body>
+<section class="main__header">
+  <p>독창적 아름다움​</p>
+  <p>타협없는 디테일​</p>
+  <p>독보적 철학으로​</p>
+</section>
+<section class="main__header">
+  <p>소파, 그 이상</p>
+</section>
+
+<button onclick="location.href='./menu.html'" class="main__button">Lazy Haus 입장</button>
+
+
+<div class="back__G">
+  <div class="back__gradient"></div>
+</div>
+</main>
+
+    <script src="./jquery.min.js"></script>
+    <script src="./script.js"></script>
+
+</body>
 </html>
