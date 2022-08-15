@@ -20,20 +20,20 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
 
-  <body>
+  <body style="display:none;">
 <main>
 
-  <header>
+  <div class="header">
   <div class="logo_bk" onclick="location.href='./index.html'">
     <img src="./img/logo_bk.png"/>
   </div>
-  </header>
-
-
+</div>
 
 <div class="back__G__red">
   <img src="./img/img_main_backg.png"/>
 </div>
+
+
 
 
 <button onclick="location.href='./main_1.html'" class="menu__1">EXHIBITION</button>
@@ -42,10 +42,22 @@
 
 <button onclick="location.href='./main_3.html'" class="menu__3">ABOUT</button>
 
+
+
 </main>
 
     <script src="./jquery.min.js"></script>
     <script src="./script.js"></script>
+
+    <script>
+ 
+ $(document).ready(function(){
+
+$('body').fadeIn(1000);
+
+});
+
+    </script>
 
 </body>
 </html>
