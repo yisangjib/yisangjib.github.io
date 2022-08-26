@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "font";
+  src: url("../fonts/national-2-regular.woff2") format("woff2");
+}
+
+html {
+  font-size: 16px;
+}
+
+img::selection {
+  background: none;
+}
+
+html,
+body,
+button {
+  font: 16px "font";
+}
+
+body,
+figure {
+  opacity: 0.1;
+}
+
+main {
+  position: relative;
+  float: left;
+}
+
+header {
+  position: absolute;
+  font-size: 28px;
+
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: calc(3% + 16px);
+
+  z-index: 100;
+}
+
+header div {
+  background-color: #000;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+figure {
+  position: relative;
+  float: left;
+  clear: none;
+
+  margin: 4px 0px 0px 4px;
+  width: 50%;
+}
+
+figcaption {
+  position: relative;
+  float: left;
+  clear: both;
+}
+
+img {
+  position: relative;
+  float: left;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 1px;
+}
+
+@media (max-width: 700px) {
+  html,
+  body {
+    font: 12px "font";
+  }
+}
